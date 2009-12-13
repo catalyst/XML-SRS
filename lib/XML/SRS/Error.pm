@@ -18,7 +18,7 @@ enum "XML::SRS::Error::Severity" =>
 
 has_attr "Severity" =>
 	is => "ro",
-	isa => "XML::SRS::Severity",
+	isa => "XML::SRS::Error::Severity",
 	required => 1,
 	;
 

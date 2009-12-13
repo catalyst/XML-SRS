@@ -3,6 +3,7 @@ package XML::SRS::ACL;
 
 use Moose;
 use PRANG::Graph;
+use XML::SRS::Types;
 
 has_attr 'Resource' =>
 	is => "ro",
@@ -18,12 +19,14 @@ has_attr 'List' =>
 
 has_attr 'Size' =>
 	is => "ro",
-	isa => "XML::EPP::Number",
+	isa => "XML::SRS::Number",
+	xml_required => 0,
 	;
 
 has_attr 'SizeChange' =>
 	is => "ro",
-	isa => "XML::EPP::Number",
+	isa => "XML::SRS::Number",
+	xml_required => 0,
 	;
 
 sub BUILD {
@@ -35,6 +38,7 @@ sub BUILD {
 has_attr 'Type' =>
 	is => "ro",
 	isa => "Str",
+	xml_required => 0,
 	;
 
 has_element 'entries' =>

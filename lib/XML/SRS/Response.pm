@@ -24,6 +24,7 @@ has_attr "VerMinor" =>
 has_attr "RegistrarId" =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
+	xml_required => 0,
 	;
 
 has_element "results" =>

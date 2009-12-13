@@ -1,7 +1,7 @@
 <NZSRSResponse VerMajor="3" VerMinor="6" RegistrarId="199">
   <Response Action="AccessControlListQry" FeId="2" FeSeq="108979231" OrigRegistrarId="11" RecipientRegistrarId="11" Rows="1">
     <FeTimeStamp Day="11" Hour="11" Minute="22" Month="12" Second="18" TimeZoneOffset="+13:00" Year="2009"/>
-    <AccessControlList Resource="whoisd" Size="2" Type="blacklist">
+    <AccessControlList Resource="whoisd" Size="2" List="deny" Type="blacklist">
       <AccessControlListEntry Address="34.0.0.0/8" Comment="Halliburton">
         <EffectiveDate Day="20" Hour="17" Minute="45" Month="3" Second="50" TimeZoneOffset="-05:00" Year="2003"/>
         </AccessControlListEntry>

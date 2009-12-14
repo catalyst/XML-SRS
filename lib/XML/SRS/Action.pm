@@ -11,9 +11,10 @@ use XML::SRS::Types;
 # BuildDnsZoneFiles GenerateDomainReport AdjustRegistrarAccount
 # AccessControlListRemove AccessControlListAdd 
 
-has_attr 'ActionId' =>
+has_attr 'action_id' =>
 	is => "ro",
 	isa => "XML::SRS::UID",
+	xml_name => 'ActionId',
 	;
 
 with 'XML::SRS::Node', "PRANG::Graph";

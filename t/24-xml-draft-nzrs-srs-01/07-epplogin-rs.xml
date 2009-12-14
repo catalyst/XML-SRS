@@ -82,6 +82,7 @@ nxX1TYFMCXdHHLiq
     </Registrar>
   </Response>
   <Response Action="AccessControlListQry" FeId="8" FeSeq="4020284" OrigRegistrarId="90" RecipientRegistrarId="90" Rows="1">
+    <FeTimeStamp Day="11" Hour="12" Minute="23" Month="12" Second="13" TimeZoneOffset="+13:00" Year="2009" />
     <AccessControlList List="allow" Resource="epp_connect" Size="1" Type="registrar_ip">
       <AccessControlListEntry Address="101.1.5.0/24" RegistrarId="90" Comment="Test Registrar Netblock">
          <EffectiveDate Day="20" Hour="17" Minute="45" Month="3" Second="50" TimeZoneOffset="-05:00" Year="2009"/>
@@ -89,8 +90,9 @@ nxX1TYFMCXdHHLiq
     </AccessControlList>
   </Response>
   <Response Action="AccessControlListQry" FeId="8" FeSeq="4020284" OrigRegistrarId="90" RecipientRegistrarId="90" Rows="1">
+    <FeTimeStamp Day="11" Hour="12" Minute="23" Month="12" Second="13" TimeZoneOffset="+13:00" Year="2009" />
     <AccessControlList List="allow" Resource="epp_client_certs" Size="1" Type="registrar_domain">
-      <AccessControlListEntry Domain="*.client.cert.example.com" RegistrarId="90" Comment="Test Registrar Key">
+      <AccessControlListEntry DomainName="*.client.cert.example.com" RegistrarId="90" Comment="Test Registrar Key">
          <EffectiveDate Day="20" Hour="17" Minute="46" Month="3" Second="17" TimeZoneOffset="-05:00" Year="2009"/>
       </AccessControlListEntry>
     </AccessControlList>

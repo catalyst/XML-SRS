@@ -32,6 +32,9 @@ has_attr "registrar_id" =>
 	xml_name => "RegistrarId",
 	;
 
+role_type 'XML::SRS::Action';
+role_type 'XML::SRS::Query';
+
 has_element "requests" =>
 	is => "ro",
 	isa => "ArrayRef[XML::SRS::Action|XML::SRS::Query]",

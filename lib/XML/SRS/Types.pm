@@ -99,4 +99,10 @@ enum "${PKG}::DomainStatus" =>
 subtype "${PKG}::ActionEtc"
 	=> as "${PKG}::ActionName|${PKG}::ActionEtcExtra";
 
+enum "${PKG}::RoleName" =>
+	qw( Registrar Registry Whois Query CreateDomain UpdateDomain
+	    TransferDomain CancelDomain UncancelDomain UpdateRegistrar
+	    Administer Supervisor Connect ReleaseDomain QueryACL
+	    UpdateACL );
+
 1;

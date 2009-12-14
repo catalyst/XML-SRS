@@ -11,9 +11,11 @@ BEGIN { with 'PRANG::Graph', 'XML::SRS::Node'; };
 use XML::SRS::Request;
 use XML::SRS::Response;
 
+# data types
 use XML::SRS::Time;
 use XML::SRS::Date;
 use XML::SRS::TimeStamp;
+use XML::SRS::Contact;
 
 # ---
 # plug-ins:
@@ -21,10 +23,12 @@ use XML::SRS::TimeStamp;
 # Query types:
 use XML::SRS::Whois;
 use XML::SRS::ACL::Query;
+use XML::SRS::Registrar::Query;
 
 # ActionResponse types:
 use XML::SRS::Error;
 use XML::SRS::ACL;
 use XML::SRS::Domain;
+use XML::SRS::Registrar;
 
 1;

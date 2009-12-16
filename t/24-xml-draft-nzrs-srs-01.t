@@ -16,64 +16,26 @@ use Scriptalicious;
 use XML::SRS;
 use YAML;
 
-use lib $Bin;
-use RFCTypes;
+my $xml_compare = XML::Compare->new(
+	ignore => [ q{//epp:msg/@lang} ],
+	ignore_xmlns => {
+		"epp" => "urn:ietf:params:xml:ns:epp-1.0",
+	},
+       );
 
-(my $test_dir = "$Bin/$Script") =~ s{\.t$}{};
-my @tests;
-my $grep;
-getopt("test-grep|t=s" => \$grep );
-find(sub {
-	     if ( m{\.xml$} && (!$grep||m{$grep}) ) {
-		     push @tests, $File::Find::name;
-	     }
-     }, $test_dir);
-
-plan tests => @tests * 3;
-
-# FIXME - cut and paste disease!
 for my $test ( sort @tests ) {
-	(my $test_name = $test) =~ s{^\Q$test_dir\E/}{};
-	open XML, "<$test";
-	binmode XML, ":utf8";
-	my $xml = do {
-		local($/);
-		<XML>;
-	};
-	close XML;
-	start_timer;
-	my $object = eval { XML::SRS->parse( $xml ) };
-	my $time = show_elapsed;
-	my $ok = ok($object, "$test_name - parsed OK ($time)");
-	if ( !$ok ) {
-		diag("exception: $@");
-	}
-	if ( $ok and $VERBOSE>0) {
-		diag("read: ".Dump($object));
-	}
+	my $xml = XMLTests::read_xml($test);
+
+	my $object = XMLTests::parse_test( "XML::EPP", $xml, $test );
  SKIP: {
-		skip "didn't parse", 2 unless $ok;
-		start_timer;
-		my $r_xml = eval { $object->to_xml };
-		$time = show_elapsed;
-		ok($r_xml, "$test_name - emitted OK ($time)")
-			or do {
-				diag("exception: $@");
-				skip "got an exception", 1;
-			};
-		if ($VERBOSE>0) {
-			diag("xml: ".$r_xml);
+		skip "didn't parse", 2 unless $object;
+		my $r_xml = XMLTests::emit_test( $object, $test );
+		if ( !defined $r_xml ) {
+			skip "no XML returned", 1;
 		}
-		my $recycled = eval { XML::SRS->parse($r_xml) };
-		is_deeply($recycled, $object,
-			  "round-tripped to XML and back")
-			or do {
-				if ( $@ ) {
-					diag("exception: $@");
-				}
-				diag("First round: ".Dump($object));
-				diag("Second round: ".Dump($recycled));
-			};
+		XMLTests::xml_compare_test(
+			$xml_compare, $xml, $r_xml, $test,
+		       );
 	}
 }
 

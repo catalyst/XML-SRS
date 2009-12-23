@@ -2,6 +2,7 @@
 package XML::SRS::Domain;
 use Moose;
 use PRANG::Graph;
+use XML::SRS::Types;
 
 has_attr 'name' =>
 	is => "ro",

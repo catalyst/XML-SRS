@@ -9,7 +9,7 @@ use XML::SRS::Types;
 # BillingAmountUpdate SysParamsUpdate RunLogCreate ScheduleCreate
 # ScheduleCancel ScheduleUpdate BilledUntilAdjustment
 # BuildDnsZoneFiles GenerateDomainReport AdjustRegistrarAccount
-# AccessControlListRemove AccessControlListAdd 
+# AccessControlListRemove AccessControlListAdd
 
 has_attr 'action_id' =>
 	is => "ro",

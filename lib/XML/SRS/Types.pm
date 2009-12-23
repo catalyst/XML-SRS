@@ -7,6 +7,7 @@ use warnings;
 
 use Moose::Util::TypeConstraints;
 use PRANG::XMLSchema::Types;
+use Regexp::Common qw(net);
 
 our $PKG = "XML::SRS";
 subtype "${PKG}::Number"
@@ -30,6 +31,28 @@ subtype "${PKG}::UID"
 	=> as "Str"; # XXX - any other constraints on ActionIDs?
 subtype "${PKG}::DomainName"
 	=> as "Str"; # FIXME - constrain this properly.
+
+subtype "${PKG}::IPv4"
+	=> as "Str"
+	=> where {
+		$_ =~ m{ \A $RE{net}{IPv4} \z }xms;
+	};
+
+# IPv6 : from Regexp::IPv6
+# http://search.cpan.org/~salva/Regexp-IPv6-0.02/lib/Regexp/IPv6.pm
+# http://cpansearch.perl.org/src/SALVA/Regexp-IPv6-0.02/lib/Regexp/IPv6.pm
+my $IPv4 = "(?:(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2}))";
+my $G = "[\\da-f]{1,4}";
+my @tail = ( ":", ":(?:$G)?", "(?:(?::$G){1,2}|:$IPv4?)", "(?::$G)?(?:(?::$G){1,2}|:$IPv4?)", "(?::$G){0,2}(?:(?::$G){1,2}|:$IPv4?)", "(?::$G){0,3}(?:(?::$G){1,2}|:$IPv4?)", "(?::$G){0,4}(?:(?::$G){1,2}|:$IPv4?)" );
+my $IPv6_re = $G;
+$IPv6_re = "$G:(?:$IPv6_re|$_)" for @tail;
+$IPv6_re = qr/:(?::$G){0,5}(?:(?::$G){1,2}|:$IPv4)|$IPv6_re/i;
+
+subtype "${PKG}::IPv6"
+	=> as "Str"
+	=> where {
+		$_ =~ m{ \A $IPv6_re \z }xms;
+	};
 
 our @Boolean = qw(0 1);
 subtype "${PKG}::Boolean"

@@ -30,6 +30,7 @@ has_attr "registrar_id" =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
 	xml_name => "RegistrarId",
+	xml_required => 0,
 	;
 
 role_type 'XML::SRS::Action';

@@ -85,7 +85,7 @@ has_element 'roles' =>
 
 has_element 'audit' =>
 	is => "rw",
-	isa => "XML::SRS::Audit",
+	isa => "XML::SRS::AuditDetails",
 	xml_nodeName => "AuditDetails",
 	predicate => "has_audit",
 	;

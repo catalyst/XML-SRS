@@ -32,6 +32,12 @@ subtype "${PKG}::UID"
 subtype "${PKG}::DomainName"
 	=> as "Str"; # FIXME - constrain this properly.
 
+subtype "${PKG}::UDAI"
+	=> as "Str"
+	=> where {
+		$_ =~ m{ \A [abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{8} \z }xms;
+	};
+
 subtype "${PKG}::IPv4"
 	=> as "Str"
 	=> where {

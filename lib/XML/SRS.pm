@@ -25,6 +25,7 @@ use XML::SRS::Whois;
 use XML::SRS::ACL::Query;
 use XML::SRS::Registrar::Query;
 use XML::SRS::Domain::Create;
+use XML::SRS::Domain::Update;
 
 # ActionResponse types:
 use XML::SRS::Error;

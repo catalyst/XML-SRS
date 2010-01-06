@@ -16,6 +16,9 @@ use XML::SRS::Time;
 use XML::SRS::Date;
 use XML::SRS::TimeStamp;
 use XML::SRS::Contact;
+use XML::SRS::Contact::Filter;
+use XML::SRS::Contact::Address::Filter;
+use XML::SRS::Audit;
 
 # ---
 # plug-ins:
@@ -24,13 +27,14 @@ use XML::SRS::Contact;
 use XML::SRS::Whois;
 use XML::SRS::ACL::Query;
 use XML::SRS::Registrar::Query;
-use XML::SRS::Domain::Create;
-use XML::SRS::Domain::Update;
+use XML::SRS::Domain::Query;
 
 # ActionResponse types:
 use XML::SRS::Error;
 use XML::SRS::ACL;
 use XML::SRS::Domain;
+use XML::SRS::Domain::Create;
+use XML::SRS::Domain::Update;
 use XML::SRS::Registrar;
 
 1;

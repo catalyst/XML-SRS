@@ -134,4 +134,14 @@ enum "${PKG}::RoleName" =>
 	    Administer Supervisor Connect ReleaseDomain QueryACL
 	    UpdateACL );
 
+# Domain Statuses
+enum "${PKG}::RegDomainStatus" =>
+	qw(Active PendingRelease);
+
+enum "${PKG}::DomainStatus" =>
+	qw(Active PendingRelease Available);
+
+enum "${PKG}::BillStatus" =>
+    qw(PendingConfirmation Confirmed);
+
 1;

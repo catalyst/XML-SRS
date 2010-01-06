@@ -6,6 +6,7 @@ use PRANG::Graph;
 use XML::SRS::Contact::Address;
 use XML::SRS::Contact::PSTN;
 
+# attributes
 has_attr 'name' =>
 	is => "ro",
 	isa => "Str",
@@ -20,6 +21,7 @@ has_attr 'email' =>
 	predicate => "has_email",
 	;
 
+# elements
 has_element 'address' =>
 	is => "ro",
 	isa => "XML::SRS::Contact::Address",

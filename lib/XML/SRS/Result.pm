@@ -1,6 +1,6 @@
 
-# this is called 'Response', but we call it 'Result' to not clash with
-# 'Response', which is actually 'NZSRSResponse'
+# this is called 'Response' in the XML, but we call it 'Result' to not clash
+# with 'Response', which is actually 'NZSRSResponse'
 package XML::SRS::Result;
 
 use Moose;
@@ -73,11 +73,13 @@ has_element 'messages' =>
 	is => "ro",
 	isa => "ArrayRef[XML::SRS::Response]",
 	xml_nodeName => "Response",
+	xml_min => 0,
 	;
 
 has_element 'ActionResponse' =>
 	is => "ro",
-	isa => "ArrayRef[XML::SRS::ActionResponse]",
+	isa => "XML::SRS::ActionResponse",
+	xml_required => 0,
 	;
 
 with 'XML::SRS::Node';

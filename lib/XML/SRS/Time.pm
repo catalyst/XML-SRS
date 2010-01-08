@@ -41,6 +41,7 @@ has_attr 'Second' =>
 has_attr 'TimeZoneOffset' =>
 	is => "rw",
 	isa => "XML::SRS::Time::TZOffset",
+	xml_required => 0,
 	;
 
 1;

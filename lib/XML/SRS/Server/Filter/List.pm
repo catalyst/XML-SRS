@@ -8,7 +8,7 @@ use XML::SRS::Zone;
 has_element 'server_filter' =>
 	is => 'ro',
 	isa => 'ArrayRef[XML::SRS::Server::Filter]',
-	xml_name => 'ServerFilter',
+	xml_nodeName => 'ServerFilter',
 	;
 
 with 'XML::SRS::Node';

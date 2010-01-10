@@ -12,6 +12,12 @@ has_attr 'domain_name' =>
     required => 1,
 	;
 
+has_attr 'domain_name_unicode' =>
+	is => "ro",
+	isa => "XML::SRS::DomainName",
+	xml_name => "DomainNameUnicode",
+	;
+
 has_attr 'registrant_ref' =>
 	is => "ro",
 	isa => "XML::SRS::UID",

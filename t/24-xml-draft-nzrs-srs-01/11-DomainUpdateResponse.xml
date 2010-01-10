@@ -1,5 +1,5 @@
 <NZSRSRequest VerMinor="11" VerMajor="3">
-  <DomainCreate Delegate="1" ActionId="xx101" DomainName="example.org.nz" RegistrantRef="RS1001" Term="1">
+  <DomainCreate Delegate="1" ActionId="xx101" DomainName="example.org.nz" RegistrantRef="RS1001" Term="1" DomainNameUnicode="example.org.nz" >
     <RegistrantContact Name="John Smith" Email="j.smith@mydomain.example.org.nz">
       <PostalAddress Address2="Suburbia" PostalCode="6135" Address1="14 Rural Street" City="Wellington" CountryCode="NZ"/>
       <Phone LocalNumber="111234" AreaCode="4" CountryCode="64"/>

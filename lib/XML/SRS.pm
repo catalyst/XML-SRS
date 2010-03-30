@@ -5,6 +5,7 @@ use Moose::Role;
 use XML::SRS::Types;
 use XML::SRS::Node;
 
+use PRANG::Graph;
 BEGIN { with 'PRANG::Graph', 'XML::SRS::Node'; };
 
 # packet types

@@ -8,18 +8,15 @@
 
 use inc::Module::Install;
 
-name            ("SRS-EPP-Proxy");
-abstract        ("EPP <=> SRS XML proxy server");
+name            ("XML-SRS");
+abstract        ("PRANG implementation of the XML SRS protocol");
 author          ("Catalyst SRS Team <team-srs\@catalyst.net.nz>");
-version         0;
+version         0.01;
 license         ('artistic');
 
-requires        ("perl" => 5.008005);
 requires        ("Moose" => 0.54);
 requires        ("MooseX::Method::Signatures" => 0);
-requires        ("XML::LibXML" => 1.70);
-requires        ("MooseX::Attributes::Curried" => 0);
-requires        ("Net::SSLeay::OO" => 0);
+requires        ("PRANG" => 0.02);
 test_requires   ("XML::Compare" => 0.02);
 
 &WriteAll;

@@ -24,6 +24,8 @@ plan tests => @tests * 3;
 my $xml_compare = XML::Compare->new(
 	ignore => [
 		q{//Error//text()},  # FIXME - cdata types
+		q{//DomainNameFilter/text()},  # FIXME - cdata types
+		q{//AuditText/text()},  # FIXME - cdata types
 		q{//AccessControlListQry/@FullResult},
 	       ],
        );

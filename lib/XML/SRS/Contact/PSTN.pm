@@ -27,4 +27,11 @@ has_attr 'subscriber' =>
 
 with 'XML::SRS::Node';
 
+# a coerce from Str would be nice, but need to figure out how best to
+# turn random strings into the above three components.
+use Moose::Util::TypeConstraints;
+coerce __PACKAGE__
+	=> from "HashRef"
+	=> via { __PACKAGE__->new( %$_ ); };
+
 1;

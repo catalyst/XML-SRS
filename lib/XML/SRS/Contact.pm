@@ -34,6 +34,7 @@ has_element 'phone' =>
 	isa => "XML::SRS::Contact::PSTN",
 	predicate => "has_phone",
 	xml_nodeName => "Phone",
+	coerce => 1,
 	;
 
 has_element 'fax' =>
@@ -41,6 +42,7 @@ has_element 'fax' =>
 	isa => "XML::SRS::Contact::PSTN",
 	predicate => "has_fax",
 	xml_nodeName => "Fax",
+	coerce => 1,
 	;
 
 with 'XML::SRS::Node';

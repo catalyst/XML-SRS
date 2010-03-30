@@ -72,13 +72,16 @@ has_element 'contact_registrant' =>
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'RegistrantContact',
 	xml_required => 0,
+	coerce => 1,
 	;
 
+# I think this element is wrong.
 has_element 'contact_registrar_public' =>
 	is => 'ro',
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'RegistrarPublicContact',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'contact_admin' =>
@@ -86,6 +89,7 @@ has_element 'contact_admin' =>
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'AdminContact',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'contact_technical' =>
@@ -93,6 +97,7 @@ has_element 'contact_technical' =>
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'TechnicalContact',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'billed_until' =>

@@ -45,4 +45,8 @@ has_element 'fax' =>
 
 with 'XML::SRS::Node';
 
+use Moose::Util::TypeConstraints;
+coerce __PACKAGE__
+	=> from "HashRef"
+	=> via { __PACKAGE__->new( %$_ ); };
 1;

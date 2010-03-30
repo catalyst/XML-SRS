@@ -44,6 +44,7 @@ has_element 'contact_registrant' =>
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "RegistrantContact",
     required => 1,
+	coerce => 1,
 	;
 
 has_element 'contact_admin' =>
@@ -51,6 +52,7 @@ has_element 'contact_admin' =>
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "AdminContact",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'contact_technical' =>
@@ -58,6 +60,7 @@ has_element 'contact_technical' =>
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "TechnicalContact",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element "nameservers" =>
@@ -65,6 +68,7 @@ has_element "nameservers" =>
 	isa => "XML::SRS::Server::List",
 	xml_nodeName => "NameServers",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 with 'XML::SRS::Audit';

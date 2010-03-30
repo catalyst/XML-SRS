@@ -27,6 +27,7 @@ has_element 'address' =>
 	isa => "XML::SRS::Contact::Address",
 	xml_nodeName => "PostalAddress",
 	predicate => "has_address",
+	coerce => 1,
 	;
 
 has_element 'phone' =>

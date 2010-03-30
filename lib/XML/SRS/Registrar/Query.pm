@@ -32,7 +32,7 @@ has_attr "name_filter" =>
 
 has_element "when" =>
 	is => "ro",
-	isa => "ArrayRef[XML::SRS::DateRange]",
+	isa => "ArrayRef[XML::SRS::Date::Range]",
 	xml_nodeName => "ResultDateRange",
 	xml_required => 0,
 	;

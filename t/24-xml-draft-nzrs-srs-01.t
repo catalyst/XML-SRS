@@ -6,27 +6,32 @@
 
 use strict;
 use Test::More;
+use Scriptalicious;
+use FindBin qw($Bin);
+use lib $Bin;
+use XMLTests;
+use XML::Compare;
 
 # yes ... this will be a complete re-implementation of the XML
 # portions of NativeData in the DNRS code base :-)
 
-use FindBin qw($Bin $Script);
-use File::Find;
-use Scriptalicious;
 use XML::SRS;
-use YAML;
+
+our @tests = XMLTests::find_tests;
+
+plan tests => @tests * 3;
 
 my $xml_compare = XML::Compare->new(
-	ignore => [ q{//epp:msg/@lang} ],
-	ignore_xmlns => {
-		"epp" => "urn:ietf:params:xml:ns:epp-1.0",
-	},
+	ignore => [
+		q{//Error//text()},  # FIXME - cdata types
+		q{//AccessControlListQry/@FullResult},
+	       ],
        );
 
 for my $test ( sort @tests ) {
 	my $xml = XMLTests::read_xml($test);
 
-	my $object = XMLTests::parse_test( "XML::EPP", $xml, $test );
+	my $object = XMLTests::parse_test( "XML::SRS", $xml, $test );
  SKIP: {
 		skip "didn't parse", 2 unless $object;
 		my $r_xml = XMLTests::emit_test( $object, $test );

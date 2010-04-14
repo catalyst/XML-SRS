@@ -151,7 +151,7 @@ has_element 'billed_until_date_range' =>
 
 has_element 'audit_text_filter' =>
 	is => 'ro',
-	isa => 'XML::SRS::Audit',
+	isa => 'Str',
 	xml_required => 0,
 	xml_nodeName => 'AuditTextFilter'
 	;

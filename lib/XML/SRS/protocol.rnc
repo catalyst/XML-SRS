@@ -1,6 +1,6 @@
 # protocol.rnc:  RELAX NG schema for NZ Shared Registry System Protocol
 # 
-# Author:     Srdjan Jankovic
+# Author:     Mostly Steven Craig, based on the original protocol.dtd
 # Version:    Release version __SRSVERMAJOR__.__SRSVERMINOR__
 # Revised:    SRS Development Team
 # 

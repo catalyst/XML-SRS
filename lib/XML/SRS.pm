@@ -125,8 +125,15 @@ Log a ticket on L<http://rt.cpan.org/>
 
 =head1 SEE ALSO
 
-For the 0.01 release, there is little internal documentation.  This
-will be expanded as the module is put to use.
+For the 0.01 release, there is little documentation of how to use the
+classes, and the implemented portion of the protocol has a particular
+focus towards a particular use case, which initially will not include
+core registry functions such as adminstering domains.  That being
+said, as you can see in the example, it is already possible to create
+DomainCreate messages.
+
+Implementation, tests and documentation will be expanded as the module
+is put to use.  This module is provided as a preview release.
 
 =head1 AUTHOR AND LICENCE
 

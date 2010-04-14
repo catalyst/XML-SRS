@@ -87,5 +87,54 @@ updates), which was developed using XML Schema and XML Namespaces.  As
 such, the SRS protocol as a stable standard far pre-dates EPP, which
 took a further 2 years to reach 1.0 status.
 
-=cut
+This module currently implements the XML part of the protocol only;
+converting this into the HTTPS POST, with PGP signature, is still
+TO-DO.
 
+=head1 SOURCE, SUBMISSIONS, SUPPORT
+
+Source code is available from Catalyst:
+
+  git://git.catalyst.net.nz/XML-SRS.git
+
+And Github:
+
+  git://github.com/catalyst/XML-SRS.git
+
+Please see the file F<SubmittingPatches> for information on preferred
+submission formats.
+
+Suggested avenues for support:
+
+=over
+
+=item *
+
+The DNRS forum on SourceForge -
+L<http://sourceforge.net/projects/dnrs/forums>
+
+=item *
+
+Contact the author and ask either politely or commercially for help.
+
+=item *
+
+Log a ticket on L<http://rt.cpan.org/>
+
+=back
+
+=head1 SEE ALSO
+
+For the 0.01 release, there is little internal documentation.  This
+will be expanded as the module is put to use.
+
+=head1 AUTHOR AND LICENCE
+
+Development commissioned by NZ Registry Services, and carried out by
+Catalyst IT - L<http://www.catalyst.net.nz/>
+
+Copyright 2009, 2010, NZ Registry Services.  This module is licensed
+under the Artistic License v2.0, which permits relicensing under other
+Free Software licenses.
+
+=cut

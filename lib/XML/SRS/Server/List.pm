@@ -7,6 +7,7 @@ use XML::SRS::Zone;
 
 use Moose::Util::TypeConstraints;
 
+use XML::SRS::Server;
 has_element 'nameservers' =>
 	is => "rw",
 	isa => "ArrayRef[XML::SRS::Server]",

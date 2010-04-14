@@ -11,12 +11,12 @@ use inc::Module::Install;
 name            ("XML-SRS");
 abstract        ("PRANG implementation of the XML SRS protocol");
 author          ("Catalyst SRS Team <team-srs\@catalyst.net.nz>");
-version         0.01;
+version_from    ("lib/XML/SRS.pm");
 license         ('artistic');
 
 requires        ("Moose" => 0.54);
 requires        ("MooseX::Method::Signatures" => 0);
-requires        ("PRANG" => 0.02);
+requires        ("PRANG" => 0.06);
 test_requires   ("XML::Compare" => 0.02);
 
 &WriteAll;

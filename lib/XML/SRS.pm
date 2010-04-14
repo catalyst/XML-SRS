@@ -1,6 +1,8 @@
 
 package XML::SRS;
 
+our $VERSION = "0.01";
+
 use Moose::Role;
 use XML::SRS::Types;
 use XML::SRS::Node;

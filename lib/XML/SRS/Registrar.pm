@@ -42,18 +42,21 @@ has_element 'contact_public' =>
 	is => "rw",
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "RegistrarPublicContact",
+	coerce => 1,
 	;
 
 has_element 'contact_private' =>
 	is => "rw",
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "RegistrarSRSContact",
+	coerce => 1,
 	;
 
 has_element 'contact_technical' =>
 	is => "rw",
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "DefaultTechnicalContact",
+	coerce => 1,
 	;
 
 has_element 'keyring' =>

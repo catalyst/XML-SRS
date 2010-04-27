@@ -2,15 +2,16 @@
 package XML::SRS::Version;
 use Moose::Role;
 use PRANG::Graph;
+
 has_attr "major" =>
-	is => "ro",
+	is => "rw",
 	isa => "Int",
 	required => 1,
 	xml_name => "VerMajor",
 	;
 
 has_attr "minor" =>
-	is => "ro",
+	is => "rw",
 	isa => "Int",
 	required => 1,
 	xml_name => "VerMinor",
@@ -19,18 +20,19 @@ has_attr "minor" =>
 has "version" =>
 	is => "ro",
 	isa => "Str",
+	lazy => 1,
 	default => sub {
 		my $self = shift;
-		$self->VerMajor.".".$self->VerMinor;
+		$self->major.".".$self->minor;
 	},
 	trigger => sub {
 		my $self = shift;
-		my $version = $self->version;
+		my $version = shift;
 		$version = $XML::SRS::PROTOCOL_VERSION
 			if $version eq "auto";
 		my ($vmaj, $vmin) = split "\.", $version;
-		$self->VerMajor(0+$vmaj);
-		$self->VerMinor(0+$vmin);
+		$self->major(0+$vmaj);
+		$self->minor(0+$vmin);
 	},
 	;
 

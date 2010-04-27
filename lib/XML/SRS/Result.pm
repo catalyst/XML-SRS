@@ -8,37 +8,42 @@ use PRANG::Graph;
 use XML::SRS::Types;
 use Moose::Util::TypeConstraints;
 
-has_attr 'Action' =>
+has_attr 'action' =>
 	is => "ro",
 	isa => "XML::SRS::ActionEtc",
 	required => 1,
+	xml_name => "Action",
 	;
 
-has_attr 'FeId' =>
+has_attr 'fe_id' =>
 	is => "ro",
 	isa => "XML::SRS::Number",
 	required => 1,
+	xml_name => "FeId",
 	;
 
-has_attr 'FeSeq' =>
+has_attr 'unique_id' =>
 	is => "ro",
 	isa => "XML::SRS::Number",
 	required => 1,
+	xml_name => "FeSeq",
 	;
 
-has_attr 'OrigRegistrarId' =>
+has_attr 'by_id' =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
 	required => 1,
+	xml_name => "OrigRegistrarId",
 	;
 
-has_attr 'RecipientRegistrarId' =>
+has_attr 'for_id' =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
 	xml_required => 0,
+	xml_name => "RecipientRegistrarId",
 	;
 
-has_attr 'action_id' =>
+has_attr 'client_id' =>
 	is => "ro",
 	isa => "XML::SRS::UID",
 	xml_required => 0,
@@ -64,10 +69,25 @@ has_attr 'Count' =>
 	xml_required => 0,
 	;
 
-has_element 'FeTimeStamp' =>
-	is => "ro",
-	isa => "XML::SRS::TimeStamp",
+subtype 'XML::SRS::timeStampType'
+	=> as "XML::SRS::TimeStamp",
 	;
+
+has_element 'server_time' =>
+	is => "ro",
+	isa => "XML::SRS::timeStampType",
+	coerce => 1,
+	xml_nodeName => "FeTimeStamp",
+	;
+
+use MooseX::Timestamp;
+use MooseX::TimestampTZ;
+
+coerce "XML::SRS::timeStampType"
+	=> from TimestampTZ
+	=> via {
+		XML::SRS::TimeStamp->new(timestamptz => $_);
+	};
 
 # this is for GetMessages responses, so let's call it messages
 has_element 'messages' =>
@@ -77,7 +97,7 @@ has_element 'messages' =>
 	xml_min => 0,
 	;
 
-has_element 'ActionResponse' =>
+has_element 'response' =>
 	is => "ro",
 	isa => "XML::SRS::ActionResponse",
 	xml_required => 0,

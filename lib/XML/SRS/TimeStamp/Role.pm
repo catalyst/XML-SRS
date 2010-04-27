@@ -1,6 +1,7 @@
 
 package XML::SRS::TimeStamp::Role;
 
+use 5.010;
 use XML::SRS::Date;
 use XML::SRS::Time;
 use Moose::Role;
@@ -11,7 +12,7 @@ use MooseX::TimestampTZ;
 
 has 'timestamp' =>
 	is => "rw",
-	isa => "MooseX::Timestamp",
+	isa => "Timestamp",
 	coerce => 1,
 	lazy => 1,
 	default => sub {
@@ -23,9 +24,31 @@ has 'timestamp' =>
 	},
 	;
 
+method buildargs_timestamp( $inv: Timestamp $timestamp ) {
+	my ($date, $time) = split " ", $timestamp;
+	($inv->buildargs_time($time), $inv->buildargs_date($date));
+}
+
+method buildargs_timestamptz( $inv: TimestampTZ $timestamptz ) {
+	$timestamptz =~ m{
+		(?<ymd>\d+-\d+-\d+)
+		\s(?<hms>\d+:\d+:\d+)
+		(?: (?<utc>Z) | (?<offset> [+-]\d{2} (?::?\d{2})? )
+		)}x or warn "$timestamptz didn't match";
+	my $hms = $+{hms};
+	my $ymd = $+{ymd};
+	my $offset = $+{utc} ? "+00:00" : $+{offset};
+	($inv->buildargs_time($hms, $offset),
+	 $inv->buildargs_date($ymd));
+}
+
+method buildargs_epoch( $inv: time_t $epoch ) {
+	$inv->buildargs_timestamptz(timestamptz $epoch);
+}
+
 has 'timestamptz' =>
 	is => "rw",
-	isa => "MooseX::TimestampTZ",
+	isa => "TimestampTZ",
 	coerce => 1,
 	lazy => 1,
 	default => sub {
@@ -45,8 +68,9 @@ has 'epoch' =>
 	lazy => 1,
 	default => sub {
 		my $self = shift;
-		$self->timestamptz;
-	};
+		epoch $self->timestamptz;
+	},
+	;
 
 with 'XML::SRS::Date', 'XML::SRS::Time';
 

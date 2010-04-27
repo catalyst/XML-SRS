@@ -69,6 +69,7 @@ has_element 'epp_auth' =>
 	is => "rw",
 	isa => "XML::SRS::Password",
 	xml_nodeName => "EPPAuth",
+	coerce => 1,
 	predicate => "has_epp_auth",
 	;
 

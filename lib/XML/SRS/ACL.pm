@@ -41,6 +41,7 @@ has_attr 'Type' =>
 	xml_required => 0,
 	;
 
+use XML::SRS::ACL::Entry;
 has_element 'entries' =>
 	is => "ro",
 	isa => "ArrayRef[XML::SRS::ACL::Entry]",

@@ -9,18 +9,6 @@ use XML::SRS::Types;
 use XML::SRS::Result;
 use XML::SRS::Error;
 
-has_attr "VerMajor" =>
-	is => "ro",
-	isa => "Int",
-	required => 1,
-	;
-
-has_attr "VerMinor" =>
-	is => "ro",
-	isa => "Int",
-	required => 1,
-	;
-
 has_attr "RegistrarId" =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
@@ -37,7 +25,16 @@ has_element "results" =>
 	;
 
 sub root_element { "NZSRSResponse" }
-with 'XML::SRS', 'XML::SRS::Node';
+with 'XML::SRS', 'XML::SRS::Node', 'XML::SRS::Version';
+
+sub BUILDARGS {
+	my $inv = shift;
+	my %args = @_;
+	if ( $args{version} ) {
+		%args = (%args, $inv->buildargs_version($args{version}));
+	}
+	\%args;
+}
 
 1;
 

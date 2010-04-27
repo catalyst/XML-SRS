@@ -12,20 +12,6 @@ use XML::SRS::Query;
 use XML::SRS::Action;
 use XML::SRS::ActionResponse;
 
-has_attr "major" =>
-	is => "ro",
-	isa => "Int",
-	xml_name => "VerMajor",
-	required => 1,
-	;
-
-has_attr "minor" =>
-	is => "ro",
-	isa => "Int",
-	xml_name => "VerMinor",
-	required => 1,
-	;
-
 has_attr "registrar_id" =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
@@ -42,7 +28,16 @@ has_element "requests" =>
 	;
 
 sub root_element { "NZSRSRequest" }
-with 'XML::SRS';
+with 'XML::SRS', "XML::SRS::Version";
+
+sub BUILDARGS {
+	my $inv = shift;
+	my %args = @_;
+	if ( $args{version} ) {
+		%args = (%args, $inv->buildargs_version($args{version}));
+	}
+	\%args;
+}
 
 1;
 

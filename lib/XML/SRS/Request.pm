@@ -30,5 +30,14 @@ has_element "requests" =>
 sub root_element { "NZSRSRequest" }
 with 'XML::SRS', "XML::SRS::Version";
 
+sub BUILDARGS {
+	my $inv = shift;
+	my %args = @_;
+	if ( $args{version} ) {
+		%args = (%args, $inv->buildargs_version($args{version}));
+	}
+	\%args;
+}
+
 1;
 

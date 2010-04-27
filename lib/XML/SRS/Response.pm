@@ -27,5 +27,14 @@ has_element "results" =>
 sub root_element { "NZSRSResponse" }
 with 'XML::SRS', 'XML::SRS::Node', 'XML::SRS::Version';
 
+sub BUILDARGS {
+	my $inv = shift;
+	my %args = @_;
+	if ( $args{version} ) {
+		%args = (%args, $inv->buildargs_version($args{version}));
+	}
+	\%args;
+}
+
 1;
 

@@ -2,6 +2,7 @@
 package XML::SRS::Version;
 use Moose::Role;
 use PRANG::Graph;
+use MooseX::Method::Signatures;
 
 has_attr "major" =>
 	is => "rw",
@@ -25,15 +26,13 @@ has "version" =>
 		my $self = shift;
 		$self->major.".".$self->minor;
 	},
-	trigger => sub {
-		my $self = shift;
-		my $version = shift;
-		$version = $XML::SRS::PROTOCOL_VERSION
-			if $version eq "auto";
-		my ($vmaj, $vmin) = split "\.", $version;
-		$self->major(0+$vmaj);
-		$self->minor(0+$vmin);
-	},
 	;
+
+method buildargs_version( $inv: Str $version ) {
+	$version = $XML::SRS::PROTOCOL_VERSION
+		if $version eq "auto";
+	my ($vmaj, $vmin) = split /\./, $version;
+	(major => 0+$vmaj, minor => 0+$vmin);
+}
 
 1;

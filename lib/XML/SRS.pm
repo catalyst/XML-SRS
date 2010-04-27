@@ -3,7 +3,7 @@ package XML::SRS;
 
 our $VERSION = "0.01";
 
-our $PROTOCOL_VERSION = "5.0";
+BEGIN { our $PROTOCOL_VERSION = "5.0" };
 use XML::SRS::Version;
 
 use Moose::Role;

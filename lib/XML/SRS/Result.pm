@@ -38,10 +38,11 @@ has_attr 'RecipientRegistrarId' =>
 	xml_required => 0,
 	;
 
-has_attr 'TransId' =>
+has_attr 'action_id' =>
 	is => "ro",
 	isa => "XML::SRS::UID",
 	xml_required => 0,
+	xml_name => "TransId",
 	;
 
 has_attr 'Rows' =>

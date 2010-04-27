@@ -1,6 +1,7 @@
 
 package XML::SRS::TimeStamp::Role;
 
+use 5.010;
 use XML::SRS::Date;
 use XML::SRS::Time;
 use Moose::Role;
@@ -21,7 +22,12 @@ has 'timestamp' =>
 			$self->Hour, $self->Minute, $self->Second//0,
 		       );
 	},
-	;
+	trigger => sub {
+		my $self = shift;
+		my ($date, $time) = split " ", $self->timestamp;
+		$self->setup_date($date);
+		$self->setup_time($time);
+	};
 
 has 'timestamptz' =>
 	is => "rw",
@@ -36,6 +42,17 @@ has 'timestamptz' =>
 			$self->TimeZoneOffset//"",
 		       );
 	},
+	trigger => sub {
+		my $self = shift;
+		$self->timestamptz =~ m{
+			(?<ymd>\d+-\d+-\d+)
+			\s(?<hms>\d+:\d+:\d+)
+			(?: (?<utc>Z) | (?<offset> [+-]\d{2} (?::?\d{2})? )
+			)}x;
+		my $offset = $+{utc} ? "+00:00" : $+{offset};
+		$self->setup_date($+{ymd});
+		$self->setup_time($+{hms}, $offset);
+	};
 	;
 
 has 'epoch' =>
@@ -45,8 +62,15 @@ has 'epoch' =>
 	lazy => 1,
 	default => sub {
 		my $self = shift;
-		$self->timestamptz;
-	};
+		epoch $self->timestamptz;
+	},
+	trigger => sub {
+		my $self = shift;
+		$self->timestamptz(
+			MooseX::TimestampTZ::timestamptz($self->epoch),
+		       );
+	}
+	;
 
 with 'XML::SRS::Date', 'XML::SRS::Time';
 

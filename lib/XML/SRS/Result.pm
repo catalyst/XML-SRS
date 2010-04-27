@@ -66,6 +66,7 @@ has_attr 'Count' =>
 has_element 'FeTimeStamp' =>
 	is => "ro",
 	isa => "XML::SRS::TimeStamp",
+	coerce => 1,
 	;
 
 # this is for GetMessages responses, so let's call it messages

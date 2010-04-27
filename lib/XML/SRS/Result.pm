@@ -63,11 +63,25 @@ has_attr 'Count' =>
 	xml_required => 0,
 	;
 
-has_element 'FeTimeStamp' =>
-	is => "ro",
-	isa => "XML::SRS::TimeStamp",
-	coerce => 1,
+subtype 'XML::SRS::timeStampType'
+	=> as "XML::SRS::TimeStamp",
 	;
+
+has_element 'server_time' =>
+	is => "ro",
+	isa => "XML::SRS::timeStampType",
+	coerce => 1,
+	xml_nodeName => "FeTimeStamp",
+	;
+
+use MooseX::Timestamp;
+use MooseX::TimestampTZ;
+
+coerce "XML::SRS::timeStampType"
+	=> from TimestampTZ
+	=> via {
+		XML::SRS::TimeStamp->new(timestamptz => $_);
+	};
 
 # this is for GetMessages responses, so let's call it messages
 has_element 'messages' =>

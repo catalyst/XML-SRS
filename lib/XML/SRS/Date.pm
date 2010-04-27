@@ -30,32 +30,32 @@ subtype 'XML::SRS::Date::Day'
 	};
 }
 
-has_attr 'Year' =>
+has_attr 'year' =>
 	is => "rw",
 	isa => "XML::SRS::Number",
 	required => 1,
+	xml_name => "Year",
 	;
 
-has_attr 'Month' =>
+has_attr 'month' =>
 	is => "rw",
 	isa => "XML::SRS::Number",
 	required => 1,
+	xml_name => "Month",
 	;
 
-has_attr 'Day' =>
+has_attr 'day' =>
 	is => "rw",
 	isa => "XML::SRS::Number",
 	required => 1,
+	xml_name => "Day",
 	;
 
-method setup_date(XML::SRS::Date::ymd $ymd) {
-	$self->setup_date_ymd(split "-", $ymd);
-}
-
-method setup_time_ymd( XML::SRS::Date::Year $y, XML::SRS::Date::Month $m, XML::SRS::Date::Day $d) {
-	$self->Year($y);
-	$self->Month($m);
-	$self->Day($d);
+method buildargs_date($inv: XML::SRS::Date::ymd $ymd) {
+	my @buildargs;
+	my ($y, $m, $d) = split "-", $ymd;
+	push @buildargs, year => $y, month => $m, day => $d;
+	@buildargs;
 }
 
 1;

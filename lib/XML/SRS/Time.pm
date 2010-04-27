@@ -21,6 +21,7 @@ subtype 'XML::SRS::Time::TZOffset'
 	=> as "Str",
 	=> where {
 		m{^[-+][\s\d]?\d(?::?\d\d)?$};
+
 	};
 
 subtype 'XML::SRS::Time::hms'
@@ -30,44 +31,42 @@ subtype 'XML::SRS::Time::hms'
 	};
 }
 
-method setup_time(XML::SRS::Time::hms $hms, Maybe[XML::SRS::Time::TZOffset] $offset?) {
-	$self->setup_time_hms(split ":", $hms);
-	if ( !defined $offset ) {
-		$self->make_floating;
+method buildargs_time($inv: XML::SRS::Time::hms $hms, Maybe[XML::SRS::Time::TZOffset] $offset?) {
+	my @buildargs;
+	if (defined $offset) {
+		push @buildargs, tz_offset => $offset;
 	}
-	else {
-		$self->TimeZoneOffset($offset);
-	}
+	my ($h, $m, $s) = split ":", $hms;
+	push @buildargs, hour => $h, minute => $m, second => $s;
+	@buildargs;
 }
 
-method setup_time_hms( XML::SRS::Time::Hour $h, XML::SRS::Time::Sexagesimal $m, XML::SRS::Time::Sexagesimal $s) {
-	$self->Hour($h);
-	$self->Minute($m);
-	$self->Second($s);
-}
-
-has_attr 'Hour' =>
+has_attr 'hour' =>
 	is => "rw",
 	isa => "XML::SRS::Time::Sexagesimal",
 	required => 1,
+	xml_name => "Hour",
 	;
 
-has_attr 'Minute' =>
+has_attr 'minute' =>
 	is => "rw",
 	isa => "XML::SRS::Time::Sexagesimal",
 	required => 1,
+	xml_name => "Minute",
 	;
 
-has_attr 'Second' =>
+has_attr 'second' =>
 	is => "rw",
 	isa => "XML::SRS::Time::Sexagesimal",
+	xml_name => "Second",
 	;
 
-has_attr 'TimeZoneOffset' =>
+has_attr 'tz_offset' =>
 	is => "rw",
 	isa => "XML::SRS::Time::TZOffset",
 	xml_required => 0,
 	clearer => "make_floating",
+	xml_name => "TimeZoneOffset",
 	;
 
 1;

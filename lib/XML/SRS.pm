@@ -1,7 +1,7 @@
 
 package XML::SRS;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 BEGIN { our $PROTOCOL_VERSION = "5.0" };
 use XML::SRS::Version;
@@ -108,6 +108,15 @@ need rewriting, please send a patch/pull request!
 This module currently implements the XML part of the protocol only;
 converting this into the HTTPS POST, with PGP signature, is still
 TO-DO.
+
+=head1 GLOBALS
+
+There is currently a C<$XML::SRS::PROTOCOL_VERSION> variable which
+includes the version of the SRS protocol parsed by the module.
+Currently, the ability to parse more than one version at a time is not
+supported, so in the event of registry protocol version changes, you
+will need to upgrade the version of L<XML::SRS> in lock-step for any
+new functionality.  This global is not exported.
 
 =head1 SOURCE, SUBMISSIONS, SUPPORT
 

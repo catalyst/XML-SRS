@@ -15,6 +15,7 @@ has_attr 'action_id' =>
 	is => "ro",
 	isa => "XML::SRS::UID",
 	xml_name => 'ActionId',
+	required => 1,
 	;
 
 with 'XML::SRS::Node', "PRANG::Graph";

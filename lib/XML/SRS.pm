@@ -56,6 +56,7 @@ XML::SRS - Shared Registry System XML Protocol
 =head1 SYNOPSIS
 
  my $create = XML::SRS::Domain::Create->new(
+          action_id => "thinkbig.co.nz-create-".time(),
           domain_name => "thinkbig.co.nz",
           term => 12,
           delegate => 1,

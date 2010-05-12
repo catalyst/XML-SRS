@@ -1,5 +1,19 @@
 =head1 CHANGELOG FOR XML::SRS
 
+=head2 VERSION 0.03, 12 MAY 2010
+
+=over
+
+=item *
+
+Implement the C<RegistrarUpdate> message
+
+=item *
+
+Mark the C<ActionId> attribute as required on all update actions.
+
+=back
+
 =head2 VERSION 0.02, 7 MAY 2010
 
 =over

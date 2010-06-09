@@ -31,7 +31,7 @@ has_attr 'count_results' =>
 
 # elements
 has_element 'handle_id_filter' =>
-	is => 'ro',
+	is => 'rw',
 	isa => 'ArrayRef[Str]',
 	xml_nodeName => 'HandleIdFilter',
 	xml_required => 0,

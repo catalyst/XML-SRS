@@ -6,6 +6,7 @@ use PRANG::Graph;
 use PRANG::XMLSchema::Types;
 use XML::SRS::Types;
 use Moose::Util::TypeConstraints;
+use PRANG::Coerce;
 
 # attributes
 has_attr 'max_results' =>
@@ -32,9 +33,10 @@ has_attr 'count_results' =>
 # elements
 has_element 'handle_id_filter' =>
 	is => 'rw',
-	isa => 'ArrayRef[Str]',
+	isa => 'PRANG::Coerce::ArrayRefOfStrs',
 	xml_nodeName => 'HandleIdFilter',
 	xml_required => 0,
+    coerce => 1,
 	;
 
 has_element 'search_date_range' =>

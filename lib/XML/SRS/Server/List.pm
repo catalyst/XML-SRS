@@ -32,7 +32,7 @@ coerce __PACKAGE__
 		__PACKAGE__->new(
 			nameservers => [
 				map {
-					XML::SRS::Server->new( %$_ );
+					XML::SRS::Server->new( $_ );
 				} @$_
 			       ],
 		       );

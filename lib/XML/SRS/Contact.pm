@@ -25,7 +25,7 @@ has_attr 'name' =>
 
 has_attr 'email' =>
 	is => "ro",
-	isa => "Str",
+	isa => "XML::SRS::Email",
 	xml_name => "Email",
 	predicate => "has_email",
 	;

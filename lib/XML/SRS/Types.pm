@@ -55,6 +55,13 @@ subtype "${PKG}::HandleId"
 		m{\A[\p{IsWord}\- ]{3,16}\Z};
 	};
 
+subtype "${PKG}::Email"
+	=> as "Str"
+	=> where {
+		# kept as-is for historical reasons
+		m{\A(?:[^@\s]+|".*")@$DNS_name_re\Z};
+	};
+
 subtype "${PKG}::IPv4"
 	=> as "Str"
 	=> where {

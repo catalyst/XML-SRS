@@ -29,8 +29,15 @@ subtype "${PKG}::Dollars"
 	};
 subtype "${PKG}::UID"
 	=> as "Str"; # XXX - any other constraints on ActionIDs?
+
+# a non-IDN domain name
+our $RR_re = qr/[a-zA-Z0-9](:?[a-zA-Z0-9\-]*[a-zA-Z0-9])?/;
+our $DNS_name_re = qr/(?:$RR_re\.)+$RR_re/;
 subtype "${PKG}::DomainName"
-	=> as "Str"; # FIXME - constrain this properly.
+	=> as "Str"
+	=> where {
+		m{\A$DNS_name_re\Z};
+	};
 
 subtype "${PKG}::UDAI"
 	=> as "Str"

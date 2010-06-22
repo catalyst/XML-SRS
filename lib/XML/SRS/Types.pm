@@ -38,6 +38,16 @@ subtype "${PKG}::UDAI"
 		$_ =~ m{ \A [abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{8} \z }xms;
 	};
 
+subtype "${PKG}::HandleId"
+	=> as "PRANG::XMLSchema::token"
+	=> where {
+		# this is a subset of the EPP handle ID specification,
+		# which allows for 3-16 characters.  Here we just
+		# restrict it to "word" characters, which still allows
+		# a whole bunch of Unicode characters.  And hyphens.
+		m{\A[\p{IsWord}\- ]{3,16}\Z};
+	};
+
 subtype "${PKG}::IPv4"
 	=> as "Str"
 	=> where {

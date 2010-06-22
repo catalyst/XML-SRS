@@ -5,6 +5,15 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Contact::Address;
 use XML::SRS::Contact::PSTN;
+use XML::SRS::Types;
+
+# handles
+has_attr 'handle_id' =>
+	is => "ro",
+	isa => "XML::SRS::HandleId",
+	xml_name => "HandleId",
+	predicate => "has_handle_id",
+	;
 
 # attributes
 has_attr 'name' =>

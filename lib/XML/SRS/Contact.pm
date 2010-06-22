@@ -37,6 +37,7 @@ has_element 'address' =>
 	xml_nodeName => "PostalAddress",
 	predicate => "has_address",
 	coerce => 1,
+	xml_required => 0,
 	;
 
 has_element 'phone' =>
@@ -45,6 +46,7 @@ has_element 'phone' =>
 	predicate => "has_phone",
 	xml_nodeName => "Phone",
 	coerce => 1,
+	xml_required => 0,
 	;
 
 has_element 'fax' =>
@@ -53,6 +55,7 @@ has_element 'fax' =>
 	predicate => "has_fax",
 	xml_nodeName => "Fax",
 	coerce => 1,
+	xml_required => 0,
 	;
 
 with 'XML::SRS::Node';

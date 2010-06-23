@@ -6,6 +6,7 @@ use PRANG::Graph;
 use PRANG::XMLSchema::Types;
 use XML::SRS::Types;
 use Moose::Util::TypeConstraints;
+use PRANG::Coerce;
 
 # attributes
 has_attr 'query_id' =>
@@ -67,9 +68,10 @@ has_attr 'count_results' =>
 # elements
 has_element 'domain_name_filter' =>
 	is => 'ro',
-	isa => 'ArrayRef[Str]',
+	isa => 'PRANG::Coerce::ArrayRefOfStrs',
 	xml_nodeName => 'DomainNameFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'name_server_filter' =>

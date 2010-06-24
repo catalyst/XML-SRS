@@ -18,8 +18,8 @@ has 'timestamp' =>
 	default => sub {
 		my $self = shift;
 		sprintf("%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
-			$self->Year, $self->Month, $self->Day,
-			$self->Hour, $self->Minute, $self->Second//0,
+			$self->year, $self->month, $self->day,
+			$self->hour, $self->minute, $self->second//0,
 		       );
 	},
 	;
@@ -54,9 +54,9 @@ has 'timestamptz' =>
 	default => sub {
 		my $self = shift;
 		sprintf("%.4d-%.2d-%.2d %.2d:%.2d:%.2d%s",
-			$self->Year, $self->Month, $self->Day,
-			$self->Hour, $self->Minute, $self->Second//0,
-			$self->TimeZoneOffset//"",
+			$self->year, $self->month, $self->day,
+			$self->hour, $self->minute, $self->second//0,
+			$self->tz_offset//"",
 		       );
 	},
 	;

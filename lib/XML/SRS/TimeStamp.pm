@@ -28,7 +28,6 @@ coerce __PACKAGE__
 		__PACKAGE__->new(epoch => $_);
 	};
 
-
 sub BUILDARGS {
 	my $class = shift;
 	my %args = @_;

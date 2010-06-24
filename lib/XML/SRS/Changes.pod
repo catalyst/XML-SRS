@@ -1,5 +1,15 @@
 =head1 CHANGELOG FOR XML::SRS
 
+=head2 VERSION 0.04, 25 JUNE 2010
+
+=over
+
+=item *
+
+Add Classes and tests for SRS Handles.
+
+=back
+
 =head2 VERSION 0.03, 12 MAY 2010
 
 =over

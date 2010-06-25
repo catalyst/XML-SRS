@@ -59,7 +59,7 @@ subtype "${PKG}::Email"
 	=> as "Str"
 	=> where {
 		# kept as-is for historical reasons
-		m{\A(?:[^@\s]+|".*")@$DNS_name_re\Z};
+		m{\A(?:[^@\s]+|".*")\@$DNS_name_re\Z};
 	};
 
 subtype "${PKG}::IPv4"

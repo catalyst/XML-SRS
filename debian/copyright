@@ -1,0 +1,13 @@
+This is the debian package for the XML-SRS module.
+It was created by Evan Giles <evan@catalyst.net.nz> using dh-make-perl.
+
+It was downloaded from http://search.cpan.org/dist/XML-SRS/
+
+This copyright info was automatically extracted from the perl module.
+It may not be accurate, so you better check the module sources
+if you don't want to get into legal troubles.
+
+The upstream author is: Catalyst SRS Team <team-srs@catalyst.net.nz>.
+
+The Debian packaging is (C) 2010, Evan Giles <evan@catalyst.net.nz> and
+is licensed under the same terms as the software itself (see above).

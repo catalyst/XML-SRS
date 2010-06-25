@@ -10,3 +10,8 @@ pm_to_blib
 cover_db
 /SIGNATURE
 /XML-SRS-*
+*stamp
+debian/libxml-srs-perl
+debian/*.substvars
+debian/*.debhelper.log
+debian/files

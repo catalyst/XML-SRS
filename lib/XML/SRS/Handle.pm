@@ -8,7 +8,7 @@ use PRANG::XMLSchema::Types;
 # attributes
 has_attr 'handle_id' =>
 	is => "ro",
-	isa => "Str",
+	isa => "XML::SRS::HandleId",
 	xml_name => "HandleId",
 	predicate => "has_handle_id",
 	;
@@ -22,7 +22,7 @@ has_attr 'name' =>
 
 has_attr 'email' =>
 	is => "ro",
-	isa => "Str",
+	isa => "XML::SRS::Email",
 	xml_name => "Email",
 	predicate => "has_email",
 	;

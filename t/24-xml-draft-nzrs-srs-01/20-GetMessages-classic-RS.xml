@@ -33,6 +33,9 @@
           <AuditText>RenewDomains</AuditText>
         </AuditDetails>
       </Domain>
+    </Response>
+    <Response Action="DomainUpdate" FeId="5" FeSeq="103433490071" OrigRegistrarId="50" RecipientRegistrarId="100" Rows="2" TransId="1034394336128529823">
+      <FeTimeStamp Day="12" Hour="00" Minute="19" Month="10" Second="00" TimeZoneOffset="+1300" Year="2002" />
       <Domain Delegate="0" DomainName="tag.org.nz" RegistrantRef="1182410" RegistrarId="100" Status="Active" Term="1">
         <NameServers>
           <Server FQDN="ns1.2day.com" IP4Addr="192.168.20.1" />

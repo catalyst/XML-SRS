@@ -92,7 +92,7 @@ coerce "XML::SRS::timeStampType"
 # this is for GetMessages responses, so let's call it messages
 has_element 'messages' =>
 	is => "ro",
-	isa => "ArrayRef[XML::SRS::Response]",
+	isa => "ArrayRef[XML::SRS::Result]",
 	xml_nodeName => "Response",
 	xml_min => 0,
 	;

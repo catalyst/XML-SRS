@@ -41,8 +41,9 @@ use XML::SRS::UDAIValid::Query;
 use XML::SRS::Handle::Create;
 use XML::SRS::Handle::Update;
 use XML::SRS::Handle::Query;
+use XML::SRS::Message;
 use XML::SRS::GetMessages;
-use XML::SRS::AckMessage;;
+use XML::SRS::AckMessage;
 
 # ActionResponse types:
 use XML::SRS::Error;

@@ -48,5 +48,24 @@ has_attr 'max_results' =>
 	xml_required => 0,
 	;
 
+use XML::SRS::GetMessages::TypeFilter;
+has_element "type_filter" =>
+	is => "ro",
+	isa => "ArrayRef[XML::SRS::GetMessages::TypeFilter]",
+	xml_min => 0,
+	xml_nodeName => "TypeFilter",
+	;
+
+use Moose::Util::TypeConstraints;
+coerce 'ArrayRef[XML::SRS::GetMessages::TypeFilter]'
+	=> from "ArrayRef[Str]"
+	=> via {
+		map {
+			XML::SRS::GetMessages::TypeFilter->new(
+				Type => $_,
+			       );
+		} @$_;
+	};
+
 with 'XML::SRS::Query';
 1;

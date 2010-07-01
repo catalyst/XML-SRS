@@ -54,17 +54,18 @@ has_element "type_filter" =>
 	isa => "ArrayRef[XML::SRS::GetMessages::TypeFilter]",
 	xml_min => 0,
 	xml_nodeName => "TypeFilter",
+	coerce => 1,
 	;
 
 use Moose::Util::TypeConstraints;
 coerce 'ArrayRef[XML::SRS::GetMessages::TypeFilter]'
 	=> from "ArrayRef[Str]"
 	=> via {
-		map {
+		[ map {
 			XML::SRS::GetMessages::TypeFilter->new(
 				Type => $_,
 			       );
-		} @$_;
+		} @$_ ];
 	};
 
 with 'XML::SRS::Query';

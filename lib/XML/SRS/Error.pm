@@ -36,6 +36,7 @@ has_element "Description" =>
 has_element "ErrorDetails" =>
 	is => "ro",
 	isa => "ArrayRef[Str]",
+	xml_min => 0,
 	;
 
 with 'XML::SRS::ActionResponse';

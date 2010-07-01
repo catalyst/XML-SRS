@@ -85,6 +85,11 @@ TimeStamp = Date, Time
 # Valid domain name
 DomainName = string
 
+# Valid DomainName details - for registering IDN
+DomainNameUnicode = string
+DomainNameUnicodeHex = string
+DomainNameLanguage = string
+
 # Valid unique identifier ?
 UID = string
 
@@ -110,6 +115,8 @@ ActionResponse =
   | element.AccessControlList*
   | (element.RawRequest, element.RawResponse)
   | element.BillingAmount*
+  | element.Handle*
+  | element.Message*
 
 RegDomainStatus = "Active" | "PendingRelease"
 DomainStatus = RegDomainStatus | "Available"
@@ -121,8 +128,10 @@ Contact =
   element.Fax?
 
 ContactAttr =
+  attribute HandleId { text }?,
   attribute Name { text }?,
-  attribute Email { text }?
+  attribute Email { text }?,
+  attribute ActionId { text }?
 
 ContactFilter =
   element.PostalAddressFilter?,
@@ -130,8 +139,10 @@ ContactFilter =
   element.Fax?
 
 ContactAttrFilter =
+  attribute HandleId { text }?,
   attribute Name { text }?,
-  attribute Email { text }?
+  attribute Email { text }?,
+  attribute ActionId { text }?
 
 PhoneAttr =
   attribute CountryCode { text }?,
@@ -178,6 +189,9 @@ element.NZSRSRequest =
     attribute RegistrarId { RegistrarId }?,
     (element.DomainCreate
      | element.DomainUpdate
+     | element.HandleCreate
+     | element.HandleUpdate
+     | element.HandleDetailsQry
      | element.Whois
      | element.DomainDetailsQry
      | element.ActionDetailsQry
@@ -187,6 +201,8 @@ element.NZSRSRequest =
      | element.RegistrarDetailsQry
      | element.RegistrarAccountQry
      | element.GetMessages
+     | element.AckMessage
+     | element.SysParamsCreate
      | element.SysParamsUpdate
      | element.SysParamsQry
      | element.RunLogCreate
@@ -226,6 +242,8 @@ element.DomainCreate =
   element DomainCreate {
     attribute ActionId { UID },
     attribute DomainName { DomainName },
+    attribute DomainNameUnicode { DomainNameUnicode }?,
+    attribute DomainNameLanguage { DomainNameLanguage }?,
     attribute RegistrantRef { UID }?,
     attribute Term { Term },
     [ a:defaultValue = "1" ] attribute Delegate { Boolean }?,
@@ -273,6 +291,36 @@ element.DomainUpdate =
     element.TechnicalContact?,
     element.NameServers?,
     element.AuditText?
+  }
+
+element.HandleCreate =
+  element HandleCreate {
+    attribute ActionId { UID },
+    attribute HandleId { UID },
+    ContactAttr,
+    Contact,
+    element.AuditText?
+  }
+
+element.HandleUpdate =
+  element HandleUpdate {
+    attribute ActionId { UID },
+    attribute HandleId { UID },
+    attribute Delete { Boolean }?,
+    ContactAttr,
+    Contact,
+    element.AuditText?
+  }
+
+element.HandleDetailsQry =
+  element HandleDetailsQry {
+    attribute MaxResults { Number }?,
+    attribute SkipResults { Number }?,
+    [ a:defaultValue = "0" ] attribute CountResults { Boolean }?,
+    element.HandleIdFilter*,
+    element.SearchDateRange?,
+    element.ChangedInDateRange?,
+    element.ContactFilter?
   }
 
 element.DomainNameFilter =
@@ -516,6 +564,13 @@ element.FieldList =
 # ++ Registry actions +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # ActionResponse: (SysParam*|Error)
+element.SysParamsCreate =
+  element SysParamsCreate {
+    attribute ActionId { UID },
+    element.SysParam+,
+    element.AuditText?
+  }
+
 element.SysParamsUpdate =
   element SysParamsUpdate {
     attribute ActionId { UID },
@@ -765,8 +820,28 @@ element.GetMessages =
     attribute MaxResults { Number }?,
     attribute SkipResults { Number }?,
     [ a:defaultValue = "0" ] attribute CountResults { Boolean }?,
+    [ a:defaultValue = "0" ] attribute QueueMode { Boolean }?,   
     element.TransDateRange?,
-    element.AuditTextFilter?
+    element.AuditTextFilter?,
+    element.TypeFilter*
+  }
+
+GetMessagesTypes = "third-party" | "server-generated-data"
+
+element.TypeFilter =
+  element TypeFilter {
+    attribute Type { GetMessagesTypes }
+  }
+
+# == AckMessage ========================================================
+
+# ACK message by originating RegistrarId/UID
+# ActionResponse: (Response|Error)
+element.AckMessage =
+  element AckMessage {
+    attribute ActionId { UID },
+    attribute OriginatingRegistrarId { RegistrarId },
+    attribute TransId { UID }
   }
 
 # == ActionResponse =====================================================
@@ -797,6 +872,13 @@ DomainQueryAction =
   | "ActionDetailsQry"
   | "UDAIValidQry"
 
+HandleWriteAction = 
+  "HandleCreate"
+  | "HandleUpdate"
+
+HandleQueryAction = 
+  "HandleDetailsQry"
+
 RegistrarWriteAction =
   "RegistrarCreate"
   | "RegistrarUpdate"
@@ -808,6 +890,7 @@ RegistrarQueryAction =
 
 RegistryAction =
   "SysParamsUpdate"
+  | "SysParamsCreate"
   | "SysParamsQry"
   | "RunLogCreate"
   | "RunLogQry"
@@ -827,10 +910,13 @@ RegistryAction =
   | "AccessControlListQry"
   | "AccessControlListAdd"
   | "AccessControlListRemove"
+  | "BillingAmountUpdate"
 
 Action =
   DomainWriteAction
   | DomainQueryAction
+  | HandleWriteAction
+  | HandleQueryAction
   | RegistrarWriteAction
   | RegistrarQueryAction
   | RegistryAction
@@ -839,10 +925,11 @@ ActionEtc =
   Action
   | "UnknownTransaction"
   | "DomainTransfer"
+  | "AckMessage"
 
 element.Response =
   element Response {
-    attribute Action { Action },
+    attribute Action { ActionEtc },
     attribute FeId { Number },
     attribute FeSeq { Number },
     attribute OrigRegistrarId { RegistrarId },
@@ -852,8 +939,16 @@ element.Response =
     attribute MoreRowsAvailable { Boolean }?,
     attribute RecipientRegistrarId { RegistrarId }?,
     element.FeTimeStamp,
-    (element.Response* | ActionResponse)?
+    (element.Response* | ActionResponse | element.AckResponse)?
   }
+
+element.AckResponse =
+  element AckResponse {
+    attribute OriginatingRegistrarId { RegistrarId },
+    attribute TransId { UID },
+    attribute Remaining { Number }
+  }
+
 
 # ++ Error ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Errors can be either specific to a requested action, or generic
@@ -903,6 +998,9 @@ element.FeTimeStamp =
 element.Domain =
   element Domain {
     attribute DomainName { DomainName },
+    attribute DomainNameUnicode { DomainNameUnicode }?,
+    attribute DomainNameUnicodeHex { DomainNameUnicodeHex }?,
+    attribute DomainNameLanguage { DomainNameLanguage }?,
     attribute RegistrantRef { UID }?,
     attribute RegistrarName { text }?,
     attribute Status { DomainStatus }?,
@@ -1130,6 +1228,38 @@ element.TechnicalContact =
 
 element.TechnicalContactFilter =
   element TechnicalContactFilter {
+    ContactAttrFilter,
+    ContactFilter
+  }
+
+element.ChangedDomains =
+  element ChangedDomains {
+     element.Domain*
+  }
+
+element.Handle =
+  element Handle {
+    attribute RegistrarId { RegistrarId },
+    ContactAttr,
+    Contact,
+    element.AuditDetails?,
+    element.ChangedDomains?
+  }
+
+
+element.Message =
+  element Message {
+  	element.Response,
+  	attribute Remaining { Number }?
+  }
+
+element.HandleIdFilter =
+  element HandleIdFilter {
+    text
+  }
+
+element.ContactFilter =
+  element ContactFilter {
     ContactAttrFilter,
     ContactFilter
   }

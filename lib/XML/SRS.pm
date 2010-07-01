@@ -1,7 +1,7 @@
 
 package XML::SRS;
 
-our $VERSION = "0.04";
+our $VERSION = "0.04_01";
 
 BEGIN { our $PROTOCOL_VERSION = "5.0" };
 use XML::SRS::Version;
@@ -41,6 +41,9 @@ use XML::SRS::UDAIValid::Query;
 use XML::SRS::Handle::Create;
 use XML::SRS::Handle::Update;
 use XML::SRS::Handle::Query;
+use XML::SRS::Message;
+use XML::SRS::GetMessages;
+use XML::SRS::AckMessage;
 
 # ActionResponse types:
 use XML::SRS::Error;

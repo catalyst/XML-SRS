@@ -1,5 +1,26 @@
 =head1 CHANGELOG FOR XML::SRS
 
+=head2 VERSION 0.05, ??? 2010
+
+=over
+
+=item *
+
+Add support for C<GetMessages>, including the new C<QueueMode> and
+C<TypeFilter> attributes/elements.
+
+=item *
+
+Support C<Error> responses with no C<ErrorDetails> elements, as
+required by the RNC.
+
+=item *
+
+Refactoring of C<Handle> and C<Contact> to use inheritance and thereby
+re-use XML attribute/element definitions.
+
+=back
+
 =head2 VERSION 0.04, 25 JUNE 2010
 
 =over

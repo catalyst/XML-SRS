@@ -1,3 +1,9 @@
+libxml-srs-perl (0.04.1-2) lucid; urgency=low
+
+  * Lower MXMS dep for Lucid
+
+ -- Sam Vilain <sam.vilain@catalyst.net.nz>  Thu, 01 Jul 2010 19:40:04 +1200
+
 libxml-srs-perl (0.04.1-1) lucid; urgency=low
 
   * Update with new version

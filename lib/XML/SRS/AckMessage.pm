@@ -9,11 +9,11 @@ sub root_element {
   "AckMessage";
 }
 
-has_attr 'query_id' =>
+has_attr 'transaction_id' =>
 	is => "ro",
 	isa => "XML::SRS::UID",
-	xml_name => "QryId",
-	predicate => "has_query_id",
+	xml_name => "TransId",
+	required => 1,
 	;
 
 has_attr 'originating_registrar' =>

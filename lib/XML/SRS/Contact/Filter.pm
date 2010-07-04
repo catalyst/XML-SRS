@@ -36,7 +36,7 @@ has_element 'phone' =>
 	xml_required => 0,
 	;
 
-has_element 'Fax' =>
+has_element 'fax' =>
 	is => 'ro',
 	isa => 'XML::SRS::Contact::PSTN',
 	xml_nodeName => 'Fax',

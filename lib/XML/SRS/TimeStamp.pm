@@ -9,6 +9,7 @@ with 'XML::SRS::TimeStamp::Role', 'XML::SRS::Node';
 use Moose::Util::TypeConstraints;
 use MooseX::Timestamp;
 use MooseX::TimestampTZ;
+use XML::SRS::Types;
 
 coerce __PACKAGE__
 	=> from Timestamp

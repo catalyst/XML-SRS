@@ -15,7 +15,7 @@ has_attr "error_id" =>
 	;
 
 enum "XML::SRS::Error::Severity" =>
-	qw( emergency alert critical error err warning notice info );
+	qw( alert crit err );
 
 has_attr "severity" =>
 	is => "ro",

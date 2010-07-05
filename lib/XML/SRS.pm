@@ -37,6 +37,7 @@ use XML::SRS::Registrar::Update;
 use XML::SRS::Domain::Create;
 use XML::SRS::Domain::Update;
 use XML::SRS::Domain::Query;
+use XML::SRS::Domain::Transferred;
 use XML::SRS::UDAIValid::Query;
 use XML::SRS::Handle::Create;
 use XML::SRS::Handle::Update;

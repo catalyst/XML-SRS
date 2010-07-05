@@ -7,7 +7,7 @@
         <FeTimeStamp Day="9" Hour="12" Minute="30" Month="6" Second="21" TimeZoneOffset="+12:00" Year="2010" />
         <DomainTransfer Day="9" Hour="12" Minute="30" Month="6" Second="21" TimeZoneOffset="+12:00" Year="2010" RegistrarName="TelstraClear Limited">
           <TransferredDomain>
-       test.co.te
+       <![CDATA[test.co.te]]>
        </TransferredDomain>
         </DomainTransfer>
       </Response>

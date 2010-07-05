@@ -42,6 +42,7 @@ has_element "details" =>
 	isa => "ArrayRef[Str]",
 	xml_min => 0,
 	xml_nodeName => "ErrorDetails",
+	auto_deref => 1,
 	;
 
 with 'XML::SRS::ActionResponse';

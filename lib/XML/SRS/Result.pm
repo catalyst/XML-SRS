@@ -50,23 +50,26 @@ has_attr 'client_id' =>
 	xml_name => "TransId",
 	;
 
-has_attr 'Rows' =>
+has_attr 'rows' =>
 	is => "ro",
 	isa => "XML::SRS::Number",
 	xml_required => 0,
+	xml_name => "Rows",
 	;
 
-has_attr 'MoreRowsAvailable' =>
+has_attr 'has_more_rows' =>
 	is => "ro",
 	isa => "XML::SRS::Boolean",
 	coerce => 1,
 	xml_required => 0,
+	xml_name => "MoreRowsAvailable",
 	;
 
-has_attr 'Count' =>
+has_attr 'count' =>
 	is => "ro",
 	isa => "XML::SRS::Number",
 	xml_required => 0,
+	xml_name => "Count",
 	;
 
 subtype 'XML::SRS::timeStampType'

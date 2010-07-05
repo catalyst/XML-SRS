@@ -3,6 +3,7 @@
 # with 'Response', which is actually 'NZSRSResponse'
 package XML::SRS::Result;
 
+use Carp;
 use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
@@ -100,10 +101,38 @@ has_element 'messages' =>
 	xml_min => 0,
 	;
 
-has_element 'response' =>
+has_element 'responses' =>
 	is => "ro",
-	isa => "XML::SRS::ActionResponse",
+	isa => "ArrayRef[XML::SRS::ActionResponse]",
 	xml_required => 0,
+	lazy => 1,
+	default => sub {
+		my $self = shift;
+		($self->has_response and defined $self->response)
+			? [ $self->response ] : [];
+	},
+	;
+
+has 'response' =>
+	is => "ro",
+	isa => "Maybe[XML::SRS::ActionResponse]",
+	predicate => "has_response",
+	lazy => 1,
+	default => sub {
+		my $self = shift;
+		my $rs_a = $self->responses;
+		if ( $rs_a and @$rs_a ) {
+			if ( @$rs_a > 1 ) {
+				confess "result has multiple responses";
+			}
+			else {
+				$rs_a->[0];
+			}
+		}
+		else {
+			undef;
+		}
+	},
 	;
 
 with 'XML::SRS::Node';

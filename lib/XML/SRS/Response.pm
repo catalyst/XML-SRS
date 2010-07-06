@@ -9,10 +9,11 @@ use XML::SRS::Types;
 use XML::SRS::Result;
 use XML::SRS::Error;
 
-has_attr "RegistrarId" =>
+has_attr "registrar_id" =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",
 	xml_required => 0,
+	xml_name => "RegistrarId",
 	;
 
 has_element "results" =>

@@ -7,8 +7,9 @@ use PRANG::Graph;
 with 'XML::SRS::TimeStamp::Role', 'XML::SRS::Node';
 
 use Moose::Util::TypeConstraints;
-use MooseX::Timestamp;
-use MooseX::TimestampTZ;
+use MooseX::Timestamp qw();
+use MooseX::TimestampTZ qw();
+use XML::SRS::Types;
 
 coerce __PACKAGE__
 	=> from Timestamp

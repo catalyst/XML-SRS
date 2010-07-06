@@ -18,7 +18,7 @@ requires        ("Moose" => 0.54);
 requires        ("MooseX::Method::Signatures" => 0);
 requires        ("PRANG" => "0.10_01");
 requires        ("Regexp::Common" => 0);
-requires        ("MooseX::Timestamp" => 0);
+requires        ("MooseX::Timestamp" => 0.06);
 requires        ("Crypt::Password" => 0.05);
 test_requires   ("XML::Compare" => 0.03);
 

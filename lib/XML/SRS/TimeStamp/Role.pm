@@ -7,8 +7,11 @@ use XML::SRS::Time;
 use Moose::Role;
 use MooseX::Method::Signatures;
 
-use MooseX::Timestamp;
-use MooseX::TimestampTZ;
+use MooseX::Timestamp qw();
+use MooseX::TimestampTZ
+	timestamptz => { -as => "_timestamptz" },
+	epoch => { -as => "_epoch" },
+	;
 
 has 'timestamp' =>
 	is => "rw",
@@ -43,7 +46,7 @@ method buildargs_timestamptz( $inv: TimestampTZ $timestamptz ) {
 }
 
 method buildargs_epoch( $inv: time_t $epoch ) {
-	$inv->buildargs_timestamptz(timestamptz $epoch);
+	$inv->buildargs_timestamptz(_timestamptz $epoch);
 }
 
 has 'timestamptz' =>
@@ -68,7 +71,7 @@ has 'epoch' =>
 	lazy => 1,
 	default => sub {
 		my $self = shift;
-		epoch $self->timestamptz;
+		_epoch $self->timestamptz;
 	},
 	;
 

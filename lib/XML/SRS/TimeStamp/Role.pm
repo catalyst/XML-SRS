@@ -27,12 +27,12 @@ has 'timestamp' =>
 	},
 	;
 
-method buildargs_timestamp( $inv: Timestamp $timestamp ) {
+method buildargs_timestamp( $inv: Timestamp $timestamp is coerce ) {
 	my ($date, $time) = split " ", $timestamp;
 	($inv->buildargs_time($time), $inv->buildargs_date($date));
 }
 
-method buildargs_timestamptz( $inv: TimestampTZ $timestamptz ) {
+method buildargs_timestamptz( $inv: TimestampTZ $timestamptz is coerce ) {
 	$timestamptz =~ m{
 		(?<ymd>\d+-\d+-\d+)
 		\s(?<hms>\d+:\d+:\d+)
@@ -45,7 +45,7 @@ method buildargs_timestamptz( $inv: TimestampTZ $timestamptz ) {
 	 $inv->buildargs_date($ymd));
 }
 
-method buildargs_epoch( $inv: time_t $epoch ) {
+method buildargs_epoch( $inv: time_t $epoch is coerce ) {
 	$inv->buildargs_timestamptz(_timestamptz $epoch);
 }
 

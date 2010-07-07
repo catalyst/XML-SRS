@@ -120,7 +120,7 @@ subtype "${PKG}::HandleQueryAction"
 	};
 
 enum "${PKG}::RegistrarWriteAction" =>
-	qw(RegistrarCreate  RegistrarUpdate);
+	qw(RegistrarCreate  RegistrarUpdate AckMessage);
 
 enum "${PKG}::RegistrarQueryAction" =>
 	qw(RegistrarDetailsQry  RegistrarAccountQry  GetMessages);

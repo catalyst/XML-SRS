@@ -43,6 +43,7 @@ use XML::SRS::Handle::Create;
 use XML::SRS::Handle::Update;
 use XML::SRS::Handle::Query;
 use XML::SRS::Message;
+use XML::SRS::Message::Ack::Response;
 use XML::SRS::GetMessages;
 use XML::SRS::AckMessage;
 

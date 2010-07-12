@@ -1,7 +1,7 @@
 Source: libxml-srs-perl
 Section: perl
 Priority: optional
-Build-Depends: debhelper (>= 5), libxml-compare-perl (>= 0.03)
+Build-Depends: debhelper (>= 5), libxml-compare-perl (>= 0.04)
 Build-Depends-Indep: perl (>= 5.6.10-12)
 Maintainer: Sam Vilain <sam.vilain@catalyst.net.nz>
 Standards-Version: 3.8.0

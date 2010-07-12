@@ -1,8 +1,30 @@
 =head1 CHANGELOG FOR XML::SRS
 
-=head2 VERSION 0.05, ??? 2010
+=head2 VERSION 0.06, 12 July 2010
 
 =over
+
+=item *
+
+Broken v0.05 dependencies, reuploading with correct deps.
+
+=back
+
+=head2 VERSION 0.05, 12 July 2010
+
+=over
+
+=item *
+
+Various timestamp fixes including better coercion.
+
+=item *
+
+Various fixed to deCamelCase into nicer_vars.
+
+=item *
+
+Add support for C<AckMessages> and mapping for C<DomainTransfer>.
 
 =item *
 

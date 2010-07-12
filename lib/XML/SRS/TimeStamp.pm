@@ -24,6 +24,12 @@ coerce __PACKAGE__
 	};
 
 coerce __PACKAGE__
+	=> from "Str"
+	=> via {
+		__PACKAGE__->new(timestamptz => $_);
+	};
+
+coerce __PACKAGE__
 	=> from "Int"
 	=> via {
 		__PACKAGE__->new(epoch => $_);

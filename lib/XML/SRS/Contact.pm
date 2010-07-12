@@ -15,6 +15,14 @@ has_attr 'handle_id' =>
 	predicate => "has_handle_id",
 	;
 
+has_attr 'action_id' =>
+	is => "rw",
+	isa => "XML::SRS::UID",
+	xml_name => 'ActionId',
+	xml_required => 0,
+	predicate => "has_action_id",
+	;
+
 # attributes
 has_attr 'name' =>
 	is => "ro",

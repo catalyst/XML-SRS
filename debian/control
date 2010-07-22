@@ -9,7 +9,7 @@ Homepage: http://search.cpan.org/dist/XML-SRS/
 
 Package: libxml-srs-perl
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}, libregexp-common-perl, libprang-perl (= __SRSVERSION__), libmoosex-method-signatures-perl (>= 0.29), libmoosex-timestamp-perl (>= 0.06), libcrypt-password-perl (>= 0.05), libmoose-perl (>= 0.54)
+Depends: ${perl:Depends}, ${misc:Depends}, libregexp-common-perl, libprang-perl (>= 0.11), libmoosex-method-signatures-perl (>= 0.29), libmoosex-timestamp-perl (>= 0.06), libcrypt-password-perl (>= 0.05), libmoose-perl (>= 0.54)
 Description:  Shared Registry System XML Protocol
  This module is an implementation of the XML protocol used by the .nz
  registry.  This protocol was developed in 2002, using what were

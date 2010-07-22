@@ -82,6 +82,7 @@ has_element 'server_time' =>
 	isa => "XML::SRS::timeStampType",
 	coerce => 1,
 	xml_nodeName => "FeTimeStamp",
+	required => 1,
 	;
 
 use MooseX::Timestamp;

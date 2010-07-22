@@ -25,6 +25,7 @@ role_type 'XML::SRS::Query';
 has_element "requests" =>
 	is => "ro",
 	isa => "ArrayRef[XML::SRS::Action|XML::SRS::Query]",
+	required => 1,
 	;
 
 sub root_element { "NZSRSRequest" }

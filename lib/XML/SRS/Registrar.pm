@@ -43,6 +43,7 @@ has_element 'contact_public' =>
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "RegistrarPublicContact",
 	coerce => 1,
+	required => 1,
 	;
 
 has_element 'contact_private' =>
@@ -50,6 +51,7 @@ has_element 'contact_private' =>
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "RegistrarSRSContact",
 	coerce => 1,
+	required => 1,
 	;
 
 has_element 'contact_technical' =>
@@ -57,12 +59,14 @@ has_element 'contact_technical' =>
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "DefaultTechnicalContact",
 	coerce => 1,
+	required => 1,
 	;
 
 has_element 'keyring' =>
 	is => "rw",
 	isa => "XML::SRS::Keyring",
 	xml_nodeName => "EncryptKeys",
+	required => 1,
 	;
 
 has_element 'epp_auth' =>

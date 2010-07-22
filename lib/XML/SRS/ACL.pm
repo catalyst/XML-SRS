@@ -46,6 +46,7 @@ has_element 'entries' =>
 	is => "ro",
 	isa => "ArrayRef[XML::SRS::ACL::Entry]",
 	xml_nodeName => "AccessControlListEntry",
+	required => 1,
 	;
 
 sub root_element {

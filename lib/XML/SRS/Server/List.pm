@@ -12,6 +12,7 @@ has_element 'nameservers' =>
 	is => "rw",
 	isa => "ArrayRef[XML::SRS::Server]",
 	xml_nodeName => "Server",
+	required => 1,
 	;
 
 coerce __PACKAGE__

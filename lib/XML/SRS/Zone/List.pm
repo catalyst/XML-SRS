@@ -9,6 +9,7 @@ has_element 'zones' =>
 	is => "rw",
 	isa => "ArrayRef[XML::SRS::Zone]",
 	xml_nodeName => "SecondLD",
+	required => 1,
 	;
 
 with 'XML::SRS::Node';

@@ -23,6 +23,7 @@ has_element "results" =>
 		Response => "XML::SRS::Result",
 		Error => "XML::SRS::Error",
 	},
+	required => 1,
 	;
 
 sub root_element { "NZSRSResponse" }

@@ -66,18 +66,18 @@ XML::SRS - Shared Registry System XML Protocol
 =head1 SYNOPSIS
 
  my $create = XML::SRS::Domain::Create->new(
-          action_id => "thinkbig.co.nz-create-".time(),
-          domain_name => "thinkbig.co.nz",
+          action_id => "kaihoro.co.nz-create-".time(),
+          domain_name => "kaihoro.co.nz",
           term => 12,
           delegate => 1,
           contact_registrant => {
-               name => "Robert Muldoon",
-               email => 'get.drunk.and.call.a.snap.election@gmail.com',
+               name => "Lord Crumb",
+               email => 'kaihoro.takeaways@gmail.com',
                address => {
                     address1 => "57 Mount Pleasant St",
                     address2 => "Burbia",
-                    city => "Ohai",
-                    region => "Southland",
+                    city => "Kaihoro",
+                    region => "Nelson",
                     cc => "NZ",
                },
                phone => {

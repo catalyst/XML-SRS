@@ -1,3 +1,10 @@
+libxml-srs-perl (0.06.1) lucid; urgency=low
+
+  * Editorial changes
+  * add required => 1 on various attributes for newer PRANGs
+
+ -- Sam Vilain <sam.vilain@catalyst.net.nz>  Thu, 22 Jul 2010 19:15:04 +1200
+
 libxml-srs-perl (0.06) unstable; urgency=low
 
   * Fix to dependency for XML::Compare

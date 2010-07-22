@@ -1,5 +1,7 @@
 =head1 CHANGELOG FOR XML::SRS
 
+=head2 VERSION 0.07, ? July 2010
+
 =head2 VERSION 0.06, 12 July 2010
 
 =over

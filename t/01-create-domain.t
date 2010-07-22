@@ -7,18 +7,18 @@ use XML::Compare;
 BEGIN { use_ok("XML::SRS") }
 
 my $create = XML::SRS::Domain::Create->new(
-	action_id => "thinkbig.co.nz-".1273643528,
-	domain_name => "thinkbig.co.nz",
+	action_id => "kaihoro.co.nz-".1273643528,
+	domain_name => "kaihoro.co.nz",
 	term => 12,
 	delegate => 1,
 	contact_registrant => {
-		name => "Robert Muldoon",
-		email => 'get.drunk.and.call.a.snap.election@gmail.com',
+		name => "Lord Crumb",
+		email => 'kaihoro.takeaways@gmail.com',
 		address => {
 			address1 => "57 Mount Pleasant St",
 			address2 => "Burbia",
-			city => "Ohai",
-			region => "Southland",
+			city => "Kaihoro",
+			region => "Nelson",
 			cc => "NZ",
 		},
 		phone => {
@@ -38,9 +38,9 @@ my $xml_request = $create->to_xml;
 my $xmlc = XML::Compare->new();
 
 ok($xmlc->is_same( $xml_request, <<'XML' ), "CreateDomain")
-<DomainCreate Delegate="1" DomainName="thinkbig.co.nz" Term="12" ActionId="thinkbig.co.nz-1273643528">
-  <RegistrantContact Name="Robert Muldoon" Email="get.drunk.and.call.a.snap.election@gmail.com">
-    <PostalAddress Address2="Burbia" Address1="57 Mount Pleasant St" Province="Southland" City="Ohai" CountryCode="NZ" />
+<DomainCreate Delegate="1" DomainName="kaihoro.co.nz" Term="12" ActionId="kaihoro.co.nz-1273643528">
+  <RegistrantContact Name="Lord Crumb" Email="kaihoro.takeaways@gmail.com">
+    <PostalAddress Address2="Burbia" Address1="57 Mount Pleasant St" Province="Nelson" City="Kaihoro" CountryCode="NZ" />
     <Phone LocalNumber="499 2267" AreaCode="4" CountryCode="64" />
   </RegistrantContact>
   <NameServers>

@@ -72,7 +72,7 @@ XML::SRS - Shared Registry System XML Protocol
           delegate => 1,
           contact_registrant => {
                name => "Lord Crumb",
-               email => '@gmail.com',
+               email => 'kaihoro.takeaways@gmail.com',
                address => {
                     address1 => "57 Mount Pleasant St",
                     address2 => "Burbia",

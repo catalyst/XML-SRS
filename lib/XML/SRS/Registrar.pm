@@ -62,6 +62,7 @@ has_element 'contact_technical' =>
 	required => 1,
 	;
 
+use XML::SRS::Keyring;
 has_element 'keyring' =>
 	is => "rw",
 	isa => "XML::SRS::Keyring",

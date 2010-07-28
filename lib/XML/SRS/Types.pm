@@ -156,7 +156,7 @@ enum "${PKG}::RoleName" =>
 	qw( Registrar Registry Whois Query CreateDomain UpdateDomain
 	    TransferDomain CancelDomain UncancelDomain UpdateRegistrar
 	    Administer Supervisor Connect ReleaseDomain QueryACL
-	    UpdateACL );
+	    UpdateACL QueryRegACL);
 
 # Domain Statuses
 enum "${PKG}::RegDomainStatus" =>

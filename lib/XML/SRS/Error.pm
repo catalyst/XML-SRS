@@ -9,7 +9,7 @@ sub root_element { "Error" }
 
 has_attr "error_id" =>
 	is => "ro",
-	isa => "XML::SRS::UID",
+	isa => "Str",
 	required => 1,
 	xml_name => "ErrorId",
 	;
@@ -26,7 +26,7 @@ has_attr "severity" =>
 
 has_attr "hint" =>
 	is => "ro",
-	isa => "XML::SRS::UID",  # odd
+	isa => "Str",
 	required => 1,
 	xml_name => "Hint",
 	;

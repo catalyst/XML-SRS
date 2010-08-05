@@ -75,6 +75,15 @@ has_element 'contact_registrant' =>
 	coerce => 1,
 	;
 
+# I think this element is wrong.
+has_element 'contact_registrar_public' =>
+	is => 'ro',
+	isa => 'XML::SRS::Contact',
+	xml_nodeName => 'RegistrarPublicContact',
+	xml_required => 0,
+	coerce => 1,
+	;
+
 has_element 'contact_admin' =>
 	is => 'ro',
 	isa => 'XML::SRS::Contact',

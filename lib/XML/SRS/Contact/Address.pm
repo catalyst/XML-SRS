@@ -23,7 +23,7 @@ has_attr 'address1' =>
 	;
 
 has_attr 'address2' =>
-	is => "ro",
+	is => "rw",
 	isa => "Str",
 	xml_required => 0,
 	xml_name => "Address2",

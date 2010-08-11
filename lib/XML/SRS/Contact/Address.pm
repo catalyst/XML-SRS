@@ -16,7 +16,7 @@ method address() {
 }
 
 has_attr 'address1' =>
-	is => "ro",
+	is => "rw",
 	isa => "Str",
 	xml_required => 0,
 	xml_name => "Address1",
@@ -30,28 +30,28 @@ has_attr 'address2' =>
 	;
 
 has_attr 'city' =>
-	is => "ro",
+	is => "rw",
 	isa => "Str",
 	xml_required => 0,
 	xml_name => "City",
 	;
 
 has_attr 'region' =>
-	is => "ro",
+	is => "rw",
 	isa => "Str",
 	xml_required => 0,
 	xml_name => "Province",
 	;
 
 has_attr 'cc' =>
-	is => "ro",
+	is => "rw",
 	isa => "Str",
 	xml_required => 0,
 	xml_name => "CountryCode",
 	;
 
 has_attr 'postcode' =>
-	is => "ro",
+	is => "rw",
 	isa => "Str",
 	xml_required => 0,
 	xml_name => "PostalCode",

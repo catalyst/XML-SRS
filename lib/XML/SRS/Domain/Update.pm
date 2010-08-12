@@ -33,7 +33,7 @@ has_attr 'term' =>
 	;
 
 has_attr 'delegate' =>
-	is => 'ro',
+	is => 'rw',
 	isa => 'XML::SRS::Boolean',
 	xml_name => 'Delegate',
 	xml_required => 0,

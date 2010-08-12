@@ -64,7 +64,7 @@ has_element 'contact_technical' =>
 	;
 
 has_element "nameservers" =>
-	is => "ro",
+	is => "rw",
 	isa => "XML::SRS::Server::List",
 	xml_nodeName => "NameServers",
 	xml_required => 0,

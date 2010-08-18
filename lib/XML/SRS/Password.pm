@@ -11,6 +11,7 @@ class_type "Crypt::Password";
 has_attr 'crypted' =>
 	is => "ro",
 	isa => "Crypt::Password",
+	xml_isa => "Str",
 	handles => [qw/check/],
 	xml_name => "Password",
 	required => 1,

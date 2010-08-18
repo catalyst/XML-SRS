@@ -172,4 +172,33 @@ WRONG_MIME_TYPE	expected; received
 XML_PARSE_ERROR	xmlErrorString
 ERRORS
 
+sub named_details {
+	my $self = shift;
+	my @named_details;
+	my $names = ERROR_DETAILS_NAMES->{$self->error_id} || [];
+	my @details = $self->details;
+	my @names = map { $names->[$_] } 0..$#details;
+	return () unless @details;
+	if ( @details % 2 or grep { ($names[$_*2+1]||"") ne "fieldName" }
+		     0..($#details>>1) ) {
+		while ( @details ) {
+			my $name = shift @names;
+			push @named_details, (
+				$name ? "error detail '".($name)."'"
+					: "(unknown error detail)"
+				       );
+			push @named_details, shift @details;
+		}
+	}
+	else {
+		@names = reverse @names;
+		@details = reverse @details;
+		while ( @details ) {
+			push @named_details, "value of '".(shift @details)."'";
+			push @named_details, shift @details;
+		}
+	}
+	@named_details;
+}
+
 1;

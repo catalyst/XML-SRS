@@ -18,6 +18,14 @@ has_attr 'registrar_id' =>
 	xml_name => "RegistrarId",
 	;
 
+has_element 'created_date' =>
+	is => 'ro',
+	isa => 'XML::SRS::TimeStamp',
+	xml_required => 0,
+	xml_nodeName => 'CreatedDate',
+	;
+
+
 has_element 'audit' =>
 	is => "rw",
 	isa => "XML::SRS::AuditDetails",

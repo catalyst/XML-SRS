@@ -79,6 +79,13 @@ has_attr 'full_result' =>
 	isa => 'XML::SRS::Boolean',
 	xml_name => 'FullResult',
 	xml_required => 0,
+	;	
+
+has_attr 'convert_contacts_to_handles' =>
+	is => 'ro',
+	isa => 'XML::SRS::Boolean',
+	xml_name => 'ConvertContactsToHandles',
+	xml_required => 0,
 	;
 
 # elements

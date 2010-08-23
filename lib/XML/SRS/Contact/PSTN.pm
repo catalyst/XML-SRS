@@ -38,4 +38,8 @@ coerce __PACKAGE__
 	=> from "Str"
 	=> via { $_ =~ m/^\+(\d{1,3})\.(\d+)$/; __PACKAGE__->new(cc=>$1,ndc=>'',subscriber=>$2); };
 
+coerce __PACKAGE__
+	=> from "Undef"
+	=> via { __PACKAGE__->new() };
+
 1;

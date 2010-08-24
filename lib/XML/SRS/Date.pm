@@ -58,4 +58,11 @@ method buildargs_date($inv: XML::SRS::Date::ymd $ymd) {
 	@buildargs;
 }
 
+method date() {
+	return sprintf(
+		"%.4d-%.2d-%.2d",
+		$self->year, $self->month, $self->day,
+		);
+}
+
 1;

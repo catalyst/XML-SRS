@@ -30,6 +30,18 @@ has_attr 'unique_id' =>
 	xml_name => "FeSeq",
 	;
 
+# for identifying a result within a unique transaction
+has 'part' =>
+	is => "rw",
+	isa => "Int",
+	;
+
+sub result_id {
+	my $self = shift;
+	$self->fe_id.",".$self->unique_id
+		.($self->part ? ("[".$self->part."]") : "");
+}
+
 has_attr 'by_id' =>
 	is => "ro",
 	isa => "XML::SRS::RegistrarId",

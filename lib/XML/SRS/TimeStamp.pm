@@ -14,25 +14,25 @@ use XML::SRS::Types;
 coerce __PACKAGE__
 	=> from Timestamp
 	=> via {
-		__PACKAGE__->new(timestamp => $_);
+	__PACKAGE__->new(timestamp => $_);
 	};
 
 coerce __PACKAGE__
 	=> from TimestampTZ
 	=> via {
-		__PACKAGE__->new(timestamptz => $_);
+	__PACKAGE__->new(timestamptz => $_);
 	};
 
 coerce __PACKAGE__
 	=> from "Str"
 	=> via {
-		__PACKAGE__->new(timestamptz => $_);
+	__PACKAGE__->new(timestamptz => $_);
 	};
 
 coerce __PACKAGE__
 	=> from "Int"
 	=> via {
-		__PACKAGE__->new(epoch => $_);
+	__PACKAGE__->new(epoch => $_);
 	};
 
 sub BUILDARGS {

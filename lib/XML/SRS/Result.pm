@@ -103,7 +103,7 @@ use MooseX::TimestampTZ;
 coerce "XML::SRS::timeStampType"
 	=> from TimestampTZ
 	=> via {
-		XML::SRS::TimeStamp->new(timestamptz => $_);
+	XML::SRS::TimeStamp->new(timestamptz => $_);
 	};
 
 # this is for GetMessages responses, so let's call it messages
@@ -120,9 +120,9 @@ has_element 'responses' =>
 	xml_required => 0,
 	lazy => 1,
 	default => sub {
-		my $self = shift;
-		($self->has_response and defined $self->response)
-			? [ $self->response ] : [];
+	my $self = shift;
+	($self->has_response and defined $self->response)
+		? [ $self->response ] : [];
 	},
 	;
 
@@ -132,19 +132,19 @@ has 'response' =>
 	predicate => "has_response",
 	lazy => 1,
 	default => sub {
-		my $self = shift;
-		my $rs_a = $self->responses;
-		if ( $rs_a and @$rs_a ) {
-			if ( @$rs_a > 1 ) {
-				confess "result has multiple responses";
-			}
-			else {
-				$rs_a->[0];
-			}
+	my $self = shift;
+	my $rs_a = $self->responses;
+	if ( $rs_a and @$rs_a ) {
+		if ( @$rs_a > 1 ) {
+			confess "result has multiple responses";
 		}
 		else {
-			undef;
+			$rs_a->[0];
 		}
+	}
+	else {
+		undef;
+	}
 	},
 	;
 

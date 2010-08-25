@@ -36,7 +36,7 @@ has_element 'handle_id_filter' =>
 	isa => 'PRANG::Coerce::ArrayRefOfStrs',
 	xml_nodeName => 'HandleIdFilter',
 	xml_required => 0,
-    coerce => 1,
+	coerce => 1,
 	;
 
 has_element 'search_date_range' =>
@@ -60,7 +60,7 @@ has_element 'contact_filter' =>
 	xml_required => 0,
 	;
 
-sub root_element { 'HandleDetailsQry' }
+sub root_element {'HandleDetailsQry'}
 with 'XML::SRS::Query';
 
 1;

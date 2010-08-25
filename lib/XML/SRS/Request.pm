@@ -28,7 +28,7 @@ has_element "requests" =>
 	required => 1,
 	;
 
-sub root_element { "NZSRSRequest" }
+sub root_element {"NZSRSRequest"}
 with 'XML::SRS', "XML::SRS::Version";
 
 sub BUILDARGS {

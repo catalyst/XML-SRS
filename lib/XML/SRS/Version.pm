@@ -23,8 +23,8 @@ has "version" =>
 	isa => "Str",
 	lazy => 1,
 	default => sub {
-		my $self = shift;
-		$self->major.".".$self->minor;
+	my $self = shift;
+	$self->major.".".$self->minor;
 	},
 	;
 

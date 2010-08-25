@@ -14,7 +14,7 @@ has_attr 'valid' =>
 # elements
 # (none)
 
-sub root_element { 'UDAIValid' }
+sub root_element {'UDAIValid'}
 
 with 'XML::SRS::ActionResponse';
 

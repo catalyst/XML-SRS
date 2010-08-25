@@ -41,9 +41,9 @@ has_element "filter" =>
 	is => "ro",
 	isa => "ArrayRef[Str]",
 	xml_nodeName => {
-		DomainNameFilter => "Str",
-		RegistrarIdFilter => "Str",
-		AddressFilter => "Str",
+	DomainNameFilter => "Str",
+	RegistrarIdFilter => "Str",
+	AddressFilter => "Str",
 	},
 	xml_nodeName_attr => "filter_types",
 	;

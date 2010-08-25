@@ -17,7 +17,7 @@ has_attr 'full' =>
 	xml_name => "FullResult",
 	predicate => "has_full",
 	lazy => 1,
-	default => sub { 1 },
+	default => sub {1},
 	;
 
 has_attr 'source_ip' =>
@@ -33,6 +33,6 @@ has_attr 'domain' =>
 	xml_name => "DomainName",
 	;
 
-sub root_element { "Whois" }
+sub root_element {"Whois"}
 with 'XML::SRS::Query';
 1;

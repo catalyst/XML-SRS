@@ -6,13 +6,13 @@ use MooseX::Method::Signatures;
 use PRANG::Graph;
 
 method address() {
-	( $self->address1,
-	  $self->address2,
-	  $self->city,
-	  $self->region,
-	  $self->postcode,
-	  $self->cc,
-	 );
+	(   $self->address1,
+		$self->address2,
+		$self->city,
+		$self->region,
+		$self->postcode,
+		$self->cc,
+	);
 }
 
 has_attr 'address1' =>
@@ -63,6 +63,6 @@ use Moose::Util::TypeConstraints;
 
 coerce __PACKAGE__
 	=> from "HashRef"
-	=> via { __PACKAGE__->new( %$_ ); };
+	=> via { __PACKAGE__->new(%$_); };
 
 1;

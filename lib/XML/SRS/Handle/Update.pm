@@ -83,7 +83,7 @@ has_element 'audit' =>
 
 with 'XML::SRS::Audit';
 
-sub root_element { 'HandleUpdate' }
+sub root_element {'HandleUpdate'}
 with 'XML::SRS::Action';
 
 1;

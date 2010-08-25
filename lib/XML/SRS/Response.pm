@@ -20,13 +20,13 @@ has_element "results" =>
 	is => "ro",
 	isa => "ArrayRef[XML::SRS::Result|XML::SRS::Error]",
 	xml_nodeName => {
-		Response => "XML::SRS::Result",
-		Error => "XML::SRS::Error",
+	Response => "XML::SRS::Result",
+	Error => "XML::SRS::Error",
 	},
 	required => 1,
 	;
 
-sub root_element { "NZSRSResponse" }
+sub root_element {"NZSRSResponse"}
 with 'XML::SRS', 'XML::SRS::Node', 'XML::SRS::Version';
 
 sub BUILDARGS {

@@ -172,7 +172,7 @@ has_element 'field_list' =>
 	xml_nodeName => 'FieldList',
 	;
 
-sub root_element { 'DomainDetailsQry' }
+sub root_element {'DomainDetailsQry'}
 with 'XML::SRS::Query';
 
 1;

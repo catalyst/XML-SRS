@@ -23,6 +23,6 @@ has_attr 'udai' =>
 	xml_name => 'UDAI',
 	;
 
-sub root_element { 'UDAIValidQry' }
+sub root_element {'UDAIValidQry'}
 with 'XML::SRS::Query';
 1;

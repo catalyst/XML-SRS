@@ -79,7 +79,7 @@ has_attr 'full_result' =>
 	isa => 'XML::SRS::Boolean',
 	xml_name => 'FullResult',
 	xml_required => 0,
-	;	
+	;
 
 has_attr 'convert_contacts_to_handles' =>
 	is => 'ro',
@@ -126,7 +126,7 @@ has_element 'nameservers' =>
 
 with 'XML::SRS::Audit';
 
-sub root_element { 'DomainUpdate' }
+sub root_element {'DomainUpdate'}
 with 'XML::SRS::Action';
 
 1;

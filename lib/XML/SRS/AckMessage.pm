@@ -5,8 +5,8 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 
-sub root_element { 
-  "AckMessage";
+sub root_element {
+	"AckMessage";
 }
 
 has_attr 'transaction_id' =>

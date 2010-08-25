@@ -19,11 +19,12 @@ has 'timestamp' =>
 	coerce => 1,
 	lazy => 1,
 	default => sub {
-		my $self = shift;
-		sprintf("%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
-			$self->year, $self->month, $self->day,
-			$self->hour, $self->minute, $self->second//0,
-		       );
+	my $self = shift;
+	sprintf(
+		"%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
+		$self->year, $self->month, $self->day,
+		$self->hour, $self->minute, $self->second//0,
+	);
 	},
 	;
 
@@ -41,8 +42,9 @@ method buildargs_timestamptz( $inv: TimestampTZ $timestamptz is coerce ) {
 	my $hms = $+{hms};
 	my $ymd = $+{ymd};
 	my $offset = $+{utc} ? "+00:00" : $+{offset};
-	($inv->buildargs_time($hms, $offset),
-	 $inv->buildargs_date($ymd));
+	(   $inv->buildargs_time($hms, $offset),
+		$inv->buildargs_date($ymd)
+	);
 }
 
 method buildargs_epoch( $inv: time_t $epoch is coerce ) {
@@ -55,12 +57,13 @@ has 'timestamptz' =>
 	coerce => 1,
 	lazy => 1,
 	default => sub {
-		my $self = shift;
-		sprintf("%.4d-%.2d-%.2d %.2d:%.2d:%.2d%s",
-			$self->year, $self->month, $self->day,
-			$self->hour, $self->minute, $self->second//0,
-			$self->tz_offset//"",
-		       );
+	my $self = shift;
+	sprintf(
+		"%.4d-%.2d-%.2d %.2d:%.2d:%.2d%s",
+		$self->year, $self->month, $self->day,
+		$self->hour, $self->minute, $self->second//0,
+		$self->tz_offset//"",
+	);
 	},
 	;
 
@@ -70,8 +73,8 @@ has 'epoch' =>
 	coerce => 1,
 	lazy => 1,
 	default => sub {
-		my $self = shift;
-		_epoch $self->timestamptz;
+	my $self = shift;
+	_epoch $self->timestamptz;
 	},
 	;
 

@@ -19,9 +19,9 @@ my $one = XML::SRS::Result->new(
 ok($one, "create Result: simple");
 
 my $rs = XML::SRS::Response->new(
-	results => [ $one ],
+	results => [$one],
 	version => "auto",
-       );
+);
 ok($rs, "create Response with version => auto");
 my $xml_request = $rs->to_xml;
 
@@ -52,14 +52,14 @@ my $multi = XML::SRS::Result->new(
 	responses => [
 		XML::SRS::Domain->new( name => "foo.co.te" ),
 		XML::SRS::Domain->new( name => "bar.co.te" ),
-	       ],
+	],
 );
 ok($multi, "create Result: multi");
 
 $rs = XML::SRS::Response->new(
-	results => [ $multi ],
+	results => [$multi],
 	version => "auto",
-       );
+);
 $xml_request = $rs->to_xml;
 
 $xmlc = XML::Compare->new();

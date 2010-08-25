@@ -20,7 +20,7 @@ has_element 'result' =>
 	required => 1,
 	;
 
-sub root_element { "Message" }
+sub root_element {"Message"}
 with 'XML::SRS::ActionResponse', 'XML::SRS::Node';
 
 1;

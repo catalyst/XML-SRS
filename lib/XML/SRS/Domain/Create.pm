@@ -9,7 +9,7 @@ has_attr 'domain_name' =>
 	is => "ro",
 	isa => "XML::SRS::DomainName",
 	xml_name => "DomainName",
-    required => 1,
+	required => 1,
 	;
 
 has_attr 'domain_name_unicode' =>
@@ -29,7 +29,7 @@ has_attr 'term' =>
 	is => "ro",
 	isa => "XML::SRS::Term",
 	xml_name => "Term",
-    required => 1,
+	required => 1,
 	;
 
 has_attr 'delegate' =>
@@ -43,7 +43,7 @@ has_element 'contact_registrant' =>
 	is => "ro",
 	isa => "XML::SRS::Contact",
 	xml_nodeName => "RegistrantContact",
-    required => 1,
+	required => 1,
 	coerce => 1,
 	;
 
@@ -73,7 +73,7 @@ has_element "nameservers" =>
 
 with 'XML::SRS::Audit';
 
-sub root_element { 'DomainCreate' }
+sub root_element {'DomainCreate'}
 with 'XML::SRS::Action';
 
 1;

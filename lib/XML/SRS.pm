@@ -3,7 +3,7 @@ package XML::SRS;
 
 our $VERSION = "0.06_01";
 
-BEGIN { our $PROTOCOL_VERSION = "5.0" };
+BEGIN { our $PROTOCOL_VERSION = "5.0" }
 use XML::SRS::Version;
 
 use Moose::Role;
@@ -11,7 +11,7 @@ use XML::SRS::Types;
 use XML::SRS::Node;
 
 use PRANG::Graph;
-BEGIN { with 'PRANG::Graph', 'XML::SRS::Node'; };
+BEGIN { with 'PRANG::Graph', 'XML::SRS::Node'; }
 
 # packet types
 use XML::SRS::Request;

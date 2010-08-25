@@ -7,27 +7,27 @@ use Moose::Util::TypeConstraints;
 use MooseX::Method::Signatures;
 
 BEGIN {
-subtype "XML::SRS::Date::ymd"
-	=> as "Str"
-	=> where {
+	subtype "XML::SRS::Date::ymd"
+		=> as "Str"
+		=> where {
 		m{^(\d{4})-(\d{1,2})-(\d{1,2})$};
-	};
+		};
 
-subtype 'XML::SRS::Date::Year'
-	=> as "Int",
-	=> where {
+	subtype 'XML::SRS::Date::Year'
+		=> as "Int",
+		=> where {
 		length(0+$_) == 4;
-	};
-subtype 'XML::SRS::Date::Month'
-	=> as "Int",
-	=> where {
+		};
+	subtype 'XML::SRS::Date::Month'
+		=> as "Int",
+		=> where {
 		$_ >= 1 and $_ <= 12;
-	};
-subtype 'XML::SRS::Date::Day'
-	=> as "Str",
-	=> where {
+		};
+	subtype 'XML::SRS::Date::Day'
+		=> as "Str",
+		=> where {
 		$_ >= 1 and $_ <= 31;
-	};
+		};
 }
 
 has_attr 'year' =>
@@ -62,7 +62,7 @@ method date() {
 	return sprintf(
 		"%.4d-%.2d-%.2d",
 		$self->year, $self->month, $self->day,
-		);
+	);
 }
 
 1;

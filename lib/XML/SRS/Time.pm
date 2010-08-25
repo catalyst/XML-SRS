@@ -7,28 +7,28 @@ use Moose::Util::TypeConstraints;
 use MooseX::Method::Signatures;
 
 BEGIN{
-subtype 'XML::SRS::Time::Hour'
-	=> as "Int",
-	=> where {
+	subtype 'XML::SRS::Time::Hour'
+		=> as "Int",
+		=> where {
 		$_ >= 0 and $_ <= 23;
-	};
-subtype 'XML::SRS::Time::Sexagesimal'
-	=> as "Int",
-	=> where {
+		};
+	subtype 'XML::SRS::Time::Sexagesimal'
+		=> as "Int",
+		=> where {
 		$_ >= 0 and $_ <= 59;
-	};
-subtype 'XML::SRS::Time::TZOffset'
-	=> as "Str",
-	=> where {
+		};
+	subtype 'XML::SRS::Time::TZOffset'
+		=> as "Str",
+		=> where {
 		m{^[-+][\s\d]?\d(?::?\d\d)?$};
 
-	};
+		};
 
-subtype 'XML::SRS::Time::hms'
-	=> as "Str",
-	=> where {
+	subtype 'XML::SRS::Time::hms'
+		=> as "Str",
+		=> where {
 		m{^(\d{1,2}):(\d{1,2}):(\d{1,2})$};
-	};
+		};
 }
 
 method buildargs_time($inv: XML::SRS::Time::hms $hms, Maybe[XML::SRS::Time::TZOffset] $offset?) {

@@ -14,13 +14,16 @@ getopt_lenient( "test-grep|t=s" => \$grep );
 
 sub find_tests {
 	my @tests;
-	find(sub {
-		     if ( m{\.xml$} && (!$grep||m{$grep}) ) {
-			     my $name = $File::Find::name;
-			     $name =~ s{^\Q$test_dir\E/}{} or die;
-			     push @tests, $name;
-		     }
-	     }, $test_dir);
+	find(
+		sub {
+			if ( m{\.xml$} && (!$grep||m{$grep}) ) {
+				my $name = $File::Find::name;
+				$name =~ s{^\Q$test_dir\E/}{} or die;
+				push @tests, $name;
+			}
+		},
+		$test_dir
+	);
 	@tests;
 }
 
@@ -41,7 +44,7 @@ sub parse_test {
 	my $xml = shift;
 	my $test_name = shift;
 	start_timer;
-	my $object = eval { $class->parse( $xml ) };
+	my $object = eval { $class->parse($xml) };
 	my $time = show_elapsed;
 	my $ok = ok($object, "$test_name - parsed OK ($time)");
 	if ( !$ok ) {
@@ -61,8 +64,8 @@ sub emit_test {
 	my $time = show_elapsed;
 	ok($r_xml, "$test_name - emitted OK ($time)")
 		or do {
-			diag("exception: $@");
-			return undef;
+		diag("exception: $@");
+		return undef;
 		};
 	if ($main::VERBOSE>0) {
 		diag("xml: ".$r_xml);

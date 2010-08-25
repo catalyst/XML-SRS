@@ -28,10 +28,12 @@ my $create = XML::SRS::Domain::Create->new(
 		},
 	},
 	nameservers => [qw( ns1.registrar.net.nz ns2.registrar.net.nz )],
-       );
+);
 
-isa_ok($create, "XML::SRS::Domain::Create",
-       "new DomainCreate message");
+isa_ok(
+	$create, "XML::SRS::Domain::Create",
+	"new DomainCreate message"
+);
 
 my $xml_request = $create->to_xml;
 

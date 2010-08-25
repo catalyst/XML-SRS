@@ -6,7 +6,8 @@ use PRANG::Graph;
 
 use Moose::Util::TypeConstraints;
 
-enum "XML::SRS::GetMessagesTypes" => qw(third-party server-generated-data);
+enum "XML::SRS::GetMessagesTypes" =>
+	qw(third-party server-generated-data);
 
 has_attr "Type" =>
 	is => "ro",

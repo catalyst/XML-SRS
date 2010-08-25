@@ -23,8 +23,9 @@ has_element 'created_date' =>
 	isa => 'XML::SRS::TimeStamp',
 	xml_required => 0,
 	xml_nodeName => 'CreatedDate',
-	;
 
+	#coerce => 1,
+	;
 
 has_element 'audit' =>
 	is => "rw",

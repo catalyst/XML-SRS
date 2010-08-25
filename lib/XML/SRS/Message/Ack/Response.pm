@@ -26,7 +26,7 @@ has_attr 'remaining' =>
 	xml_name => "Remaining",
 	;
 
-sub root_element { "AckResponse" }
+sub root_element {"AckResponse"}
 with 'XML::SRS::ActionResponse', 'XML::SRS::Node';
 
 1;

@@ -5,7 +5,7 @@ use Moose;
 use PRANG::Graph;
 use Moose::Util::TypeConstraints;
 
-sub root_element { "Error" }
+sub root_element {"Error"}
 
 has_attr "error_id" =>
 	is => "ro",
@@ -56,7 +56,8 @@ use constant ERROR_DETAILS_NAMES => {
 		else {
 			();
 		}
-	} split /\n/, <<ERRORS };
+		} split /\n/,
+	<<ERRORS };
 CONFLICTING_RESULTS_PARAMETERS	
 DELETE_FLAG_WITH_OTHER_FIELDS	
 DOMAIN_CANCEL_AND_RENEW	
@@ -179,21 +180,25 @@ sub named_details {
 	my @details = $self->details;
 	my @names = map { $names->[$_] } 0..$#details;
 	return () unless @details;
-	if ( @details % 2 or grep { ($names[$_*2+1]||"") ne "fieldName" }
-		     0..($#details>>1) ) {
-		while ( @details ) {
+	if (@details % 2
+		or grep { ($names[$_*2+1]||"") ne "fieldName" }
+		0..($#details>>1)
+		)
+	{
+		while (@details) {
 			my $name = shift @names;
 			push @named_details, (
-				$name ? "error detail '".($name)."'"
-					: "(unknown error detail)"
-				       );
+				$name
+				? "error detail '".($name)."'"
+				: "(unknown error detail)"
+			);
 			push @named_details, shift @details;
 		}
 	}
 	else {
 		@names = reverse @names;
 		@details = reverse @details;
-		while ( @details ) {
+		while (@details) {
 			push @named_details, "value of '".(shift @details)."'";
 			push @named_details, shift @details;
 		}

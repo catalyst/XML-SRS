@@ -43,7 +43,7 @@ has_element 'fax' =>
 	xml_required => 0,
 	;
 
-sub root_element { 'ContactFilter' }
+sub root_element {'ContactFilter'}
 
 with 'XML::SRS::Node';
 

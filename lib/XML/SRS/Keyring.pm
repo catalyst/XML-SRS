@@ -8,8 +8,8 @@ use Moose::Util::TypeConstraints;
 subtype 'XML::SRS::PGP::PubKey'
 	=> as "Str"
 	=> where {
-		m{\A-----BEGIN PGP PUBLIC KEY} &&
-			m{-----END PGP PUBLIC KEY.*\Z};
+	m{\A-----BEGIN PGP PUBLIC KEY} &&
+		m{-----END PGP PUBLIC KEY.*\Z};
 	};
 
 has_element 'keys' =>

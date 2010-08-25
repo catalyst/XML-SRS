@@ -99,7 +99,7 @@ has_element 'audit' =>
 	predicate => "has_audit",
 	;
 
-sub root_element { "Registrar" }
+sub root_element {"Registrar"}
 with 'XML::SRS::ActionResponse';
 
 1;

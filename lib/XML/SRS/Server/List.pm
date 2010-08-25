@@ -18,25 +18,25 @@ has_element 'nameservers' =>
 coerce __PACKAGE__
 	=> from 'ArrayRef[Str]'
 	=> via {
-		__PACKAGE__->new(
-			nameservers => [
-				map {
-					XML::SRS::Server->new( fqdn => $_ );
+	__PACKAGE__->new(
+		nameservers => [
+			map {
+				XML::SRS::Server->new( fqdn => $_ );
 				} @$_
-			       ],
-		       );
+		],
+	);
 	};
 
 coerce __PACKAGE__
 	=> from 'ArrayRef[HashRef]'
 	=> via {
-		__PACKAGE__->new(
-			nameservers => [
-				map {
-					XML::SRS::Server->new( $_ );
+	__PACKAGE__->new(
+		nameservers => [
+			map {
+				XML::SRS::Server->new($_);
 				} @$_
-			       ],
-		       );
+		],
+	);
 	};
 
 with 'XML::SRS::Node';

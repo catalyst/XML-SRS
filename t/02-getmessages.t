@@ -7,16 +7,20 @@ use XML::Compare;
 BEGIN { use_ok("XML::SRS") }
 
 my $get = XML::SRS::GetMessages->new(
-      queue => 1,
-      max_results => 1,
-      type_filter => [
-        XML::SRS::GetMessages::TypeFilter->new(Type => "third-party"),
-        XML::SRS::GetMessages::TypeFilter->new(Type => "server-generated-data"),
-      ],
+	queue => 1,
+	max_results => 1,
+	type_filter => [
+		XML::SRS::GetMessages::TypeFilter->new(Type => "third-party"),
+		XML::SRS::GetMessages::TypeFilter->new(
+			Type => "server-generated-data"
+		),
+	],
 );
 
-isa_ok($get, "XML::SRS::GetMessages",
-       "new GetMessages message");
+isa_ok(
+	$get, "XML::SRS::GetMessages",
+	"new GetMessages message"
+);
 
 my $xml_request = $get->to_xml;
 
@@ -33,19 +37,22 @@ ok($xmlc->is_same( $xml_request, $XML ), "GetMessages")
 	or diag("Error: ".$xmlc->error);
 
 $get = XML::SRS::GetMessages->new(
-      queue => 1,
-      max_results => 1,
-      type_filter => [
-        "third-party",
-        "server-generated-data"
-      ],
+	queue => 1,
+	max_results => 1,
+	type_filter => [
+		"third-party",
+		"server-generated-data"
+	],
 );
 
-isa_ok($get, "XML::SRS::GetMessages",
-       "new GetMessages message (coerced type_filter)");
+isa_ok(
+	$get, "XML::SRS::GetMessages",
+	"new GetMessages message (coerced type_filter)"
+);
 
 $xml_request = $get->to_xml;
 
-ok($xmlc->is_same( $xml_request, $XML ), "GetMessages (coerced type_filter)")
+ok($xmlc->is_same( $xml_request, $XML ),
+	"GetMessages (coerced type_filter)")
 	or diag("Error: ".$xmlc->error);
 

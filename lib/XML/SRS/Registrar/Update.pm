@@ -90,7 +90,7 @@ has_element 'audit' =>
 	xml_required => 0,
 	;
 
-sub root_element { "RegistrarUpdate" }
+sub root_element {"RegistrarUpdate"}
 with 'XML::SRS::Action';
 
 1;

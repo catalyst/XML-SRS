@@ -5,8 +5,8 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 
-sub root_element { 
-  "GetMessages";
+sub root_element {
+	"GetMessages";
 }
 
 has_attr 'query_id' =>
@@ -61,11 +61,12 @@ use Moose::Util::TypeConstraints;
 coerce 'ArrayRef[XML::SRS::GetMessages::TypeFilter]'
 	=> from "ArrayRef[Str]"
 	=> via {
-		[ map {
+	[   map {
 			XML::SRS::GetMessages::TypeFilter->new(
 				Type => $_,
-			       );
-		} @$_ ];
+			);
+			} @$_
+	];
 	};
 
 with 'XML::SRS::Query';

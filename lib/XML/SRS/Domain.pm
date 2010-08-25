@@ -31,6 +31,11 @@ has_attr 'status' =>
 	xml_required => 0,
 	;
 
+sub is_available {
+	my $self = shift;
+	$self->status eq "Available" ? 1 : 0;
+}
+
 has_attr 'delegate' =>
 	is => "ro",
 	isa => "XML::SRS::Boolean",

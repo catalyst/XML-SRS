@@ -71,6 +71,13 @@ has_element 'nameservers' =>
 	xml_nodeName => 'NameServers',
 	xml_required => 0,
 	;
+	
+has_element "dns_sec" =>
+	is => "rw",
+	isa => "XML::SRS::DS::List",
+	xml_nodeName => "DNSSEC",
+	xml_required => 0,
+	;
 
 has_element 'contact_registrant' =>
 	is => 'ro',

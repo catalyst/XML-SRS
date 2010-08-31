@@ -70,6 +70,13 @@ has_element "nameservers" =>
 	xml_required => 0,
 	coerce => 1,
 	;
+	
+has_element "dns_sec" =>
+	is => "rw",
+	isa => "XML::SRS::DS::List",
+	xml_nodeName => "DNSSEC",
+	xml_required => 0,
+	;	
 
 with 'XML::SRS::Audit';
 

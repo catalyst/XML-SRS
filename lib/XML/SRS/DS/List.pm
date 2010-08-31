@@ -7,7 +7,7 @@ use XML::SRS::Zone;
 use Moose::Util::TypeConstraints;
 
 use XML::SRS::Server;
-has_element 'nameservers' =>
+has_element 'ds_list' =>
 	is => "rw",
 	isa => "ArrayRef[XML::SRS::DS]",
 	xml_nodeName => "DS",
@@ -15,27 +15,11 @@ has_element 'nameservers' =>
 	;
 
 coerce __PACKAGE__
-	=> from 'ArrayRef[Str]'
+	=> from 'ArrayRef[XML::SRS::DS]'
 	=> via {
-	__PACKAGE__->new(
-		nameservers => [
-			map {
-				XML::SRS::DS->new( fqdn => $_ );
-				} @$_
-		],
-	);
-	};
-
-coerce __PACKAGE__
-	=> from 'ArrayRef[HashRef]'
-	=> via {
-	__PACKAGE__->new(
-		nameservers => [
-			map {
-				XML::SRS::DS->new($_);
-				} @$_
-		],
-	);
+		__PACKAGE__->new(
+			ds_list => $_,
+		);
 	};
 
 with 'XML::SRS::Node';

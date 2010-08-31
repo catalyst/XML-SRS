@@ -4,6 +4,7 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 use XML::SRS::Server::List;
+use XML::SRS::DS::List;
 
 has_attr 'domain_name' =>
 	is => "ro",
@@ -76,6 +77,7 @@ has_element "dns_sec" =>
 	isa => "XML::SRS::DS::List",
 	xml_nodeName => "DNSSEC",
 	xml_required => 0,
+	coerce => 1,
 	;	
 
 with 'XML::SRS::Audit';

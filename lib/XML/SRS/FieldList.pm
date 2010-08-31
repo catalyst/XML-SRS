@@ -18,6 +18,13 @@ has_attr 'name_servers' =>
 	xml_required => 0,
 	xml_name => 'NameServers',
 	;
+	
+has_attr 'dns_sec' =>
+	is => 'ro',
+	isa => 'XML::SRS::Boolean',
+	xml_required => 0,
+	xml_name => 'DNSSEC',
+	;
 
 has_attr 'registrant_contact' =>
 	is => 'ro',

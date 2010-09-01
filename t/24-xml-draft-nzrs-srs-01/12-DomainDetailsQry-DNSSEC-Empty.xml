@@ -16,14 +16,7 @@
         <Server FQDN="ns3.everydns.net"/>
         <Server FQDN="ns4.everydns.net"/>
       </NameServers>
-      <DNSSEC>
-        <DS KeyTag="42454" Algorithm="5" DigestType="1">
-          <Digest>3FC2FB591B6089F454B90A529C760E3F92F28399</Digest>
-        </DS>
-        <DS KeyTag="42454" Algorithm="5" DigestType="2">
-          <Digest>3A54F693DA1D3FC6073B3D065FEDFAC000610CE83C7D2A084DF883E0B308DCA6</Digest>
-        </DS>
-      </DNSSEC>      
+      <DNSSEC/>      
       <RegistrantContact Name="A Person" Email="someone@example.com">
         <PostalAddress Address1="Road" Address2="Suburb" City="City" CountryCode="NZ"/>
         <Phone AreaCode="4" CountryCode="64" LocalNumber="0000000"/>

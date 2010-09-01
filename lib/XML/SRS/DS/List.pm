@@ -11,7 +11,7 @@ has_element 'ds_list' =>
 	is => "rw",
 	isa => "ArrayRef[XML::SRS::DS]",
 	xml_nodeName => "DS",
-	required => 1,
+	xml_required => 0,
 	;
 
 coerce __PACKAGE__

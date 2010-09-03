@@ -4,6 +4,7 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 use XML::SRS::Server::List;
+use XML::SRS::DS::List;
 
 # attributes
 has_attr 'udai' =>
@@ -122,6 +123,14 @@ has_element 'nameservers' =>
 	isa => 'XML::SRS::Server::List',
 	xml_nodeName => 'NameServers',
 	xml_required => 0,
+	;
+
+has_element "dns_sec" =>
+	is => "rw",
+	isa => "XML::SRS::DS::List",
+	xml_nodeName => "DNSSEC",
+	xml_required => 0,
+	coerce => 1,
 	;
 
 with 'XML::SRS::Audit';

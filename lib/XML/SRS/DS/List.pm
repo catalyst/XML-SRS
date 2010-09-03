@@ -2,7 +2,7 @@ package XML::SRS::DS::List;
 
 use Moose;
 use PRANG::Graph;
-use XML::SRS::Zone;
+use XML::SRS::DS;
 
 use Moose::Util::TypeConstraints;
 

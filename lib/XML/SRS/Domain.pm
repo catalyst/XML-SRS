@@ -10,6 +10,20 @@ has_attr 'name' =>
 	xml_name => "DomainName",
 	;
 
+has_attr 'name_unicode' =>
+	is => "ro",
+	isa => "Str",
+	xml_name => "DomainNameUnicode",
+	xml_required => 0,	
+	;
+	
+has_attr 'name_unicode_hex' =>
+	is => "ro",
+	isa => "Str",
+	xml_name => "DomainNameUnicodeHex",
+	xml_required => 0,
+	;
+
 has_attr 'registrant_ref' =>
 	is => "ro",
 	isa => "XML::SRS::UID",

@@ -9,13 +9,6 @@ use Moose::Util::TypeConstraints;
 use PRANG::Coerce;
 
 # attributes
-has_attr 'query_id' =>
-	is => 'ro',
-	isa => 'XML::SRS::UID',
-	xml_name => 'QryId',
-	xml_required => 0,
-	;
-
 has_attr 'status' =>
 	is => 'ro',
 	isa => 'XML::SRS::RegDomainStatus',

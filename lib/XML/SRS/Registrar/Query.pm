@@ -9,13 +9,6 @@ sub root_element {
 	"RegistrarDetailsQry";
 }
 
-has_attr "query_id" =>
-	is => "ro",
-	isa => "XML::SRS::UID",
-	xml_name => "QryId",
-	xml_required => 0,
-	;
-
 has_attr "registrar_id" =>
 	is => "ro",
 	isa => "Str",

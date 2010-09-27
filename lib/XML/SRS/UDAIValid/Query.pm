@@ -4,13 +4,6 @@ package XML::SRS::UDAIValid::Query;
 use Moose;
 use PRANG::Graph;
 
-has_attr 'query_id' =>
-	is => 'ro',
-	isa => 'XML::SRS::UID',
-	xml_name => 'QryId',
-	predicate => 'has_query_id',
-	;
-
 has_attr 'domain' =>
 	is => 'ro',
 	isa => 'XML::SRS::DomainName',

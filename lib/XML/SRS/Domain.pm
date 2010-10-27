@@ -23,6 +23,13 @@ has_attr 'name_unicode_hex' =>
 	xml_name => "DomainNameUnicodeHex",
 	xml_required => 0,
 	;
+	
+has_attr 'name_language' =>
+	is => "ro",
+	isa => "Str",
+	xml_name => "DomainNameLanguage",
+	xml_required => 0,
+	;
 
 has_attr 'registrant_ref' =>
 	is => "ro",

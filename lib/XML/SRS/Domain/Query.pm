@@ -38,14 +38,14 @@ has_attr 'registrant_ref' =>
 	;
 
 has_attr 'max_results' =>
-	is => 'ro',
+	is => 'rw',
 	isa => 'XML::SRS::Number',
 	xml_name => 'MaxResults',
 	xml_required => 0,
 	;
 
 has_attr 'skip_results' =>
-	is => 'ro',
+	is => 'rw',
 	isa => 'XML::SRS::Number',
 	xml_name => 'SkipResults',
 	xml_required => 0,

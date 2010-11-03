@@ -138,6 +138,13 @@ has_attr 'effective_from' =>
 	xml_name => 'EffectiveFrom',
 	;
 
+has_attr 'default_contacts' =>
+	is => 'ro',
+	isa => 'XML::SRS::Boolean',
+	xml_required => 0,
+	xml_name => 'DefaultContacts',
+	;
+
 with 'XML::SRS::Node';
 
 1;

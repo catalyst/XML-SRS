@@ -161,6 +161,13 @@ has_element 'locked_date' =>
 	xml_nodeName => 'LockedDate',
 	;
 
+has_element 'default_contacts' =>
+	is => 'ro',
+	isa => 'XML::SRS::DefaultContacts',
+	xml_required => 0,
+	xml_nodeName => 'DefaultContacts',
+	;
+
 has_element 'audit' =>
 	is => "rw",
 	isa => "XML::SRS::AuditDetails",

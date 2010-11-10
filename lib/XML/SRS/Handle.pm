@@ -34,6 +34,13 @@ has_element 'audit' =>
 	predicate => "has_audit",
 	;
 
+has_element 'changed_domains' =>
+	is => "ro",
+	isa => "XML::SRS::ChangedDomains",
+	xml_nodeName => "ChangedDomains",
+	predicate => "has_changed_domains",
+	;
+
 has_attr 'action_id' =>
 	is => "rw",
 	isa => "XML::SRS::UID",

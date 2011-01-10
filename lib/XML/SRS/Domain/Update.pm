@@ -14,8 +14,8 @@ has_attr 'udai' =>
 	xml_required => 0;
 
 has_attr 'new_udai' =>
-	is => 'ro',
-	isa => 'XML::SRS::UDAI',
+	is => 'rw',
+	isa => 'XML::SRS::Boolean',
 	xml_name => 'NewUDAI',
 	xml_required => 0;
 

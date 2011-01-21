@@ -2,10 +2,11 @@
 package XML::SRS::Contact::Address;
 
 use Moose;
-use MooseX::Method::Signatures;
 use PRANG::Graph;
 
-method address() {
+sub address() {
+    my $self = shift;
+    
 	(   $self->address1,
 		$self->address2,
 		$self->city,

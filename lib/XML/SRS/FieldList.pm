@@ -2,7 +2,6 @@
 package XML::SRS::FieldList;
 
 use Moose;
-use MooseX::Method::Signatures;
 use PRANG::Graph;
 
 has_attr 'status' =>

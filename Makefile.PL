@@ -15,7 +15,7 @@ version_from    ("lib/XML/SRS.pm");
 license         ('artistic');
 
 requires        ("Moose" => 0.54);
-requires        ("MooseX::Method::Signatures" => 0);
+requires        ("MooseX::Params::Validate" => 0.15);
 requires        ("PRANG" => "0.10_01");
 requires        ("Regexp::Common" => 0);
 requires        ("MooseX::Timestamp" => 0.06);

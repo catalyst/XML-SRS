@@ -4,7 +4,7 @@ package XML::SRS::Time;
 use Moose::Role;
 use PRANG::Graph;
 use Moose::Util::TypeConstraints;
-use MooseX::Method::Signatures;
+use MooseX::Params::Validate;
 
 BEGIN{
 	subtype 'XML::SRS::Time::Hour'
@@ -31,7 +31,14 @@ BEGIN{
 		};
 }
 
-method buildargs_time($inv: XML::SRS::Time::hms $hms, Maybe[XML::SRS::Time::TZOffset] $offset?) {
+sub buildargs_time {
+      my $inc = shift;
+      my ( $hms, $offset ) = pos_validated_list(
+          \@_,
+          { isa => 'XML::SRS::Time::hms' },
+          { isa => 'Maybe[XML::SRS::Time::TZOffset]', optional => 1 },
+      );    
+    
 	my @buildargs;
 	if (defined $offset) {
 		push @buildargs, tz_offset => $offset;

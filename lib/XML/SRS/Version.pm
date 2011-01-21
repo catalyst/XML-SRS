@@ -2,7 +2,7 @@
 package XML::SRS::Version;
 use Moose::Role;
 use PRANG::Graph;
-use MooseX::Method::Signatures;
+use MooseX::Params::Validate;
 
 has_attr "major" =>
 	is => "rw",
@@ -28,7 +28,13 @@ has "version" =>
 	},
 	;
 
-method buildargs_version( $inv: Str $version ) {
+sub buildargs_version {
+      my $inv = shift;
+      my ( $version ) = pos_validated_list(
+          \@_,
+          { isa => 'Str' },
+      );    
+    
 	$version = $XML::SRS::PROTOCOL_VERSION
 		if $version eq "auto";
 	my ($vmaj, $vmin) = split /\./, $version;

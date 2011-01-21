@@ -2,7 +2,6 @@
 package XML::SRS::Contact::Address::Filter;
 
 use Moose;
-use MooseX::Method::Signatures;
 use PRANG::Graph;
 
 has_attr 'address1' =>

@@ -5,7 +5,7 @@ use 5.010;
 use XML::SRS::Date;
 use XML::SRS::Time;
 use Moose::Role;
-use MooseX::Method::Signatures;
+use MooseX::Params::Validate;
 
 use MooseX::Timestamp qw();
 use MooseX::TimestampTZ
@@ -28,12 +28,24 @@ has 'timestamp' =>
 	},
 	;
 
-method buildargs_timestamp( $inv: Timestamp $timestamp is coerce ) {
+sub buildargs_timestamp {
+    my $inv = shift;
+    my ( $timestamp ) = pos_validated_list(
+        \@_,
+        { isa => 'Timestamp', coerce => 1 },
+    );    
+    
 	my ($date, $time) = split " ", $timestamp;
 	($inv->buildargs_time($time), $inv->buildargs_date($date));
 }
 
-method buildargs_timestamptz( $inv: TimestampTZ $timestamptz is coerce ) {
+sub buildargs_timestamptz {
+    my $inv = shift;
+    my ( $timestamptz ) = pos_validated_list(
+        \@_,
+        { isa => 'TimestampTZ', coerce => 1 },
+    );    
+    
 	$timestamptz =~ m{
 		(?<ymd>\d+-\d+-\d+)
 		\s(?<hms>\d+:\d+:\d+)
@@ -47,7 +59,13 @@ method buildargs_timestamptz( $inv: TimestampTZ $timestamptz is coerce ) {
 	);
 }
 
-method buildargs_epoch( $inv: time_t $epoch is coerce ) {
+sub buildargs_epoch {
+    my $inv = shift;
+    my ( $epoch ) = pos_validated_list(
+        \@_,
+        { isa => 'time_t', coerce => 1 },
+    );    
+    
 	$inv->buildargs_timestamptz(_timestamptz $epoch);
 }
 

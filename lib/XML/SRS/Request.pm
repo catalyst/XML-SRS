@@ -3,7 +3,6 @@ package XML::SRS::Request;
 
 use Moose;
 use Moose::Util::TypeConstraints;
-use MooseX::Method::Signatures;
 use PRANG::Graph;
 
 use XML::SRS::Types;

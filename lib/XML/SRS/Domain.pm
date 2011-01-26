@@ -40,14 +40,14 @@ has_attr 'registrant_ref' =>
 
 has_attr 'registrar_name' =>
 	is => "ro",
-	isa => "XML::SRS::UID",
+	isa => "Str",
 	xml_name => "RegistrarName",
 	xml_required => 0,
 	;
 
 has_attr 'status' =>
 	is => "ro",
-	isa => "XML::SRS::DomainStatus",
+	isa => "Str",
 	xml_name => "Status",
 	xml_required => 0,
 	;
@@ -80,7 +80,7 @@ has_attr 'registrar_id' =>
 
 has_attr 'UDAI' =>
 	is => "ro",
-	isa => 'XML::SRS::UDAI',
+	isa => 'Str',
 	xml_name => "UDAI",
 	xml_required => 0,
 	;
@@ -108,7 +108,6 @@ has_element 'contact_registrant' =>
 	coerce => 1,
 	;
 
-# I think this element is wrong.
 has_element 'contact_registrar_public' =>
 	is => 'ro',
 	isa => 'XML::SRS::Contact',

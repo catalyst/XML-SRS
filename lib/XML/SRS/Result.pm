@@ -151,3 +151,108 @@ has 'response' =>
 with 'XML::SRS::Node';
 
 1;
+
+__END__
+
+=head1 NAME
+
+XML::SRS::Result - Represents the result of an individual SRS query or action
+
+=head1 SYNOPSIS
+
+  my $response = XML::SRS->parse($xml);
+  
+  my $results = $response->results;
+  
+  # If the response was for a transaction involving domains, get the
+  #  list of domain records returned in the response (as an array ref)
+  my $domains = $results->responses;
+  
+=head1 DESCRIPTION
+
+This class represents the response to an individual transaction in an
+SRS request. Each response may have its own list of 'responses'. For
+example, a DomainDetailsQry might return multiple domains. These domains
+can be obtained via the 'responses' attribute of this class (see below).
+
+The root XML element of this class is 'Response' XML element. However, as
+this clashes with the top level 'Response' (i.e. 'NZSRSResponse' XML element),
+it has been renamed 'Result'. 
+
+=head1 ATTRIBUTES
+
+Each attribute of this class has an accessor/mutator of the same name as
+the attribute. Additionally, they can be passed as parameters to the
+constructor.
+
+=head2 responses
+
+An array ref of objects that compose the L<XML::SRS::ActionResponse> role.
+This corresponds to the responses to the indvidual transactions of a request.
+The objects returned here will be in a class dependent on the response type,
+for example, a DomainDetailsQry will return 0 or more M<XML::SRS::Domain>
+objects, while a HandleDetailsQry will return 0 or more M<XML::SRS::Handle>
+objects. See the POD for each individual transaction for details on what type
+of response to expect.
+
+=head2 response
+
+Returns the first response in the list, or undef if there are none. It's a
+fairly common case to only expect one response, so this attribute is often
+useful.
+
+=head2 messages
+
+The GetMessages transaction is somewhat different, in that it returns a list
+of results (i.e. XML::SRS::Result objects), rather than responses. This
+attribute contains those result objects.
+
+=head2 action
+
+The name of the 'action' this result relates to. For example 'Whois'
+if this is the result of a 'Whois' request. Maps to the 'Action' XML
+attribute.
+
+=head2 fe_id
+
+The front end service id of the request. Maps to the 'FeId' XML attribute.
+
+=head2 unique_id
+
+The front end sequence number of the request. Maps to the 'FeSeq' XML 
+attribute.
+
+=head2 by_id
+
+Maps to the 'OrigRegistrarId' XML attribute
+
+=head2 for_id
+
+Maps to the 'RecipientRegistrarId' XML attribute
+
+=head2 client_id
+
+Maps to the 'TransId' XML attribute
+
+=head2 rows
+
+Maps to the 'Rows' XML attribute
+
+=head2 has_more_rows
+
+Maps to the 'MoreRowsAvailable' XML attribute
+
+=head2 count
+
+Maps to the 'Count' XML attribute
+
+=head1 METHODS
+
+=head2 new(%params)
+
+Construct a new XML::SRS::Request object. %params specifies the initial
+values of the attributes.
+  
+=head1 COMPOSED OF
+
+L<XML::SRS::Node>

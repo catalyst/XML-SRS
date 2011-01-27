@@ -41,3 +41,53 @@ sub BUILDARGS {
 
 1;
 
+__END__
+
+=head1 NAME
+
+XML::SRS::Request - Top level SRS request class
+
+=head1 SYNOPSIS
+
+  my $request = XML::SRS::Request->new(
+      registrar_id => 555,
+      requests => \@requests,
+  );
+  
+  $request->to_xml();
+  
+=head1 DESCRIPTION
+
+This class represents the top level of an SRS request. It can be used to
+construct an XML document suitable for sending to an SRS server (such as
+the .nz Domain registry system). The root XML element of this
+class is 'NZSRSRequest'.
+
+=head1 ATTRIBUTES
+
+Each attribute of this class has an accessor/mutator of the same name as
+the attribute. Additionally, they can be passed as parameters to the
+constructor.
+
+=head2 registrar_id
+
+Optional attribute to specify the effective registrar id of the request.
+Maps to the RegistrarId XML attribute.
+
+=head2 requests
+
+Required attribute. Accepts an array ref of objects that compose the
+XML::SRS::Action or XML::SRS::Query roles. This equates to a list of
+SRS transaction objects, i.e. objects representing Whois, DomainCreate,
+etc.
+
+=head1 METHODS
+
+=head2 new(%params)
+
+Construct a new XML::SRS::Request object. %params specifies the initial
+values of the attributes.
+  
+=head1 COMPOSED OF
+
+L<XML::SRS>, L<XML::SRS::Version>

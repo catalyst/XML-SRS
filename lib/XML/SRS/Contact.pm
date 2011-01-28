@@ -72,4 +72,62 @@ use Moose::Util::TypeConstraints;
 coerce __PACKAGE__
 	=> from "HashRef"
 	=> via { __PACKAGE__->new(%$_); };
+		
 1;
+
+__END__
+
+=head1 NAME
+
+XML::SRS::Contact - Class representing an SRS Contact object
+
+=head1 DESCRIPTION
+
+This class represents an SRS Contact object.
+
+=head1 ATTRIBUTES
+
+Each attribute of this class has an accessor/mutator of the same name as
+the attribute. Additionally, they can be passed as parameters to the
+constructor.
+
+=head2 email
+
+Must be of type XML::SRS::Email. Maps to the XML attribute 'Email'
+
+=head2 handle_id
+
+Must be of type XML::SRS::HandleId. Maps to the XML attribute 'HandleId'
+
+=head2 fax
+
+Must be of type XML::SRS::Contact::PSTN. Maps to the XML element 'Fax'
+
+=head2 name
+
+Must be of type Str. Maps to the XML attribute 'Name'
+
+=head2 address
+
+Must be of type XML::SRS::Contact::Address. Maps to the XML element 'PostalAddress'
+
+=head2 action_id
+
+Must be of type XML::SRS::UID. Maps to the XML attribute 'ActionId'
+
+=head2 phone
+
+Must be of type XML::SRS::Contact::PSTN. Maps to the XML element 'Phone'
+
+=head1 METHODS
+
+=head2 new(%params)
+
+Construct a new XML::SRS::Request object. %params specifies the initial
+values of the attributes.
+  
+=head1 COMPOSED OF
+
+L<XML::SRS::Node>
+
+

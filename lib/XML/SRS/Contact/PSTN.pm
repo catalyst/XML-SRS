@@ -46,3 +46,42 @@ coerce __PACKAGE__
 	=> via { __PACKAGE__->new() };
 
 1;
+
+__END__
+
+=head1 NAME
+
+XML::SRS::Contact::PSTN - Class representing an SRS Phone Number object
+
+=head1 DESCRIPTION
+
+This class represents an SRS Phone number object.
+
+=head1 ATTRIBUTES
+
+Each attribute of this class has an accessor/mutator of the same name as
+the attribute. Additionally, they can be passed as parameters to the
+constructor.
+
+=head2 subscriber
+
+Must be of type Str. Maps to the XML attribute 'LocalNumber'
+
+=head2 ndc
+
+Must be of type Str. Maps to the XML attribute 'AreaCode'
+
+=head2 cc
+
+Must be of type Str. Maps to the XML attribute 'CountryCode'
+
+=head1 METHODS
+
+=head2 new(%params)
+
+Construct a new XML::SRS::Request object. %params specifies the initial
+values of the attributes.
+  
+=head1 COMPOSED OF
+
+L<XML::SRS::Node>

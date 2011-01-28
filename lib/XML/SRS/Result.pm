@@ -190,8 +190,8 @@ constructor.
 An array ref of objects that compose the L<XML::SRS::ActionResponse> role.
 This corresponds to the responses to the indvidual transactions of a request.
 The objects returned here will be in a class dependent on the response type,
-for example, a DomainDetailsQry will return 0 or more M<XML::SRS::Domain>
-objects, while a HandleDetailsQry will return 0 or more M<XML::SRS::Handle>
+for example, a DomainDetailsQry will return 0 or more L<XML::SRS::Domain>
+objects, while a HandleDetailsQry will return 0 or more L<XML::SRS::Handle>
 objects. See the POD for each individual transaction for details on what type
 of response to expect.
 

@@ -25,7 +25,7 @@ coerce __PACKAGE__
 				} @$_
 		],
 	);
-	};
+};
 
 coerce __PACKAGE__
 	=> from 'ArrayRef[HashRef]'
@@ -37,7 +37,7 @@ coerce __PACKAGE__
 				} @$_
 		],
 	);
-	};
+};
 
 with 'XML::SRS::Node';
 

@@ -22,6 +22,18 @@ coerce __PACKAGE__
 		);
 	};
 
+coerce __PACKAGE__
+	=> from 'ArrayRef[HashRef]'
+	=> via {
+	__PACKAGE__->new(
+		ds_list => [
+			map {
+				XML::SRS::DS->new($_);
+			} @$_
+		],
+	);
+};
+
 with 'XML::SRS::Node';
 
 1;

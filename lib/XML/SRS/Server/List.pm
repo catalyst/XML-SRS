@@ -70,7 +70,7 @@ Maps to the XML element 'Server'.
 
 Construct a new XML::SRS::Request object. %params specifies the initial
 values of the attributes.
-  
+
 =head1 COMPOSED OF
 
 L<XML::SRS::Node>

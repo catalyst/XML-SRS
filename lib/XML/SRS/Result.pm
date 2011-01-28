@@ -167,7 +167,7 @@ XML::SRS::Result - Represents the result of an individual SRS query or action
   # If the response was for a transaction involving domains, get the
   #  list of domain records returned in the response (as an array ref)
   my $domains = $results->responses;
-  
+
 =head1 DESCRIPTION
 
 This class represents the response to an individual transaction in an
@@ -252,7 +252,7 @@ Maps to the 'Count' XML attribute
 
 Construct a new XML::SRS::Request object. %params specifies the initial
 values of the attributes.
-  
+
 =head1 COMPOSED OF
 
 L<XML::SRS::Node>

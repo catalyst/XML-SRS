@@ -55,7 +55,8 @@ XML::SRS::Request - Top level SRS request class
   );
   
   $request->to_xml();
-  
+
+
 =head1 DESCRIPTION
 
 This class represents the top level of an SRS request. It can be used to
@@ -87,7 +88,7 @@ etc.
 
 Construct a new XML::SRS::Request object. %params specifies the initial
 values of the attributes.
-  
+
 =head1 COMPOSED OF
 
 L<XML::SRS>, L<XML::SRS::Version>

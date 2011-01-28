@@ -100,7 +100,7 @@ Required. Must be of type XML::SRS::Number. Maps to the XML attribute 'Year'
 
 Construct a new XML::SRS::Request object. %params specifies the initial
 values of the attributes.
-  
+
 =head1 COMPOSED OF
 
 L<XML::SRS::Node>, L<XML::SRS::TimeStamp::Role>

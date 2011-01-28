@@ -44,7 +44,7 @@ XML::SRS::Whois - Class representing an SRS Whois transaction
       source_ip => 192.168.1.1,
       domain => 'nzrs.net.nz',
   );
-  
+
 =head1 DESCRIPTION
 
 This class represents an SRS Whois request. The root XML element of this
@@ -74,7 +74,7 @@ Required string, containing a valid domain name to query on.
 
 Construct a new XML::SRS::Request object. %params specifies the initial
 values of the attributes.
-  
+
 =head1 COMPOSED OF
 
 L<XML::SRS::Query>

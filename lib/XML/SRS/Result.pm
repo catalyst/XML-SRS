@@ -89,6 +89,12 @@ subtype 'XML::SRS::timeStampType'
 	=> as "XML::SRS::TimeStamp",
 	;
 
+coerce "XML::SRS::timeStampType"
+	=> from TimestampTZ
+	=> via {
+	XML::SRS::TimeStamp->new(timestamptz => $_);
+	};
+
 has_element 'server_time' =>
 	is => "ro",
 	isa => "XML::SRS::timeStampType",
@@ -100,11 +106,7 @@ has_element 'server_time' =>
 use MooseX::Timestamp;
 use MooseX::TimestampTZ;
 
-coerce "XML::SRS::timeStampType"
-	=> from TimestampTZ
-	=> via {
-	XML::SRS::TimeStamp->new(timestamptz => $_);
-	};
+
 
 # this is for GetMessages responses, so let's call it messages
 has_element 'messages' =>

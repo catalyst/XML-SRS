@@ -8,6 +8,12 @@ use Moose::Util::TypeConstraints;
 
 class_type "Crypt::Password";
 
+coerce "Crypt::Password"
+	=> from "Str"
+	=> via {
+	password($_);
+	};
+
 has_attr 'crypted' =>
 	is => "ro",
 	isa => "Crypt::Password",
@@ -17,12 +23,6 @@ has_attr 'crypted' =>
 	required => 1,
 	coerce => 1,
 	;
-
-coerce "Crypt::Password"
-	=> from "Str"
-	=> via {
-	password($_);
-	};
 
 with 'XML::SRS::Node';
 

@@ -42,16 +42,15 @@ has_attr 'max_results' =>
 	;
 
 use XML::SRS::GetMessages::TypeFilter;
-has_element "type_filter" =>
-	is => "ro",
-	isa => "ArrayRef[XML::SRS::GetMessages::TypeFilter]",
-	xml_min => 0,
-	xml_nodeName => "TypeFilter",
-	coerce => 1,
-	;
-
 use Moose::Util::TypeConstraints;
-coerce 'ArrayRef[XML::SRS::GetMessages::TypeFilter]'
+
+# For some reason, we have to create this subtype
+#  Supposedly, it should work without it if we define the coercion
+#  after the 'has_element', but that generated a warning. Possible Moose bug?
+subtype 'TypeFilterArrayRef' =>
+    as 'ArrayRef[XML::SRS::GetMessages::TypeFilter]';
+
+coerce 'TypeFilterArrayRef'
 	=> from "ArrayRef[Str]"
 	=> via {
 	[   map {
@@ -60,7 +59,15 @@ coerce 'ArrayRef[XML::SRS::GetMessages::TypeFilter]'
 			);
 			} @$_
 	];
-	};
+};
+
+has_element "type_filter" =>
+	is => "ro",
+	isa => "TypeFilterArrayRef",
+	xml_min => 0,
+	xml_nodeName => "TypeFilter",
+	coerce => 1,
+	;
 
 with 'XML::SRS::Query';
 1;

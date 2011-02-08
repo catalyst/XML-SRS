@@ -2,7 +2,10 @@ package XML::SRS::Domain::Update;
 
 use Moose;
 use PRANG::Graph;
+use PRANG::XMLSchema::Types;
 use XML::SRS::Types;
+use Moose::Util::TypeConstraints;
+use PRANG::Coerce;
 use XML::SRS::Server::List;
 use XML::SRS::DS::List;
 
@@ -92,9 +95,10 @@ has_attr 'convert_contacts_to_handles' =>
 # elements
 has_element 'filter' =>
 	is => 'ro',
-	isa => 'ArrayRef[Str]',
+	isa => 'PRANG::Coerce::ArrayRefOfStrs',
 	xml_nodeName => 'DomainNameFilter',
 	xml_required => 1,
+    coerce => 1,
 	;
 
 has_element 'contact_registrant' =>
@@ -102,6 +106,7 @@ has_element 'contact_registrant' =>
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'RegistrantContact',
 	xml_required => 0,
+    coerce => 1,
 	;
 
 has_element 'contact_admin' =>
@@ -109,6 +114,7 @@ has_element 'contact_admin' =>
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'AdminContact',
 	xml_required => 0,
+    coerce => 1,
 	;
 
 has_element 'contact_technical' =>
@@ -116,6 +122,7 @@ has_element 'contact_technical' =>
 	isa => 'XML::SRS::Contact',
 	xml_nodeName => 'TechnicalContact',
 	xml_required => 0,
+    coerce => 1,
 	;
 
 has_element 'nameservers' =>
@@ -123,6 +130,7 @@ has_element 'nameservers' =>
 	isa => 'XML::SRS::Server::List',
 	xml_nodeName => 'NameServers',
 	xml_required => 0,
+    coerce => 1,
 	;
 
 has_element "dns_sec" =>

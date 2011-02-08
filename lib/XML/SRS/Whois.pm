@@ -3,6 +3,8 @@ package XML::SRS::Whois;
 
 use Moose;
 use PRANG::Graph;
+use MooseX::Aliases;
+use MooseX::Aliases::Meta::Trait::Attribute;
 
 has_attr 'full' =>
 	is => "ro",
@@ -20,11 +22,13 @@ has_attr 'source_ip' =>
 	xml_name => "SourceIP",
 	;
 
-has_attr 'domain' =>
+has_attr 'domain_name' =>
 	is => "ro",
 	isa => "XML::SRS::DomainName",
 	xml_name => "DomainName",
 	required => 1,
+	traits => [qw(Aliased)],
+	alias => 'domain',
 	;
 
 sub root_element {"Whois"}

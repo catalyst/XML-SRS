@@ -8,6 +8,10 @@ use XML::SRS::Types;
 use Moose::Util::TypeConstraints;
 use PRANG::Coerce;
 
+use XML::SRS::FieldList;
+use XML::SRS::Server::Filter::List;
+use XML::SRS::Contact::Filter;
+
 # attributes
 has_attr 'status' =>
 	is => 'ro',
@@ -69,9 +73,10 @@ has_element 'domain_name_filter' =>
 
 has_element 'name_server_filter' =>
 	is => 'ro',
-	isa => 'XML::SRS::Server::Filter',
+	isa => 'XML::SRS::Server::Filter::List',
 	xml_nodeName => 'NameServerFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'registrant_contact_filter' =>
@@ -79,6 +84,7 @@ has_element 'registrant_contact_filter' =>
 	isa => 'XML::SRS::Contact::Filter',
 	xml_nodeName => 'RegistrantContactFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'admin_contact_filter' =>
@@ -86,6 +92,7 @@ has_element 'admin_contact_filter' =>
 	isa => 'XML::SRS::Contact::Filter',
 	xml_nodeName => 'AdminContactFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'technical_contact_filter' =>
@@ -93,6 +100,7 @@ has_element 'technical_contact_filter' =>
 	isa => 'XML::SRS::Contact::Filter',
 	xml_nodeName => 'TechnicalContactFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'result_date_range' =>
@@ -163,6 +171,7 @@ has_element 'field_list' =>
 	isa => 'XML::SRS::FieldList',
 	xml_required => 0,
 	xml_nodeName => 'FieldList',
+	coerce => 1,
 	;
 
 sub root_element {'DomainDetailsQry'}

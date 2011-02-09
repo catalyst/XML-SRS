@@ -196,7 +196,7 @@ XML::SRS::Domain::Query - Class representing an SRS DomainDetailsQry transaction
 
 =head1 SYNOPSIS
 
-  my $query = XML => =>SRS => =>Domain => =>Query->new(
+  my $query = XML::SRS::Domain::Query->new(
       "domain_name_filter" => ["ddq.co.te", "ddq2.co.te"],
       "status" => "Active",
       "delegate" => 1,

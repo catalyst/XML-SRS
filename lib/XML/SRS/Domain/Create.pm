@@ -15,7 +15,7 @@ has_attr 'domain_name' =>
 
 has_attr 'domain_name_unicode' =>
 	is => "ro",
-	isa => "XML::SRS::DomainName",
+	isa => "Str",
 	xml_name => "DomainNameUnicode",
 	;
 

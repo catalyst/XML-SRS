@@ -11,6 +11,7 @@ use PRANG::Coerce;
 use XML::SRS::FieldList;
 use XML::SRS::Server::Filter::List;
 use XML::SRS::Contact::Filter;
+use XML::SRS::Date::Range;
 
 # attributes
 has_attr 'status' =>
@@ -108,6 +109,7 @@ has_element 'result_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'ResultDateRange',
+	coerce => 1,
 	;
 
 has_element 'search_date_range' =>
@@ -115,6 +117,7 @@ has_element 'search_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'SearchDateRange',
+	coerce => 1,
 	;
 
 has_element 'changed_in_date_range' =>
@@ -122,6 +125,7 @@ has_element 'changed_in_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'ChangedInDateRange',
+	coerce => 1,
 	;
 
 has_element 'registered_date_range' =>
@@ -129,6 +133,7 @@ has_element 'registered_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'RegisteredDateRange',
+	coerce => 1,
 	;
 
 has_element 'locked_date_range' =>
@@ -136,6 +141,7 @@ has_element 'locked_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'LockedDateRange',
+	coerce => 1,
 	;
 
 has_element 'cancelled_date_range' =>
@@ -143,6 +149,7 @@ has_element 'cancelled_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'CancelledDateRange',
+	coerce => 1,
 	;
 
 has_element 'billed_until_date_range' =>
@@ -150,6 +157,7 @@ has_element 'billed_until_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'BilledUntilDateRange',
+	coerce => 1,
 	;
 
 has_element 'audit_text_filter' =>

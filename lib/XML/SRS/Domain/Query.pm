@@ -8,6 +8,11 @@ use XML::SRS::Types;
 use Moose::Util::TypeConstraints;
 use PRANG::Coerce;
 
+use XML::SRS::FieldList;
+use XML::SRS::Server::Filter::List;
+use XML::SRS::Contact::Filter;
+use XML::SRS::Date::Range;
+
 # attributes
 has_attr 'status' =>
 	is => 'ro',
@@ -69,9 +74,10 @@ has_element 'domain_name_filter' =>
 
 has_element 'name_server_filter' =>
 	is => 'ro',
-	isa => 'XML::SRS::Server::Filter',
+	isa => 'XML::SRS::Server::Filter::List',
 	xml_nodeName => 'NameServerFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'registrant_contact_filter' =>
@@ -79,6 +85,7 @@ has_element 'registrant_contact_filter' =>
 	isa => 'XML::SRS::Contact::Filter',
 	xml_nodeName => 'RegistrantContactFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'admin_contact_filter' =>
@@ -86,6 +93,7 @@ has_element 'admin_contact_filter' =>
 	isa => 'XML::SRS::Contact::Filter',
 	xml_nodeName => 'AdminContactFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'technical_contact_filter' =>
@@ -93,6 +101,7 @@ has_element 'technical_contact_filter' =>
 	isa => 'XML::SRS::Contact::Filter',
 	xml_nodeName => 'TechnicalContactFilter',
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'result_date_range' =>
@@ -100,6 +109,7 @@ has_element 'result_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'ResultDateRange',
+	coerce => 1,
 	;
 
 has_element 'search_date_range' =>
@@ -107,6 +117,7 @@ has_element 'search_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'SearchDateRange',
+	coerce => 1,
 	;
 
 has_element 'changed_in_date_range' =>
@@ -114,6 +125,7 @@ has_element 'changed_in_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'ChangedInDateRange',
+	coerce => 1,
 	;
 
 has_element 'registered_date_range' =>
@@ -121,6 +133,7 @@ has_element 'registered_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'RegisteredDateRange',
+	coerce => 1,
 	;
 
 has_element 'locked_date_range' =>
@@ -128,6 +141,7 @@ has_element 'locked_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'LockedDateRange',
+	coerce => 1,
 	;
 
 has_element 'cancelled_date_range' =>
@@ -135,6 +149,7 @@ has_element 'cancelled_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'CancelledDateRange',
+	coerce => 1,
 	;
 
 has_element 'billed_until_date_range' =>
@@ -142,6 +157,7 @@ has_element 'billed_until_date_range' =>
 	isa => 'XML::SRS::Date::Range',
 	xml_required => 0,
 	xml_nodeName => 'BilledUntilDateRange',
+	coerce => 1,
 	;
 
 has_element 'audit_text_filter' =>
@@ -163,6 +179,7 @@ has_element 'field_list' =>
 	isa => 'XML::SRS::FieldList',
 	xml_required => 0,
 	xml_nodeName => 'FieldList',
+	coerce => 1,
 	;
 
 sub root_element {'DomainDetailsQry'}

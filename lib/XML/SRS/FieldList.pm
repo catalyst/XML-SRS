@@ -4,6 +4,8 @@ package XML::SRS::FieldList;
 use Moose;
 use PRANG::Graph;
 
+use Moose::Util::TypeConstraints;
+
 has_attr 'status' =>
 	is => 'ro',
 	isa => 'XML::SRS::Boolean',
@@ -145,5 +147,15 @@ has_attr 'default_contacts' =>
 	;
 
 with 'XML::SRS::Node';
+
+coerce __PACKAGE__
+	=> from 'ArrayRef'
+	=> via {
+    	my %params = map { $_ => 1 } @{$_[0]}; 
+
+    	__PACKAGE__->new(
+    		%params,
+    	);
+    };
 
 1;

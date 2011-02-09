@@ -5,6 +5,8 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 
+use Moose::Util::TypeConstraints;
+
 has_attr 'fqdn' =>
 	is => "ro",
 	isa => "XML::SRS::DomainName",

@@ -12,7 +12,7 @@ has_element 'server_filter' =>
 	is => 'ro',
 	isa => 'ArrayRef[XML::SRS::Server::Filter]',
 	xml_nodeName => 'ServerFilter',
-	coerce => 1,
+	coerce => 0,
 	required => 1,
 	;
 

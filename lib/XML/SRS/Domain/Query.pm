@@ -12,6 +12,9 @@ use XML::SRS::FieldList;
 use XML::SRS::Server::Filter::List;
 use XML::SRS::Contact::Filter;
 use XML::SRS::Date::Range;
+use MooseX::Aliases;
+use MooseX::Aliases::Meta::Trait::Attribute;
+
 
 # attributes
 has_attr 'status' =>
@@ -86,6 +89,8 @@ has_element 'registrant_contact_filter' =>
 	xml_nodeName => 'RegistrantContactFilter',
 	xml_required => 0,
 	coerce => 1,
+	traits => [qw(Aliased)],	
+	alias => 'contact_registrant',
 	;
 
 has_element 'admin_contact_filter' =>
@@ -94,6 +99,8 @@ has_element 'admin_contact_filter' =>
 	xml_nodeName => 'AdminContactFilter',
 	xml_required => 0,
 	coerce => 1,
+	traits => [qw(Aliased)],	
+	alias => 'contact_admin',
 	;
 
 has_element 'technical_contact_filter' =>
@@ -102,6 +109,8 @@ has_element 'technical_contact_filter' =>
 	xml_nodeName => 'TechnicalContactFilter',
 	xml_required => 0,
 	coerce => 1,
+	traits => [qw(Aliased)],	
+	alias => 'contact_technical',
 	;
 
 has_element 'result_date_range' =>

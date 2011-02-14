@@ -26,6 +26,7 @@ has_element 'digest' =>
 	is => "rw",
 	isa => "Str",
 	xml_nodeName => "Digest",
+	predicate => 'has_digest',
 	;	
 
 with 'XML::SRS::Node';

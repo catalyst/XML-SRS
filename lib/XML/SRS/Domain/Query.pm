@@ -10,6 +10,7 @@ use PRANG::Coerce;
 
 use XML::SRS::FieldList;
 use XML::SRS::Server::Filter::List;
+use XML::SRS::DS::Filter::List;
 use XML::SRS::Contact::Filter;
 use XML::SRS::Date::Range;
 use MooseX::Aliases;
@@ -82,6 +83,14 @@ has_element 'name_server_filter' =>
 	xml_required => 0,
 	coerce => 1,
 	;
+	
+has_element 'dns_sec_filter' =>
+	is => 'ro',
+	isa => 'XML::SRS::DS::Filter::List',
+	xml_nodeName => 'DNSSECFilter',
+	xml_required => 0,
+	coerce => 1,
+	;	
 
 has_element 'registrant_contact_filter' =>
 	is => 'ro',
@@ -266,7 +275,13 @@ XML::SRS::Domain::Query - Class representing an SRS DomainDetailsQry transaction
   	  "search_date_range" => {
   		"begin" => "2000-01-01 00:00:00",
   		"end" => "2020-01-01 00:00:00",
-  	  },      
+  	  },
+      "dns_sec_filter" => {
+    		"key_tag" => "2",
+    		"algorithm" => "6",
+    		"digest_type" => "1",
+    		"digest" => "2222222222222222222222222222222222222222",
+      },  	        
       "audit_text_filter" => "audit text *",
       "action_id_filter" => "ddq setup *",  
   	  "field_list"= > [ 

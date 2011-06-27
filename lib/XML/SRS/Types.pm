@@ -15,7 +15,7 @@ subtype "${PKG}::Number"
 subtype "${PKG}::RegistrarId"
 	=> as "PRANG::XMLSchema::positiveInteger";
 subtype "${PKG}::Term"
-	=> as "PRANG::XMLSchema::positiveInteger";
+	=> as "PRANG::XMLSchema::nonNegativeInteger";
 subtype "${PKG}::token_OTHERS"
 	=> as "Str",
 	=> where { $_ eq "OTHERS" };

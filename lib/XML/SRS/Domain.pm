@@ -91,6 +91,7 @@ has_element 'nameservers' =>
 	isa => 'XML::SRS::Server::List',
 	xml_nodeName => 'NameServers',
 	xml_required => 0,
+	coerce => 1,
 	;
 	
 has_element "dns_sec" =>

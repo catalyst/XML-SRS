@@ -2,6 +2,7 @@ package XML::SRS::Domain::Create;
 
 use Moose;
 use PRANG::Graph;
+use XML::SRS::Contact;
 use XML::SRS::Types;
 use XML::SRS::Server::List;
 use XML::SRS::DS::List;
@@ -95,7 +96,7 @@ XML::SRS::Domain::Create - Class representing an SRS DomainCreate transaction
 
 =head1 SYNOPSIS
 
-  my $create = XML::SRS::DomainCreate->new(
+  my $create = XML::SRS::Domain::Create->new(
         domain_name => 'foo.co.nz',
         term => 1,
         action_id => "1234",

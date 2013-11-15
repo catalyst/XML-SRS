@@ -6,6 +6,8 @@ use PRANG::Graph;
 use MooseX::Aliases;
 use MooseX::Aliases::Meta::Trait::Attribute;
 
+use XML::SRS::Types;
+
 has_attr 'full' =>
 	is => "ro",
 	isa => "XML::SRS::Boolean",

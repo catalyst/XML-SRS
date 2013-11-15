@@ -7,6 +7,7 @@ use Carp;
 use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
+use XML::SRS::TimeStamp;
 use Moose::Util::TypeConstraints;
 
 has_attr 'action' =>
@@ -94,6 +95,12 @@ coerce "XML::SRS::timeStampType"
 	=> via {
 	XML::SRS::TimeStamp->new(timestamptz => $_);
 	};
+	
+coerce "XML::SRS::timeStampType"
+    => from 'Str'
+    => via {
+    XML::SRS::TimeStamp->new(timestamptz => $_);
+    };
 
 has_element 'server_time' =>
 	is => "ro",
@@ -115,6 +122,8 @@ has_element 'messages' =>
 	xml_nodeName => "Response",
 	xml_min => 0,
 	;
+	
+role_type 'XML::SRS::ActionResponse';
 
 has_element 'responses' =>
 	is => "ro",

@@ -159,7 +159,8 @@ has 'response' =>
 	},
 	;
 
-with 'XML::SRS::Node';
+with 'XML::SRS', 'XML::SRS::Node';
+sub root_element { 'Response' }
 
 1;
 

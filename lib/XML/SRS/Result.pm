@@ -159,6 +159,14 @@ has 'response' =>
 	},
 	;
 
+sub is_error {
+    my $self = shift;
+    
+    my $responses = $self->responses;
+    
+    return $responses->[0]->isa('XML::SRS::Error');   
+}
+
 with 'XML::SRS', 'XML::SRS::Node';
 sub root_element { 'Response' }
 

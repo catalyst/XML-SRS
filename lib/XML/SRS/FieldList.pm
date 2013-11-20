@@ -158,4 +158,17 @@ coerce __PACKAGE__
     	);
     };
 
+# Return a list of fields that have been requested
+sub requested_fields {
+    my $self = shift;
+    
+    my @fields;
+    foreach my $attr_name ($self->meta->get_attribute_list) {
+        push @fields, $attr_name
+            if $self->$attr_name;
+    }
+    
+    return @fields;
+}
+
 1;

@@ -39,6 +39,14 @@ coerce __PACKAGE__
 	);
 };
 
+coerce __PACKAGE__
+    => from 'ArrayRef[XML::SRS::Server]'
+    => via {
+    __PACKAGE__->new(
+        nameservers => $_,
+    );
+};
+
 with 'XML::SRS::Node';
 
 1;

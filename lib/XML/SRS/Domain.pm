@@ -2,8 +2,14 @@
 package XML::SRS::Domain;
 use Moose;
 use PRANG::Graph;
+
 use XML::SRS::Types;
 use XML::SRS::Server::List;
+use XML::SRS::DefaultContacts;
+use XML::SRS::AuditDetails;
+
+use MooseX::Aliases;
+use MooseX::Aliases::Meta::Trait::Attribute;
 
 has_attr 'name' =>
 	is => "ro",
@@ -30,6 +36,8 @@ has_attr 'name_language' =>
 	isa => "Str",
 	xml_name => "DomainNameLanguage",
 	xml_required => 0,
+    traits => [qw(Aliased)],    
+    alias => 'idna_language',	
 	;
 
 has_attr 'registrant_ref' =>
@@ -100,6 +108,7 @@ has_element "dns_sec" =>
 	isa => "XML::SRS::DS::List",
 	xml_nodeName => "DNSSEC",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'contact_registrant' =>
@@ -108,6 +117,8 @@ has_element 'contact_registrant' =>
 	xml_nodeName => 'RegistrantContact',
 	xml_required => 0,
 	coerce => 1,
+    traits => [qw(Aliased)],    
+    alias => 'registrant_contact',	
 	;
 
 has_element 'contact_registrar_public' =>
@@ -116,6 +127,8 @@ has_element 'contact_registrar_public' =>
 	xml_nodeName => 'RegistrarPublicContact',
 	xml_required => 0,
 	coerce => 1,
+    traits => [qw(Aliased)],    
+    alias => 'registrar_public_contact',	
 	;
 
 has_element 'contact_admin' =>
@@ -124,6 +137,8 @@ has_element 'contact_admin' =>
 	xml_nodeName => 'AdminContact',
 	xml_required => 0,
 	coerce => 1,
+    traits => [qw(Aliased)],    
+    alias => 'admin_contact',	
 	;
 
 has_element 'contact_technical' =>
@@ -132,6 +147,8 @@ has_element 'contact_technical' =>
 	xml_nodeName => 'TechnicalContact',
 	xml_required => 0,
 	coerce => 1,
+    traits => [qw(Aliased)],    
+    alias => 'technical_contact',
 	;
 
 has_element 'billed_until' =>
@@ -139,6 +156,7 @@ has_element 'billed_until' =>
 	isa => 'XML::SRS::TimeStamp',
 	xml_required => 0,
 	xml_nodeName => 'BilledUntil',
+	coerce => 1,
 	;
 
 has_element 'registered_date' =>
@@ -146,6 +164,9 @@ has_element 'registered_date' =>
 	isa => 'XML::SRS::TimeStamp',
 	xml_required => 0,
 	xml_nodeName => 'RegisteredDate',
+    traits => [qw(Aliased)],    
+    alias => 'registered',
+    coerce => 1,
 	;
 
 has_element 'cancelled_date' =>
@@ -153,6 +174,9 @@ has_element 'cancelled_date' =>
 	isa => 'XML::SRS::TimeStamp',
 	xml_required => 0,
 	xml_nodeName => 'CancelledDate',
+    traits => [qw(Aliased)],    
+    alias => 'cancelled',
+    coerce => 1,
 	;
 
 has_element 'locked_date' =>
@@ -160,6 +184,9 @@ has_element 'locked_date' =>
 	isa => 'XML::SRS::TimeStamp',
 	xml_required => 0,
 	xml_nodeName => 'LockedDate',
+    traits => [qw(Aliased)],    
+    alias => 'locked',
+    coerce => 1,	
 	;
 
 has_element 'default_contacts' =>
@@ -167,6 +194,7 @@ has_element 'default_contacts' =>
 	isa => 'XML::SRS::DefaultContacts',
 	xml_required => 0,
 	xml_nodeName => 'DefaultContacts',
+	coerce => 1,
 	;
 
 has_element 'audit' =>
@@ -174,6 +202,9 @@ has_element 'audit' =>
 	isa => "XML::SRS::AuditDetails",
 	xml_nodeName => "AuditDetails",
 	predicate => "has_audit",
+    traits => [qw(Aliased)],    
+    alias => 'audit_details',
+    coerce => 1,
 	;
 
 sub root_element {

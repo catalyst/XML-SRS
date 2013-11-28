@@ -1,0 +1,65 @@
+<NZSRSRequest VerMajor="5" VerMinor="1" RegistrarId="1">   
+ <RegistrarCreate ActionId="action" Name="Registrar s9c1" RegistrarId="111" AccRef="Reg s9c1">                                                          
+  <RegistrarPublicContact Name="Registrar s9c1" Email="Registrar.email.s9c1@test.co.te">
+   <PostalAddress Address1="Registrar Address 1 s9c1" Address2="Registrar Address 2 s9c1" City="Registrar City s9c1" Province="Registrar Province s9c1" CountryCode="NZ" PostalCode="Registrar post code s9c1"/>
+   <Phone AreaCode="4" CountryCode="64" LocalNumber="Registrar phone s9c1"/>
+   <Fax AreaCode="4" CountryCode="64" LocalNumber="Registrar fax s9c1"/>
+  </RegistrarPublicContact>
+  <RegistrarSRSContact Name="Admin s9c1" Email="Admin.email.s9c1@test.co.te">
+   <PostalAddress Address1="Admin Address 1 s9c1" Address2="Admin Address 2 s9c1" City="Admin City s9c1" Province="Admin Province s9c1" CountryCode="NU" PostalCode="Admin post code s9c1"/>
+   <Phone AreaCode="5" CountryCode="65" LocalNumber="Admin phone s9c1"/>
+   <Fax AreaCode="5" CountryCode="65" LocalNumber="Admin fax s9c1"/>
+  </RegistrarSRSContact>
+   <DefaultTechnicalContact Name="Technical s9c1" Email="Technical.email.s9c1@test.co.te">
+    <PostalAddress Address1="Technical Address 1 s9c1" Address2="Technical Address 2 s9c1" City="Technical City s9c1" Province="Technical Province s9c1" CountryCode="AQ" PostalCode="Technical post code s9c1"/>
+    <Phone AreaCode="6" CountryCode="66" LocalNumber="Technical phone s9c1"/>
+    <Fax AreaCode="6" CountryCode="66" LocalNumber="Technical fax s9c1"/>
+   </DefaultTechnicalContact>                                                          
+ <EncryptKeys><EncryptKey><![CDATA[-----BEGIN PGP PUBLIC KEY BLOCK-----
+ Version: GnuPG v1.4.1 (GNU/Linux)
+ 
+ mQGiBEeEJuQRBACeGkxeqTyUnBIBZ/ztbjLDy7fWMqWPb+KaVrubgnlXa7lHqi57
+ 8qm0jGseOOMaCZfM4Kj01bsIzmUZvNHnineKbNR04yY+MkK16by5YptlWQf4E4TV
+ Msr4r10JMvmfn9KBut98uqpOE0djljU+B/xyjv+bL1zUVC+IRg5joE5XYwCghOZk
+ taKWwWZz+JLSqjabctF3ypMD/iHMbmC7y63bh73Q6QTQ8+z4w1Y9pRB5mQBCnyR6
+ RUL29f9zRyVZBnDQe4yIjBtoEylyzB0EDeEOwaN54f8c83TEL+dvIGOAaCo66ZCN
+ 0w86fW39q0ES0/VlboFaCI3Y7bvjrKkqdjSPNY0J9D9s53SPqa0PubFxrUlK7r0o
+ SKNkBACK4p57IsDBImjD0VE/NmBF4D7UL7I9Ri+d0sQN45iMSdFOsPyFJh1vwzR9
+ kj30kbW+EfXFNWIc1eRgKuJsBu9wrIqTwJp6aFMTjWSMTVciIQgw39g/LL6ZJLO6
+ x7Uy4BKJ+mDR8NhzZc3aArOzW8+PnhxJRR007RTlZvShYLaJC7QTc2Vjb25ka2V5
+ IDxhQGEuY29tPoheBBMRAgAeBQJHhCbkAhsDBgsJCAcDAgMVAgMDFgIBAh4BAheA
+ AAoJEEwoj8aLPLZzxx0An3aP0H06mmaEdXhP8H8P5XHSGzn5AJ9TIymKNHyeTI44
+ fXprU9RBUiWmNLkBDQRHhCblEAQAxun9BEpKzCwxwfbxZwK/i1Rl/xda0FaljE7h
+ pE1qNt7z0VD1tTiJzZvN8mxsPB9ufp95bNPZ5NRjr1WSWrWrDSSPtfhLzBxK1Lec
+ /3IhFJ4NeqgnqNxFnm7U0eqh5KvtZNmNFczbpv1ePrIfZav8b4z5NPB5YckVj6mn
+ ejT/YwMAAwYD/1IG9hr3jXooHtD6VvGX8IX8CKB2T5puFW5ziUb9S2bCFJDi5ckn
+ IxmegWg3U8rbYcw2Llj3EsmacFkGUxFXiOMxmvjWCpxpyCQ0gTWa/jS+bOsQtESi
+ BOH7qhc9GkLtVekZRZ5iTT63ANKX1v1dkmtmFE5564KBjRlsP5lBsqxdiEkEGBEC
+ AAkFAkeEJuUCGwwACgkQTCiPxos8tnPFRgCeOtFfK7yxJOo8urRtsYLskU80lI4A
+ n3HdIwGkqvdbJAscXjsp5hPZyeSC
+ =NI1A
+ -----END PGP PUBLIC KEY BLOCK-----]]></EncryptKey></EncryptKeys>
+  <Allowed2LDs>
+     <SecondLD DomainName="co.te"/>
+     <SecondLD DomainName="net.te"/>
+     <SecondLD DomainName="org.te"/>
+     <SecondLD DomainName="ac.te"/>
+     <SecondLD DomainName="gen.te"/>
+     <SecondLD DomainName="geek.te"/>
+     <SecondLD DomainName="school.te"/>
+     <SecondLD DomainName="maori.te"/>
+  </Allowed2LDs>  
+  <Roles>
+    <Role RoleName="Registrar"/>
+    <Role RoleName="Connect"/>
+    <Role RoleName="Whois"/>
+    <Role RoleName="Query"/>
+    <Role RoleName="CreateDomain"/>
+    <Role RoleName="UpdateDomain"/>
+    <Role RoleName="TransferDomain"/>
+    <Role RoleName="CancelDomain"/>
+    <Role RoleName="UncancelDomain"/>
+    <Role RoleName="UpdateRegistrar"/>
+   </Roles>
+  </RegistrarCreate>
+</NZSRSRequest>

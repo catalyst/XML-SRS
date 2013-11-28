@@ -30,6 +30,7 @@ use XML::SRS::Audit;
 # Query types:
 use XML::SRS::Whois;
 use XML::SRS::ACL::Query;
+use XML::SRS::Registrar::Create;
 use XML::SRS::Registrar::Query;
 use XML::SRS::Registrar::Update;
 use XML::SRS::Domain::Create;

@@ -61,5 +61,6 @@
     <Role RoleName="UncancelDomain"/>
     <Role RoleName="UpdateRegistrar"/>
    </Roles>
+   <AuditText>Hello</AuditText>
   </RegistrarCreate>
 </NZSRSRequest>

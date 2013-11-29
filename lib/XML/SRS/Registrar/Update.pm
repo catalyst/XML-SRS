@@ -82,13 +82,12 @@ has_element 'roles' =>
 	xml_required => 0,
 	;
 
-has_element 'audit' =>
-	is => "rw",
-	isa => "XML::SRS::AuditDetails",
-	xml_nodeName => "AuditDetails",
-	predicate => "has_audit",
-	xml_required => 0,
-	;
+has_element 'audit_text' =>
+    is => "rw",
+    isa => "Str",
+    xml_nodeName => "AuditText",
+    predicate => "has_audit",
+    ;
 
 sub root_element {"RegistrarUpdate"}
 with 'XML::SRS::Action';

@@ -25,7 +25,7 @@ has_attr 'Size' =>
 
 has_attr 'SizeChange' =>
 	is => "ro",
-	isa => "XML::SRS::Number",
+	isa => "Int",
 	xml_required => 0,
 	;
 

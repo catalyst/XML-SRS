@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="AccessControlListRemove" FeId="1" FeSeq="12379219659561968" OrigRegistrarId="100" RecipientRegistrarId="100" Rows="1" TransId="Test testing/integrated/ui/wr36938-better-config-data/05-aclremove/99-aclremove-all.yml 0 a">
+     <FeTimeStamp Day="29" Hour="13" Minute="44" Month="11" Second="53" TimeZoneOffset="+13:00" Year="2013"/>
+     <AccessControlList List="whitelist" Resource="whoisd" SizeChange="-2" Type="ip"/>
+   </Response>
+</NZSRSResponse>

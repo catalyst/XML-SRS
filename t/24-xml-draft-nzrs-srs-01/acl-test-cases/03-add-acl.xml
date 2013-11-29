@@ -1,0 +1,8 @@
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <AccessControlListAdd ActionId="Action" Resource="whoisd" List="blacklist" FullResult="0">
+     <AccessControlListEntry Address="123.2.3.0/24" Comment="evil people" />
+     <AccessControlListEntry Address="123.2.3.0/24" Comment="evil people" />
+     <AccessControlListEntry Address="123.64.0.0/22" Comment="evil people" />
+     <AuditText>audit text</AuditText>
+    </AccessControlListAdd>
+</NZSRSRequest>

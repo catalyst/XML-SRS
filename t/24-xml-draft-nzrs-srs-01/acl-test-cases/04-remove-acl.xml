@@ -1,0 +1,7 @@
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <AccessControlListRemove ActionId="actionid" Resource="whoisd" List="whitelist" FullResult="0">
+     <AccessControlListEntry Address="123.5.0.0/24" Comment="more bad people"/>
+     <AccessControlListEntry Address="123.5.1.0/24" Comment="more bad people"/>
+     <AuditText>whitelist</AuditText>
+   </AccessControlListRemove>
+</NZSRSRequest>

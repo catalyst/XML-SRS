@@ -32,7 +32,8 @@ has_element 'effective' =>
 	is => "ro",
 	isa => "XML::SRS::TimeStamp",
 	xml_nodeName => "EffectiveDate",
-	predicate => "has_effective",
+	predicate => "has_effective",	
+    xml_required => 0,
 	;
 
 with 'XML::SRS::Node';

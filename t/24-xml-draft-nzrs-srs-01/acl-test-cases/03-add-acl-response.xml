@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="AccessControlListAdd" FeId="1" FeSeq="19599700466836724" OrigRegistrarId="100" RecipientRegistrarId="100" Rows="1" TransId="Test testing/integrated/ui/wr36938-better-config-data/04-acladd/01-acladd.yml 0">
+     <FeTimeStamp Day="29" Hour="12" Minute="28" Month="11" Second="28" TimeZoneOffset="+13:00" Year="2013"/>
+     <AccessControlList List="blacklist" Resource="whoisd" SizeChange="1" Type="ip"/>
+   </Response>
+</NZSRSResponse>

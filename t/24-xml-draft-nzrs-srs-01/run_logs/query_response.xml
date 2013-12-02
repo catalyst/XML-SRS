@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="50">
+   <Response Action="RunLogQry" FeId="1" FeSeq="58273855140118512" OrigRegistrarId="1" RecipientRegistrarId="50" Rows="2">
+     <FeTimeStamp Day="3" Hour="11" Minute="06" Month="1" Second="07" TimeZoneOffset="+13:00" Year="2014"/>
+     <RunLog ActionStatus="Successful" Parameters="" ProcessName="ReleaseDomains">
+       <RunLogTimeStamp Day="03" Hour="10" Minute="56" Month="1" Second="07" TimeZoneOffset="+13:00" Year="2014"/>
+       <RunLogDetails><![CDATA[Audit Text s18c1b]]></RunLogDetails>
+     </RunLog>
+     <RunLog ActionStatus="Successful" Parameters="" ProcessName="ReleaseDomains">
+       <RunLogTimeStamp Day="03" Hour="10" Minute="56" Month="12" Second="07" TimeZoneOffset="+13:00" Year="2013"/>
+       <RunLogDetails><![CDATA[Audit Text s18c1a]]></RunLogDetails>
+     </RunLog>
+   </Response>
+</NZSRSResponse>

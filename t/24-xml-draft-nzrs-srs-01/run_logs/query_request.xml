@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="50">
+   <RunLogQry ProcessName="ReleaseDomains">
+     <LogDateRange>
+       <From Year="2013" Hour="11" Month="11" TimeZoneOffset="+13:00" Day="23" Second="43" Minute="04"/>
+       <To Year="2013" Hour="11" Month="12" TimeZoneOffset="+13:00" Day="03" Second="43" Minute="04"/>
+     </LogDateRange>
+   </RunLogQry>
+</NZSRSRequest>

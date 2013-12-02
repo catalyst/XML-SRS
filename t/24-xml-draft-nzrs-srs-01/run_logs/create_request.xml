@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="50">
+   <RunLogCreate ActionId="Test testing/acceptance/ui/Acceptance-Registry/s18-Query-Run-Logs/Acceptance-s18c1/s18c1-02-run-log-create.yml 0">
+     <FirstRunDate Year="2014" Hour="10" Month="06" TimeZoneOffset="+12:00" Day="03" Second="34" Minute="46"/>
+     <RunLog ProcessName="ReleaseDomains" ActionStatus="Successful">
+       <RunLogTimeStamp Year="2013" Hour="10" Month="12" TimeZoneOffset="+13:00" Day="03" Second="35" Minute="36"/>
+       <RunLogDetails><![CDATA[Audit Text s18c1a]]></RunLogDetails>
+     </RunLog>
+   </RunLogCreate>
+</NZSRSRequest>

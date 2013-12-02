@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="50">
+   <Response Action="RunLogCreate" FeId="1" FeSeq="81166645311483872" OrigRegistrarId="50" RecipientRegistrarId="50" TransId="Test testing/acceptance/ui/Acceptance-Registry/s18-Query-Run-Logs/Acceptance-s18c1/s18c1-02-run-log-create.yml 0">
+     <FeTimeStamp Day="3" Hour="10" Minute="46" Month="12" Second="35" TimeZoneOffset="+13:00" Year="2013"/>
+     <RunLog ActionStatus="Successful" Parameters="" ProcessName="ReleaseDomains">
+       <RunLogTimeStamp Day="03" Hour="10" Minute="36" Month="12" Second="35" TimeZoneOffset="+13:00" Year="2013"/>
+       <RunLogDetails><![CDATA[Audit Text s18c1a]]></RunLogDetails>
+     </RunLog>
+   </Response>
+</NZSRSResponse>

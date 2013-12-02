@@ -3,6 +3,7 @@ package XML::SRS::Schedule::Query;
 use Moose;
 use PRANG::Graph;
 use Moose::Util::TypeConstraints;
+use XML::SRS::TimeStamp;
 
 sub root_element {
     "ScheduleQry";

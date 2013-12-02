@@ -3,6 +3,7 @@ package XML::SRS::Schedule::Update;
 use Moose;
 use PRANG::Graph;
 use Moose::Util::TypeConstraints;
+use XML::SRS::TimeStamp;
 
 sub root_element {
     "ScheduleUpdate";

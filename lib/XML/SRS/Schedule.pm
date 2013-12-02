@@ -3,6 +3,7 @@ package XML::SRS::Schedule;
 use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
+use XML::SRS::TimeStamp;
 
 has_attr "ProcessName" =>
     is => "ro",

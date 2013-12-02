@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+  <Response Action="SysParamsQry" FeId="1" FeSeq="87265783947999504" OrigRegistrarId="1" RecipientRegistrarId="100">
+    <FeTimeStamp Day="3" Hour="10" Minute="31" Month="12" Second="48" TimeZoneOffset="+13:00" Year="2013"/>
+    <SysParam Name="Pending Release Period">
+      <ParamValue><![CDATA[90]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Maximum Domain Name Servers">
+      <ParamValue><![CDATA[10]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Request Timeout">
+      <ParamValue><![CDATA[120]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Registration Grace Period">
+      <ParamValue><![CDATA[5]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Maximum XML Response Size">
+      <ParamValue><![CDATA[1024]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Maximum Billing Term">
+      <ParamValue><![CDATA[120]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Double Registration Period">
+      <ParamValue><![CDATA[30]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Maximum Message Size">
+      <ParamValue><![CDATA[1000000]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="Renewal Grace Period">
+      <ParamValue><![CDATA[5]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="01" Hour="00" Minute="00" Month="1" Second="00" TimeZoneOffset="+13:00" Year="2000"/>
+        </AuditTime>
+        <AuditText><![CDATA[init-model-db]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="There have been vampires since">
+      <ParamValue><![CDATA[20090101 00:00:00]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="03" Hour="10" Minute="31" Month="12" Second="47" TimeZoneOffset="+13:00" Year="2013"/>
+        </AuditTime>
+        <AuditText><![CDATA[create new sysparam record]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="IDNA Activation Date II">
+      <ParamValue><![CDATA[20100726 10:00:00]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="03" Hour="10" Minute="31" Month="12" Second="48" TimeZoneOffset="+13:00" Year="2013"/>
+        </AuditTime>
+        <AuditText><![CDATA[System Paramter setup]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="IDNA Default Language II">
+      <ParamValue><![CDATA[.NZ LATIN]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="03" Hour="10" Minute="31" Month="12" Second="48" TimeZoneOffset="+13:00" Year="2013"/>
+        </AuditTime>
+        <AuditText><![CDATA[System Paramter setup]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+    <SysParam Name="IDNA Language .NZ LATIN II">
+      <ParamValue><![CDATA[U+002D U+0101 U+0113 U+012B U+014D U+016B U+0030-U+0039 U+0061-U+007A]]></ParamValue>
+      <AuditDetails>
+        <AuditTime>
+          <From Day="03" Hour="10" Minute="31" Month="12" Second="48" TimeZoneOffset="+13:00" Year="2013"/>
+        </AuditTime>
+        <AuditText><![CDATA[System Paramter setup]]></AuditText>
+      </AuditDetails>
+    </SysParam>
+  </Response>
+</NZSRSResponse>

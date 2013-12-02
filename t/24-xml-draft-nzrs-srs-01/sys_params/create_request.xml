@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <SysParamsCreate ActionId="Test testing/integrated/ui/SysParams/00-valid.yml 0">
+     <SysParam Name="There have been vampires since">
+       <ParamValue><![CDATA[20090101 00:00:00]]></ParamValue>
+     </SysParam>
+     <AuditText>create new sysparam record</AuditText>
+   </SysParamsCreate>
+</NZSRSRequest>

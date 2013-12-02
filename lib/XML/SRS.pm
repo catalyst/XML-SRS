@@ -51,6 +51,9 @@ use XML::SRS::Schedule::Create;
 use XML::SRS::Schedule::Query;
 use XML::SRS::Schedule::Update;
 use XML::SRS::Schedule::Cancel;
+use XML::SRS::SysParam::Create;
+use XML::SRS::SysParam::Query;
+use XML::SRS::SysParam::Update;
 
 # ActionResponse types:
 use XML::SRS::Error;
@@ -60,6 +63,7 @@ use XML::SRS::Handle;
 use XML::SRS::Registrar;
 use XML::SRS::UDAIValid;
 use XML::SRS::Schedule;
+use XML::SRS::SysParam;
 
 1;
 

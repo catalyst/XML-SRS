@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <SysParamsUpdate ActionId="Test testing/integrated/ui/SysParams/03-update.yml 0">
+     <SysParam Name="There have been vampires since">
+       <ParamValue>14611221 21:42:00</ParamValue>
+     </SysParam>
+   </SysParamsUpdate>
+   <SysParamsQry/>
+</NZSRSRequest>

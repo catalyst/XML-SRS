@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="SysParamsCreate" FeId="1" FeSeq="5741447403943667" OrigRegistrarId="1" RecipientRegistrarId="100" TransId="Test testing/integrated/ui/SysParams/00-valid.yml 0">
+     <FeTimeStamp Day="3" Hour="09" Minute="53" Month="12" Second="20" TimeZoneOffset="+13:00" Year="2013"/>
+     <SysParam Name="There have been vampires since">
+       <ParamValue><![CDATA[20090101 00:00:00]]></ParamValue>
+       <AuditDetails>
+         <AuditTime>
+           <From Day="03" Hour="09" Minute="53" Month="12" Second="20" TimeZoneOffset="+13:00" Year="2013"/>
+         </AuditTime>
+         <AuditText><![CDATA[create new sysparam record]]></AuditText>
+       </AuditDetails>
+     </SysParam>
+   </Response>
+</NZSRSResponse>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0">
+   <ScheduleCancel ActionId="Test testing/acceptance/ui/Acceptance-Registry/s17-Cancel-Schedule/Acceptance-s17c1/s17c1-02-schedule-cancel.yml 0" ProcessName="BuildDnsZoneFiles">
+     <FirstRunDate Year="2014" Hour="09" Month="06" TimeZoneOffset="+12:00" Day="03" Second="25" Minute="21"/>
+     <AuditText><![CDATA[Cancel Build DNS Zone Files s17c1]]></AuditText>
+   </ScheduleCancel>
+</NZSRSRequest>

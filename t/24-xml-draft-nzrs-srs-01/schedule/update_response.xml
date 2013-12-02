@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="1">
+   <Response Action="ScheduleUpdate" FeId="1" FeSeq="46881482060732080" OrigRegistrarId="1" RecipientRegistrarId="1" TransId="Test testing/integrated/ui/Schedule/20-UpdateFrequency.yml 0">
+     <FeTimeStamp Day="3" Hour="09" Minute="01" Month="12" Second="02" TimeZoneOffset="+13:00" Year="2013"/>
+     <Schedule CreateActionId="Test testing/integrated/ui/Schedule/10-Create.yml 0" CreateByRegistrarId="1" Frequency="7 days" Parameters="" ProcessName="BuildDnsZoneFiles">
+       <FirstRunDate Day="06" Hour="09" Minute="01" Month="12" Second="01" TimeZoneOffset="+13:00" Year="2013"/>
+       <CreateAuditText/>
+     </Schedule>
+   </Response>
+</NZSRSResponse>

@@ -47,6 +47,10 @@ use XML::SRS::Message;
 use XML::SRS::Message::Ack::Response;
 use XML::SRS::GetMessages;
 use XML::SRS::AckMessage;
+use XML::SRS::Schedule::Create;
+use XML::SRS::Schedule::Query;
+use XML::SRS::Schedule::Update;
+use XML::SRS::Schedule::Cancel;
 
 # ActionResponse types:
 use XML::SRS::Error;
@@ -55,6 +59,7 @@ use XML::SRS::Domain;
 use XML::SRS::Handle;
 use XML::SRS::Registrar;
 use XML::SRS::UDAIValid;
+use XML::SRS::Schedule;
 
 1;
 

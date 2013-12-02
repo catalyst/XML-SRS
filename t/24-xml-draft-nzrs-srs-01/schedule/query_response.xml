@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+ <NZSRSResponse VerMajor="5" VerMinor="0">
+   <Response Action="ScheduleQry" FeId="1" FeSeq="99890523690647008" OrigRegistrarId="1" RecipientRegistrarId="1">
+     <FeTimeStamp Day="2" Hour="18" Minute="24" Month="12" Second="41" TimeZoneOffset="+13:00" Year="2013"/>
+     <Schedule CreateActionId="MODEL-INIT" CreateByRegistrarId="1" Frequency="01:00:00" Parameters="" ProcessName="BuildDnsZoneFiles">
+       <FirstRunDate Day="29" Hour="11" Minute="48" Month="11" Second="00" TimeZoneOffset="+13:00" Year="2013"/>
+       <CreateAuditText><![CDATA[init-model-db]]></CreateAuditText>
+     </Schedule>
+   </Response>
+</NZSRSResponse>

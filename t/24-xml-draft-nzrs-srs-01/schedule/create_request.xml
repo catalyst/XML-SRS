@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="1">
+   <ScheduleCreate ActionId="action" ProcessName="RenewDomains" Frequency="1 day">
+     <FirstRunDate Year="2014" Hour="17" Month="12" TimeZoneOffset="+13:00" Day="02" Second="31" Minute="41"/>
+     <FinalRunDate Year="2014" Hour="18" Month="12" TimeZoneOffset="+13:00" Day="02" Second="31" Minute="41"/>
+     <AuditText><![CDATA[Renew Domains s15c1]]></AuditText>
+   </ScheduleCreate>
+</NZSRSRequest>

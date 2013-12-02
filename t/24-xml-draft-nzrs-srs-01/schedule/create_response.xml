@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="1">
+   <Response Action="ScheduleCreate" FeId="1" FeSeq="49797022559596728" OrigRegistrarId="1" RecipientRegistrarId="1" TransId="Test testing/acceptance/ui/Acceptance-Registry/s15-Create-Schedule/Acceptance-s15c1/s15c1-01-create-renew-domains-schedule.yml 0">
+     <FeTimeStamp Day="2" Hour="17" Minute="41" Month="12" Second="31" TimeZoneOffset="+13:00" Year="2013"/>
+     <Schedule CancelByRegistrarId="1" CreateActionId="Test testing/acceptance/ui/Acceptance-Registry/s15-Create-Schedule/Acceptance-s15c1/s15c1-01-create-renew-domains-schedule.yml 0" CreateByRegistrarId="1" Frequency="1 day" Parameters="" ProcessName="RenewDomains">
+       <FirstRunDate Day="02" Hour="17" Minute="41" Month="12" Second="31" TimeZoneOffset="+13:00" Year="2014"/>
+       <FinalRunDate Day="02" Hour="18" Minute="41" Month="12" Second="31" TimeZoneOffset="+13:00" Year="2014"/>
+       <CreateAuditText><![CDATA[Renew Domains s15c1]]></CreateAuditText>
+       <CancelAuditText><![CDATA[Renew Domains s15c1]]></CancelAuditText>
+     </Schedule>
+   </Response>
+</NZSRSResponse>

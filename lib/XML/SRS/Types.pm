@@ -179,5 +179,10 @@ enum "${PKG}::DomainStatus" =>
 
 enum "${PKG}::BillStatus" =>
 	qw(PendingConfirmation Confirmed);
+	
+# Schedule Types
+enum "${PKG}::ScheduledJobType" =>
+    qw(BuildDnsZoneFiles ReleaseDomains RenewDomains GenerateDomainReport GenerateStatsReport
+       ExtractWebsiteData DeleteUnusedHandles);
 
 1;

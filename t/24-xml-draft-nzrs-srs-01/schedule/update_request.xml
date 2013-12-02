@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="1">
+   <ScheduleUpdate ActionId="Test testing/integrated/ui/Schedule/20-UpdateFrequency.yml 0" ProcessName="BuildDnsZoneFiles" Frequency="1 week">
+     <FirstRunDate Year="2013" Hour="09" Month="12" TimeZoneOffset="+13:00" Day="06" Second="01" Minute="01"/>
+     <LastRunDate Year="2013" Hour="10" Month="12" TimeZoneOffset="+13:00" Day="06" Second="01" Minute="01"/>
+   </ScheduleUpdate>
+</NZSRSRequest>

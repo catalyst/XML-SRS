@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0">
+   <Response Action="ScheduleCancel" FeId="1" FeSeq="91696794363403456" OrigRegistrarId="1" RecipientRegistrarId="1" TransId="Test testing/acceptance/ui/Acceptance-Registry/s17-Cancel-Schedule/Acceptance-s17c1/s17c1-02-schedule-cancel.yml 0">
+     <FeTimeStamp Day="3" Hour="09" Minute="21" Month="12" Second="26" TimeZoneOffset="+13:00" Year="2013"/>
+     <Schedule CancelByRegistrarId="1" CreateActionId="Test testing/acceptance/ui/Acceptance-Registry/s17-Cancel-Schedule/Acceptance-s17c1/s17c1-01-schedule-create.yml 0" CreateByRegistrarId="1" Frequency="01:00:00" Parameters="" ProcessName="BuildDnsZoneFiles">
+       <FirstRunDate Day="03" Hour="09" Minute="21" Month="6" Second="25" TimeZoneOffset="+12:00" Year="2014"/>
+       <FinalRunDate Day="03" Hour="09" Minute="21" Month="12" Second="26" TimeZoneOffset="+13:00" Year="2013"/>
+       <CreateAuditText><![CDATA[Create Build DNS Zone Files s17c1]]></CreateAuditText>
+       <CancelAuditText><![CDATA[Cancel Build DNS Zone Files s17c1]]></CancelAuditText>
+     </Schedule>
+   </Response>
+</NZSRSResponse>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="ResetMsgQ" FeId="1" FeSeq="85057502831018176" OrigRegistrarId="1" RecipientRegistrarId="100" Rows="0" TransId="Test testing/integrated/ui/GetMessages/ResetMsgQ/35-resetmsgq.yml 0">
+     <FeTimeStamp Day="3" Hour="11" Minute="13" Month="12" Second="13" TimeZoneOffset="+13:00" Year="2013"/>
+   </Response>
+</NZSRSResponse>

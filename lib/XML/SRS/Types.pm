@@ -141,7 +141,7 @@ enum "${PKG}::RegistryAction" =>
 	DeferredIncomeSummaryQry DeferredIncomeDetailQry
 	BilledUntilAdjustment BuildDnsZoneFiles GenerateDomainReport
 	AdjustRegistrarAccount AccessControlListQry
-	AccessControlListAdd AccessControlListRemove);
+	AccessControlListAdd AccessControlListRemove ResetMsgQ);
 
 subtype "${PKG}::ActionName" =>
 	as join(

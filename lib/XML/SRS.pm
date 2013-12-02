@@ -56,6 +56,7 @@ use XML::SRS::SysParam::Query;
 use XML::SRS::SysParam::Update;
 use XML::SRS::RunLog::Create;
 use XML::SRS::RunLog::Query;
+use XML::SRS::ResetMsgQ;
 
 # ActionResponse types:
 use XML::SRS::Error;

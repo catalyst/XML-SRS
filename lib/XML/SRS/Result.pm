@@ -164,6 +164,8 @@ sub is_error {
     
     my $responses = $self->responses;
     
+    return 0 unless @$responses;
+    
     return $responses->[0]->isa('XML::SRS::Error');   
 }
 

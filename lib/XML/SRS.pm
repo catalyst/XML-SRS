@@ -58,6 +58,7 @@ use XML::SRS::SysParam::Update;
 use XML::SRS::RunLog::Create;
 use XML::SRS::RunLog::Query;
 use XML::SRS::ResetMsgQ;
+use XML::SRS::GenerateDomainReport;
 
 # ActionResponse types:
 use XML::SRS::Error;

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="GenerateDomainReport" FeId="1" FeSeq="34349227261646220" OrigRegistrarId="1" RecipientRegistrarId="100" Rows="1" TransId="Test testing/integrated/ui/roles/Registry/06-generate-domain-report.yml 0">
+     <FeTimeStamp Day="4" Hour="12" Minute="14" Month="12" Second="09" TimeZoneOffset="+13:00" Year="2013"/>
+     <RunLog ActionStatus="Successful" Parameters="" ProcessName="GenerateDomainReport">
+       <RunLogTimeStamp Day="04" Hour="12" Minute="14" Month="12" Second="09" TimeZoneOffset="+13:00" Year="2013"/>
+       <RunLogDetails><![CDATA[Completed (FILE=/var/srs/statistics/domainReport-srsinstance-20131204121409, Total=7)]]></RunLogDetails>
+     </RunLog>
+   </Response>
+</NZSRSResponse>

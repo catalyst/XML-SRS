@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <GenerateDomainReport ActionId="Test testing/integrated/ui/roles/Registry/06-generate-domain-report.yml 0">
+     <RunDate Year="2013" Hour="12" Month="12" TimeZoneOffset="+13:00" Day="04" Second="09" Minute="14"/>
+   </GenerateDomainReport>
+</NZSRSRequest>

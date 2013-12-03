@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="RegistrarAccountQry" FeId="1" FeSeq="13619092739294202" OrigRegistrarId="100" RecipientRegistrarId="100" Rows="2">
+     <FeTimeStamp Day="8" Hour="11" Minute="28" Month="1" Second="11" TimeZoneOffset="+13:00" Year="2014"/>
+     <BillingTrans Amount="1.50" BillingTerm="1" DomainName="transfer-test1.co.te" RegistrarId="100" TransStatus="PendingConfirmation" Type="Renew">
+       <TransDate Day="08" Hour="11" Minute="28" Month="1" Second="11" TimeZoneOffset="+13:00" Year="2014"/>
+       <BillPeriodStart Day="03" Hour="11" Minute="28" Month="1" Second="10" TimeZoneOffset="+13:00" Year="2014"/>
+       <BillPeriodEnd Day="03" Hour="11" Minute="28" Month="2" Second="10" TimeZoneOffset="+13:00" Year="2014"/>
+     </BillingTrans>
+     <BillingTrans Amount="1.50" BillingTerm="1" DomainName="transfer-test1.co.te" RegistrarId="100" TransStatus="PendingConfirmation" Type="Create">
+       <TransDate Day="03" Hour="11" Minute="28" Month="12" Second="10" TimeZoneOffset="+13:00" Year="2013"/>
+       <BillPeriodStart Day="03" Hour="11" Minute="28" Month="12" Second="10" TimeZoneOffset="+13:00" Year="2013"/>
+       <BillPeriodEnd Day="03" Hour="11" Minute="28" Month="1" Second="10" TimeZoneOffset="+13:00" Year="2014"/>
+     </BillingTrans>
+   </Response>
+</NZSRSResponse>

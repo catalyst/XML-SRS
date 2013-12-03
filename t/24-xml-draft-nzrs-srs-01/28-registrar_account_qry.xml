@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="101">
+   <RegistrarAccountQry DomainName="transfer-test1.co.te">
+       </RegistrarAccountQry>
+</NZSRSRequest>

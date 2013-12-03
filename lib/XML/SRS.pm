@@ -35,6 +35,7 @@ use XML::SRS::ACL::Remove;
 use XML::SRS::Registrar::Create;
 use XML::SRS::Registrar::Query;
 use XML::SRS::Registrar::Update;
+use XML::SRS::Registrar::AccountQuery;
 use XML::SRS::Domain::Create;
 use XML::SRS::Domain::Update;
 use XML::SRS::Domain::Query;
@@ -68,6 +69,7 @@ use XML::SRS::UDAIValid;
 use XML::SRS::Schedule;
 use XML::SRS::SysParam;
 use XML::SRS::RunLog;
+use XML::SRS::BillingTrans;
 
 1;
 

@@ -137,7 +137,7 @@ enum "${PKG}::RegistrarQueryAction" =>
 enum "${PKG}::RegistryAction" =>
 	qw(SysParamsCreate SysParamsUpdate SysParamsQry RunLogCreate RunLogQry
 	ScheduleCreate ScheduleCancel ScheduleQry ScheduleUpdate
-	BillingExtract SetBillingAmount BillingAmountQry
+	BillingExtract SetBillingAmount BillingAmountQry BillingAmountUpdate
 	DeferredIncomeSummaryQry DeferredIncomeDetailQry
 	BilledUntilAdjustment BuildDnsZoneFiles GenerateDomainReport
 	AdjustRegistrarAccount AccessControlListQry

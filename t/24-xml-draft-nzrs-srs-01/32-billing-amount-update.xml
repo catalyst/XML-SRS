@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="1">
+   <BillingAmountUpdate ActionId="Test testing/integrated/ui/wr53347-BillingAmountQry/04-change-billing-amount.yml 0">
+     <BillingAmount Amount="4.50">
+       <EffectiveDate Year="2013" Hour="04" Month="12" TimeZoneOffset="+13:00" Day="05" Second="00" Minute="30"/>
+     </BillingAmount>
+   </BillingAmountUpdate>
+</NZSRSRequest>

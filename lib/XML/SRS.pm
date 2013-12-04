@@ -62,6 +62,8 @@ use XML::SRS::GenerateDomainReport;
 use XML::SRS::DeferredIncome::SummaryQuery;
 use XML::SRS::DeferredIncome::DetailQuery;
 use XML::SRS::BuildDnsZoneFiles;
+use XML::SRS::BillingAmount::Query;
+use XML::SRS::BillingAmount::Update;
 
 # ActionResponse types:
 use XML::SRS::Error;
@@ -75,6 +77,7 @@ use XML::SRS::SysParam;
 use XML::SRS::RunLog;
 use XML::SRS::BillingTrans;
 use XML::SRS::DeferredRegistrarIncome;
+use XML::SRS::BillingAmount;
 
 1;
 

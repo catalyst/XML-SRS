@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="1">
+   <Response Action="BillingAmountQry" FeId="1" FeSeq="82817269888813520" OrigRegistrarId="1" RecipientRegistrarId="1">
+     <FeTimeStamp Day="4" Hour="13" Minute="25" Month="12" Second="48" TimeZoneOffset="+13:00" Year="2013"/>
+     <BillingAmount Amount="2.00"/>
+     <BillingAmount Amount="1.75">
+       <EffectiveDate Day="01" Hour="00" Minute="00" Month="7" Second="00" TimeZoneOffset="+12:00" Year="2004"/>
+     </BillingAmount>
+     <BillingAmount Amount="1.50">
+       <EffectiveDate Day="01" Hour="00" Minute="00" Month="7" Second="00" TimeZoneOffset="+12:00" Year="2007"/>
+     </BillingAmount>
+     <BillingAmount Amount="4.00">
+       <EffectiveDate Day="05" Hour="04" Minute="00" Month="12" Second="00" TimeZoneOffset="+13:00" Year="2013"/>
+     </BillingAmount>
+     <BillingAmount Amount="5.00">
+       <EffectiveDate Day="05" Hour="05" Minute="00" Month="12" Second="00" TimeZoneOffset="+13:00" Year="2013"/>
+     </BillingAmount>
+   </Response>
+</NZSRSResponse>

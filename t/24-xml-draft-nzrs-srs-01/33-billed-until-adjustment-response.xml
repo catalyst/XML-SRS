@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+   <Response Action="BilledUntilAdjustment" FeId="1" FeSeq="51055006016710536" OrigRegistrarId="1" RecipientRegistrarId="100" TransId="Test testing/acceptance/ui/Acceptance-Registry/s21-Set-billed-until-adjustment/Acceptance-s21c1/s21c1-02-set-adjustment-date-valid-date.yml 0">
+     <FeTimeStamp Day="4" Hour="14" Minute="03" Month="12" Second="08" TimeZoneOffset="+13:00" Year="2013"/>
+     <Domain Delegate="1" DomainName="registrytest21-1.co.te" RegistrantRef="Ref. s21c1" RegistrarId="100" Status="Active" Term="1">
+       <NameServers>
+         <Server FQDN="srstestc1-1.net.te"/>
+         <Server FQDN="srstestc1-2.net.te"/>
+         <Server FQDN="srstestc1-3.net.te"/>
+         <Server FQDN="srstestc1-4.net.te"/>
+         <Server FQDN="srstestc1-5.net.te"/>
+         <Server FQDN="srstestc1-6.net.te"/>
+         <Server FQDN="srstestc1-7.net.te"/>
+         <Server FQDN="srstestc1-8.net.te"/>
+         <Server FQDN="srstestc1-9.net.te"/>
+         <Server FQDN="srstestc1-10.net.te"/>
+       </NameServers>
+       <RegistrantContact Name="Registrant s21c1" Email="Registrant.email.s21c1@test.co.te">
+         <PostalAddress Address1="Registrant Address 1 s21c1" Address2="Registrant Address 2 s21c1" City="Registrant City s21c1" CountryCode="NZ" PostalCode="Registrant post code s21c1" Province="Registrant Province s21c1"/>
+         <Phone AreaCode="4" CountryCode="64" LocalNumber="Registrant phone s21c1"/>
+         <Fax AreaCode="4" CountryCode="64" LocalNumber="Registrant fax s21c1"/>
+       </RegistrantContact>
+       <AdminContact Name="Admin s21c1" Email="Admin.email.s21c1@test.co.te">
+         <PostalAddress Address1="Admin Address 1 s21c1" Address2="Admin Address 2 s21c1" City="Admin City s21c1" CountryCode="NU" PostalCode="Admin post code s21c1" Province="Admin Province s21c1"/>
+         <Phone AreaCode="4" CountryCode="64" LocalNumber="Admin phone s21c1"/>
+         <Fax AreaCode="4" CountryCode="64" LocalNumber="Admin fax s21c1"/>
+       </AdminContact>
+       <TechnicalContact Name="Technical s21c1" Email="Technical.email.s21c1@test.co.te">
+         <PostalAddress Address1="Technical Address 1 s21c1" Address2="Technical Address 2 s21c1" City="Technical City s21c1" CountryCode="AQ" PostalCode="Technical post code s21c1" Province="Technical Province s21c1"/>
+         <Phone AreaCode="4" CountryCode="64" LocalNumber="Technical phone s21c1"/>
+         <Fax AreaCode="4" CountryCode="64" LocalNumber="Technical fax s21c1"/>
+       </TechnicalContact>
+       <BilledUntil Day="04" Hour="14" Minute="03" Month="8" Second="07" TimeZoneOffset="+12:00" Year="2014"/>
+       <RegisteredDate Day="04" Hour="14" Minute="03" Month="12" Second="07" TimeZoneOffset="+13:00" Year="2013"/>
+       <AuditDetails ActionId="Test testing/acceptance/ui/Acceptance-Registry/s21-Set-billed-until-adjustment/Acceptance-s21c1/s21c1-02-set-adjustment-date-valid-date.yml 0" RegistrarId="1">
+         <AuditTime>
+           <From Day="04" Hour="14" Minute="03" Month="12" Second="08" TimeZoneOffset="+13:00" Year="2013"/>
+         </AuditTime>
+         <AuditText><![CDATA[BilledUntilAdjustment registrytest21-1.co.te]]></AuditText>
+       </AuditDetails>
+     </Domain>
+   </Response>
+</NZSRSResponse>

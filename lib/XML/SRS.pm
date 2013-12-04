@@ -64,6 +64,7 @@ use XML::SRS::DeferredIncome::DetailQuery;
 use XML::SRS::BuildDnsZoneFiles;
 use XML::SRS::BillingAmount::Query;
 use XML::SRS::BillingAmount::Update;
+use XML::SRS::BilledUntilAdjustment;
 
 # ActionResponse types:
 use XML::SRS::Error;

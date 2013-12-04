@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <BilledUntilAdjustment ActionId="Test testing/acceptance/ui/Acceptance-Registry/s21-Set-billed-until-adjustment/Acceptance-s21c1/s21c1-02-set-adjustment-date-valid-date.yml 0" DomainName="registrytest21-1.co.te">
+     <NewBilledUntilDate Year="2014" Hour="14" Month="08" TimeZoneOffset="+12:00" Day="04" Second="07" Minute="03"/>
+     <AuditText><![CDATA[BilledUntilAdjustment registrytest21-1.co.te]]></AuditText>
+   </BilledUntilAdjustment>
+</NZSRSRequest>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="50">
+  <Response Action="BuildDnsZoneFiles" FeId="1" FeSeq="20170507811415916" OrigRegistrarId="50" RecipientRegistrarId="50" Rows="1" TransId="Test testing/integrated/ui/wr72273-dnssec/05-DomainCreate/02-creates/91-BuildDnsZoneFile.yml 0">
+     <FeTimeStamp Day="4" Hour="13" Minute="19" Month="12" Second="42" TimeZoneOffset="+13:00" Year="2013"/>
+     <RunLog ActionStatus="Successful" Parameters="" ProcessName="BuildDnsZoneFiles">
+       <RunLogTimeStamp Day="04" Hour="13" Minute="24" Month="12" Second="40" TimeZoneOffset="+13:00" Year="2013"/>
+       <RunLogDetails><![CDATA[Completed (FILE=/var/run/zonebuild/dnsOutputFile-srsinstance),   MD5 Hash = /5WOGJtBED83Z9MjZaanAg==,   Domains exported = 4,   Domains not delegated = 6,   Domains delegated but with insufficent servers = 0,   Domains with server names only = 4,   Domains with IPv4 servers = 6,   Domains with IPv6 servers = 1,   Domains with DS records = 3,   Domains exported in co.te = 4,   Total 10]]></RunLogDetails>
+     </RunLog>
+   </Response>
+</NZSRSResponse>

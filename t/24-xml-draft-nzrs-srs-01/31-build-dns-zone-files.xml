@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="50">
+  <BuildDnsZoneFiles ActionId="Test testing/integrated/ui/wr72273-dnssec/05-DomainCreate/02-creates/91-BuildDnsZoneFile.yml 0">
+     <RunDate Year="2013" Hour="13" Month="12" TimeZoneOffset="+13:00" Day="04" Second="40" Minute="24"/>
+   </BuildDnsZoneFiles>
+</NZSRSRequest>

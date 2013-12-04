@@ -61,6 +61,7 @@ use XML::SRS::ResetMsgQ;
 use XML::SRS::GenerateDomainReport;
 use XML::SRS::DeferredIncome::SummaryQuery;
 use XML::SRS::DeferredIncome::DetailQuery;
+use XML::SRS::BuildDnsZoneFiles;
 
 # ActionResponse types:
 use XML::SRS::Error;

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+  <Response Action="ActionDetailsQry" FeId="1" FeSeq="43542158798979360" OrigRegistrarId="100" RecipientRegistrarId="100">
+    <FeTimeStamp Day="4" Hour="14" Minute="32" Month="12" Second="36" TimeZoneOffset="+13:00" Year="2013"/>
+    <RawRequest>
+      <XML><![CDATA[%3cNZSRSRequest+VerMajor%3d%225%22+VerMinor%3d%220%22+RegistrarId%3d%22100%22%3e%0d%0a++%3cDomainCreate+Term%3d%2212%22+ActionId%3d%22adq1%22+DomainName%3d%22mess-q1%2eco%2ete%22%3e%0d%0a++++%3cRegistrantContact+Name%3d%22Name%22+Email%3d%22testdomain%40test%2enet%2enz%22%3e%0d%0a++++++%3cPostalAddress+Address1%3d%22Address1%22+City%3d%22testCity%22+CountryCode%3d%22NZ%22%2f%3e%0d%0a++++++++%3cPhone+CountryCode%3d%2264%22+AreaCode%3d%224%22+LocalNumber%3d%22testdomain+Phone%22%2f%3e%0d%0a++++%3c%2fRegistrantContact%3e%0d%0a++++%3cAuditText%3ecreate+new+mess-q+domain%3c%2fAuditText%3e%0d%0a++%3c%2fDomainCreate%3e%0d%0a%3c%2fNZSRSRequest%3e]]></XML>
+      <Signature><![CDATA[-----BEGIN PGP SIGNATURE-----
+Version: Crypt::OpenPGP 1.04
+
+iQEcBAABAgAGBQJSnoYzAAoJEMwoKuCQLV6uNZIH/jWkPegDN0er5yk71JM9xWSR
+IBuhwIzXI8JHgBuplXg6j1/bNK89TUAWx+O7Abkr5MnHk7123FBK5u68uUJGJvM5
+mmB8UG8cRvSVlbtG0kxRmMaas+1Rc47XzUD3QZi1xAqY4dYf6T20pXceTL7d6BxH
+2J6qqlLKda1IbNKrDpi57EU/2LT8/MktDjuuZ70bHnhZqrR0+7fQMa0LVNikdgJu
+whEbaOanS1cVJvIsoReNhGd7dR+EgCA5OdOQTc9TnSsJbQYPdMAAsdgTrVu0/TCp
+TkMcPSWxmGpUfSGfu47PeHlIDU0P/1f1APp3vQCCPV9qTsNQwAw116/QoJ9NXi8=
+=vfSK
+-----END PGP SIGNATURE-----
+]]></Signature>
+     </RawRequest>
+     <RawResponse>
+       <XML><![CDATA[%3c%3fxml+version%3d%221%2e0%22%3f%3e%0a%3c%21DOCTYPE+NZSRSResponse+SYSTEM+%22protocol%2edtd%22%3e%0a%3cNZSRSResponse+VerMajor%3d%22__SRSVERMAJOR__%22+VerMinor%3d%22__SRSVERMINOR__%22+RegistrarId%3d%22100%22%3e%3cResponse+Action%3d%22DomainCreate%22+FeId%3d%221%22+FeSeq%3d%22244016184388229%22+OrigRegistrarId%3d%22100%22+RecipientRegistrarId%3d%22100%22+TransId%3d%22adq1%22%3e%3cFeTimeStamp+Day%3d%224%22+Hour%3d%2214%22+Minute%3d%2232%22+Month%3d%2212%22+Second%3d%2235%22+TimeZoneOffset%3d%22%2b13%3a00%22+Year%3d%222013%22%2f%3e%3cDomain+Delegate%3d%221%22+DomainName%3d%22mess-q1%2eco%2ete%22+RegistrarId%3d%22100%22+Status%3d%22Active%22+Term%3d%221%22+UDAI%3d%22x2B76rXd%22%3e%3cRegistrantContact+Name%3d%22Name%22+Email%3d%22testdomain%40test%2enet%2enz%22%3e%3cPostalAddress+Address1%3d%22Address1%22+City%3d%22testCity%22+CountryCode%3d%22NZ%22%2f%3e%3cPhone+AreaCode%3d%224%22+CountryCode%3d%2264%22+LocalNumber%3d%22testdomain+Phone%22%2f%3e%3c%2fRegistrantContact%3e%3cAdminContact+Name%3d%22Name%22+Email%3d%22testdomain%40test%2enet%2enz%22%3e%3cPostalAddress+Address1%3d%22Address1%22+City%3d%22testCity%22+CountryCode%3d%22NZ%22%2f%3e%3cPhone+AreaCode%3d%224%22+CountryCode%3d%2264%22+LocalNumber%3d%22testdomain+Phone%22%2f%3e%3c%2fAdminContact%3e%3cTechnicalContact+Name%3d%22Model+A+Registrar%22+Email%3d%22support%40model-a%2eco%2ete%22%3e%3cPostalAddress+Address1%3d%2242%2c+Seldon+Lane%22+City%3d%22Agyropol%22+CountryCode%3d%22NZ%22+PostalCode%3d%2299001%22%2f%3e%3cPhone+AreaCode%3d%229%22+CountryCode%3d%2299%22+LocalNumber%3d%22234-5678%22%2f%3e%3cFax+AreaCode%3d%229%22+CountryCode%3d%2299%22+LocalNumber%3d%22234-5679%22%2f%3e%3c%2fTechnicalContact%3e%3cBilledUntil+Day%3d%2204%22+Hour%3d%2214%22+Minute%3d%2232%22+Month%3d%2212%22+Second%3d%2235%22+TimeZoneOffset%3d%22%2b13%3a00%22+Year%3d%222014%22%2f%3e%3cRegisteredDate+Day%3d%2204%22+Hour%3d%2214%22+Minute%3d%2232%22+Month%3d%2212%22+Second%3d%2235%22+TimeZoneOffset%3d%22%2b13%3a00%22+Year%3d%222013%22%2f%3e%3cAuditDetails+ActionId%3d%22adq1%22+RegistrarId%3d%22100%22%3e%3cAuditTime%3e%3cFrom+Day%3d%2204%22+Hour%3d%2214%22+Minute%3d%2232%22+Month%3d%2212%22+Second%3d%2235%22+TimeZoneOffset%3d%22%2b13%3a00%22+Year%3d%222013%22%2f%3e%3c%2fAuditTime%3e%3cAuditText%3e%3c%21%5bCDATA%5bcreate+new+mess-q+domain%5d%5d%3e%3c%2fAuditText%3e%3c%2fAuditDetails%3e%3c%2fDomain%3e%3c%2fResponse%3e%3c%2fNZSRSResponse%3e]]></XML>
+       <Signature><![CDATA[not stored]]></Signature>
+     </RawResponse>
+   </Response>
+</NZSRSResponse>

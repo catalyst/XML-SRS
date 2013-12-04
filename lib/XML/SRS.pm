@@ -66,6 +66,7 @@ use XML::SRS::BillingAmount::Query;
 use XML::SRS::BillingAmount::Update;
 use XML::SRS::BilledUntilAdjustment;
 use XML::SRS::AdjustRegistrarAccount;
+use XML::SRS::ActionDetailsQry;
 
 # ActionResponse types:
 use XML::SRS::Error;
@@ -80,6 +81,8 @@ use XML::SRS::RunLog;
 use XML::SRS::BillingTrans;
 use XML::SRS::DeferredRegistrarIncome;
 use XML::SRS::BillingAmount;
+use XML::SRS::RawRequest;
+use XML::SRS::RawResponse;
 
 1;
 

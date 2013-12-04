@@ -30,16 +30,16 @@ has_attr 'domain_name' =>
     xml_name => "DomainName",
     ;
 
-has_attr 'registrar_ref' =>
+has_attr 'registrant_ref' =>
     is => "ro",
     isa => "Str",
-    xml_name => "RegistrarRef",
+    xml_name => "RegistrantRef",
     xml_required => 0,
     ;
 
 has_attr 'billing_term' =>
     is => "ro",
-    isa => "XML::SRS::Term",
+    isa => "Int",
     xml_name => "BillingTerm",
     ;
 

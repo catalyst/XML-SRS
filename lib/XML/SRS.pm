@@ -65,6 +65,7 @@ use XML::SRS::BuildDnsZoneFiles;
 use XML::SRS::BillingAmount::Query;
 use XML::SRS::BillingAmount::Update;
 use XML::SRS::BilledUntilAdjustment;
+use XML::SRS::AdjustRegistrarAccount;
 
 # ActionResponse types:
 use XML::SRS::Error;

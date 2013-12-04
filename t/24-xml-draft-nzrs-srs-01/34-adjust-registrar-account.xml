@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="1">
+   <AdjustRegistrarAccount ActionId="Test testing/integrated/ui/wr61692-AdjustRegistrarAccount/03-AdjustRegistrarAccount.yml 0" DomainName="wr61692.co.te" ActionType="Credit" Months="1" RegistrarId="100">
+     <TransactionDate Year="2013" Hour="14" Month="12" TimeZoneOffset="+13:00" Day="04" Second="56" Minute="15"/>
+     <BillPeriodStart Year="2013" Hour="14" Month="12" TimeZoneOffset="+13:00" Day="04" Second="56" Minute="15"/>
+     <BillPeriodEnd Year="2014" Hour="14" Month="01" TimeZoneOffset="+13:00" Day="04" Second="56" Minute="15"/>
+     <AuditText>credit - wr61692.co.te</AuditText>
+   </AdjustRegistrarAccount>
+</NZSRSRequest>

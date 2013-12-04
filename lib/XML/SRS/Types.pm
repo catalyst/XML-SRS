@@ -109,7 +109,7 @@ coerce "${PKG}::Dollars"
 	};
 
 our @AccountingAction = qw(Credit Debit);
-subtype "${PKG}::token_OTHERS"
+subtype "${PKG}::AccountingAction"
 	=> as "Str",
 	=> where { $_ ~~ @AccountingAction };
 

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="1">
+   <Response Action="AdjustRegistrarAccount" FeId="1" FeSeq="79346182503844528" OrigRegistrarId="1" RecipientRegistrarId="1" TransId="Test testing/integrated/ui/wr61692-AdjustRegistrarAccount/03-AdjustRegistrarAccount.yml 0">
+     <FeTimeStamp Day="4" Hour="14" Minute="15" Month="12" Second="58" TimeZoneOffset="+13:00" Year="2013"/>
+     <BillingTrans Amount="-1.50" BillingTerm="-1" DomainName="wr61692.co.te" RegistrantRef="credit - wr61692.co.te" RegistrarId="100" TransStatus="PendingConfirmation" Type="Credit">
+       <TransDate Day="04" Hour="14" Minute="15" Month="12" Second="56" TimeZoneOffset="+13:00" Year="2013"/>
+       <BillPeriodStart Day="04" Hour="14" Minute="15" Month="12" Second="56" TimeZoneOffset="+13:00" Year="2013"/>
+       <BillPeriodEnd Day="04" Hour="14" Minute="15" Month="1" Second="56" TimeZoneOffset="+13:00" Year="2014"/>
+     </BillingTrans>
+   </Response>
+</NZSRSResponse>

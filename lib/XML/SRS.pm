@@ -59,6 +59,8 @@ use XML::SRS::RunLog::Create;
 use XML::SRS::RunLog::Query;
 use XML::SRS::ResetMsgQ;
 use XML::SRS::GenerateDomainReport;
+use XML::SRS::DeferredIncome::SummaryQuery;
+use XML::SRS::DeferredIncome::DetailQuery;
 
 # ActionResponse types:
 use XML::SRS::Error;
@@ -71,6 +73,7 @@ use XML::SRS::Schedule;
 use XML::SRS::SysParam;
 use XML::SRS::RunLog;
 use XML::SRS::BillingTrans;
+use XML::SRS::DeferredRegistrarIncome;
 
 1;
 

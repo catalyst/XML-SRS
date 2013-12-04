@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="0" RegistrarId="100">
+  <Response Action="DeferredIncomeSummaryQry" FeId="1" FeSeq="81559135143561792" OrigRegistrarId="1" RecipientRegistrarId="100">
+     <FeTimeStamp Day="4" Hour="12" Minute="51" Month="12" Second="35" TimeZoneOffset="+13:00" Year="2013"/>
+     <DeferredRegistrarIncome BaseMonth="10" BaseYear="2013" IncomeMonth="9" IncomeYear="2013" BilledAmount="1.50" BilledCount="2" RegistrarId="100"/>
+     <DeferredRegistrarIncome BaseMonth="4" BaseYear="2013" IncomeMonth="5" IncomeYear="2013" BilledAmount="2.50" BilledCount="1"  RegistrarId="100"/>
+   </Response>
+</NZSRSResponse>

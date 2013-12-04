@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+   <DeferredIncomeDetailQry BaseMonth="10" BaseYear="2010" IncomeYear="2010" IncomeMonth="10"/>
+</NZSRSRequest>

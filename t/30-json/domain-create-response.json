@@ -1,0 +1,42 @@
+{
+    "version": "6.1",
+    "registrar_id": 100,
+    "responses": [
+        {            
+            "action": "DomainCreate",
+            "fe_id": 1,
+            "unique_id": 12345678,
+            "by_id": 100,
+            "for_id": 100,
+            "client_id": "transaction id",            
+            "server_time": "2013-12-01 08:00:00-1300",            
+            "action_responses": [
+                {
+                    "response_type": "Domain",
+                    "name": "foo.co.nz",
+                    "registrar_id": 100,
+                    "delegate": 1,
+                    "status": "Active",
+                    "term": 1,
+                    "UDAI": "ufqwpQ7r",
+                    "contact_registrant": {
+                        "name": "Bob Smith",
+                        "email": "bob@smith.com",
+                        "address": {
+                            "address1": "105 My Street",
+                            "address2": "Suburb",
+                            "city": "My Town",
+                            "cc": "NZ",
+                            "postcode": 6011
+                        },
+                        "phone": {
+                            "cc": "64",
+                            "ndc": "4",
+                            "subscriber": "555-5555"
+                        }
+                    }                    
+                }
+            ]
+        }
+    ]
+}

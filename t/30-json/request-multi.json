@@ -1,0 +1,32 @@
+{
+    "version": "6.1",
+    "registrar_id": 100,
+    "requests": [        
+        {
+            "action": "Update",
+            "type": "Domain",            
+            "domain_name_filter": ["nzrs.net.nz"],            
+            "term": 12,
+            "action_id": "action",
+            "nameservers": [
+                {                
+                    "fqdn": "ns1.dns.net.nz"
+                },
+                {
+                    "fqdn": "ns2.dns.net.nz"
+                },
+                {                
+                    "fqdn": "ns3.dns.net.nz"
+                },
+                {
+                    "fqdn": "ns4.dns.net.nz"
+                }
+            ]
+        },
+        {
+            "action": "Whois",
+            "domain_name": "nzrs.net.nz",
+            "full": 1
+        }
+    ]
+}

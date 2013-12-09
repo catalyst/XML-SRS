@@ -43,8 +43,8 @@ sub buildargs_timestamptz {
     my $inv = shift;
     my ( $timestamptz ) = pos_validated_list(
         \@_,
-        { isa => 'TimestampTZ', coerce => 1 },
-    );    
+        { isa => 'Str' },
+    );  
     
 	$timestamptz =~ m{
 		(?<ymd>\d+-\d+-\d+)
@@ -71,8 +71,7 @@ sub buildargs_epoch {
 
 has 'timestamptz' =>
 	is => "rw",
-	isa => "TimestampTZ",
-	coerce => 1,
+	isa => "Str",
 	lazy => 1,
 	default => sub {
 	my $self = shift;

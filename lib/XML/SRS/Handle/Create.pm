@@ -4,6 +4,7 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 use XML::SRS::Server::List;
+use XML::SRS::AuditDetails;
 
 # attributes
 has_attr 'handle_id' =>
@@ -57,6 +58,7 @@ has_element 'audit' =>
 	isa => "XML::SRS::AuditDetails",
 	xml_nodeName => "AuditDetails",
 	predicate => "has_audit",
+	coerce => 1,
 	;
 
 with 'XML::SRS::Audit';

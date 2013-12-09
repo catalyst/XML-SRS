@@ -2,7 +2,8 @@ package XML::SRS::ACL::Remove;
 
 use Moose;
 use PRANG::Graph;
-use Moose::Util::TypeConstraints;
+
+use XML::SRS::ACL::Entry;
 
 sub root_element {
     "AccessControlListRemove";
@@ -29,9 +30,10 @@ has_attr "FullResult" =>
 
 has_element "entries" =>
     is => "rw",
-    isa => "ArrayRef[XML::SRS::ACL::Entry]",
+    isa => "ACLEntryArrayRef",
     xml_nodeName => "AccessControlListEntry",
     xml_required => 0,
+    coerce => 1,
     ;
     
 has_element 'audit_text' =>

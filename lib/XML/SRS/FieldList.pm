@@ -157,6 +157,14 @@ coerce __PACKAGE__
     		%params,
     	);
     };
+    
+coerce __PACKAGE__
+    => from 'HashRef'
+    => via {
+        __PACKAGE__->new(
+            %$_,
+        );
+    };    
 
 # Return a list of fields that have been requested
 sub requested_fields {

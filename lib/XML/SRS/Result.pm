@@ -169,6 +169,10 @@ sub is_error {
     return $responses->[0]->isa('XML::SRS::Error');   
 }
 
+coerce __PACKAGE__
+    => from 'HashRef'
+    => via { __PACKAGE__->new(%$_); };
+
 with 'XML::SRS', 'XML::SRS::Node';
 sub root_element { 'Response' }
 

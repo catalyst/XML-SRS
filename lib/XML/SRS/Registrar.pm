@@ -68,6 +68,7 @@ has_element 'keyring' =>
 	isa => "XML::SRS::Keyring",
 	xml_nodeName => "EncryptKeys",
 	required => 1,
+	coerce => 1,
 	;
 
 has_element 'epp_auth' =>
@@ -83,6 +84,7 @@ has_element 'allowed_zones' =>
 	isa => "XML::SRS::Zone::List",
 	xml_nodeName => "Allowed2LDs",
 	predicate => "has_allowed_zones",
+	coerce => 1,
 	;
 
 has_element 'roles' =>
@@ -90,6 +92,7 @@ has_element 'roles' =>
 	isa => "XML::SRS::Role::List",
 	xml_nodeName => "Roles",
 	predicate => "has_roles",
+	coerce => 1,
 	;
 
 has_element 'audit' =>
@@ -97,6 +100,7 @@ has_element 'audit' =>
 	isa => "XML::SRS::AuditDetails",
 	xml_nodeName => "AuditDetails",
 	predicate => "has_audit",
+	coerce => 1,
 	;
 
 sub root_element {"Registrar"}

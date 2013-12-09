@@ -3,6 +3,8 @@ package XML::SRS::ACL::Entry;
 
 use Moose;
 use PRANG::Graph;
+use XML::SRS::TimeStamp;
+use Moose::Util::TypeConstraints;
 
 has_attr 'Address' =>
 	is => "ro",
@@ -34,7 +36,21 @@ has_element 'effective' =>
 	xml_nodeName => "EffectiveDate",
 	predicate => "has_effective",	
     xml_required => 0,
+    coerce => 1,
 	;
+
+subtype 'ACLEntryArrayRef' =>
+    as 'ArrayRef[XML::SRS::ACL::Entry]';
+
+coerce 'ACLEntryArrayRef'
+    => from 'ArrayRef[HashRef]'
+    => via {
+    [
+        map {
+            XML::SRS::ACL::Entry->new($_);
+        } @$_
+    ],
+};
 
 with 'XML::SRS::Node';
 

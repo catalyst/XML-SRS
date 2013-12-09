@@ -2,6 +2,7 @@ package XML::SRS::SysParam;
 
 use Moose;
 use PRANG::Graph;
+use Moose::Util::TypeConstraints;
 use XML::SRS::Types;
 use XML::SRS::AuditDetails;
 
@@ -28,6 +29,10 @@ has_element 'audit' =>
     alias => 'audit_details',
     coerce => 1,
     ;
+
+coerce __PACKAGE__
+    => from 'HashRef'
+    => via { __PACKAGE__->new(%$_); };
 
 sub root_element {
     "SysParam";

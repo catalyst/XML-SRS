@@ -4,6 +4,10 @@ package XML::SRS::Registrar::Create;
 use Moose;
 use PRANG::Graph;
 
+use XML::SRS::Zone::List;
+use XML::SRS::Role::List;
+use XML::SRS::Keyring;
+
 has_attr 'registrar_id' =>
     is => "ro",
     isa => "Int",
@@ -64,6 +68,7 @@ has_element 'keyring' =>
     isa => "XML::SRS::Keyring",
     xml_nodeName => "EncryptKeys",
     xml_required => 0,
+    coerce => 1,
     ;
 
 use XML::SRS::Password;
@@ -82,6 +87,7 @@ has_element 'allowed_zones' =>
     xml_nodeName => "Allowed2LDs",
     predicate => "has_allowed_zones",
     xml_required => 0,
+    coerce => 1,
     ;
 
 has_element 'roles' =>
@@ -90,6 +96,7 @@ has_element 'roles' =>
     xml_nodeName => "Roles",
     predicate => "has_roles",
     xml_required => 0,
+    coerce => 1,
     ;
 
 has_element 'audit_text' =>

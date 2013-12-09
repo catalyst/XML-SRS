@@ -61,6 +61,17 @@ coerce 'TypeFilterArrayRef'
 	];
 };
 
+coerce 'TypeFilterArrayRef'
+    => from "ArrayRef[HashRef]"
+    => via {
+    [   map {
+            XML::SRS::GetMessages::TypeFilter->new(
+                $_,
+            );
+            } @$_
+    ];
+};
+
 has_element "type_filter" =>
 	is => "ro",
 	isa => "TypeFilterArrayRef",

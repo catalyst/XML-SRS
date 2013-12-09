@@ -2,8 +2,8 @@ package XML::SRS::RunLog::Create;
 
 use Moose;
 use PRANG::Graph;
-use Moose::Util::TypeConstraints;
 use XML::SRS::TimeStamp;
+use XML::SRS::RunLog;
 
 sub root_element {
     "RunLogCreate";
@@ -22,6 +22,7 @@ has_element 'run_log' =>
     isa => "XML::SRS::RunLog",
     xml_nodeName => "RunLog",
     required => 1,
+    coerce => 1,
     ;
 
 with 'XML::SRS::Action';

@@ -20,4 +20,11 @@ coerce __PACKAGE__
 	=> via {
 	__PACKAGE__->new(crypted => $_);
 	};
+	
+coerce __PACKAGE__
+    => from "HashRef"
+    => via {
+        __PACKAGE__->new(%$_);
+    };
+
 1;

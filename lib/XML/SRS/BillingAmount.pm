@@ -1,6 +1,7 @@
 package XML::SRS::BillingAmount;
 use Moose;
 use PRANG::Graph;
+use Moose::Util::TypeConstraints;
 
 use XML::SRS::Types;
 use XML::SRS::TimeStamp;
@@ -19,6 +20,10 @@ has_element 'effective_date' =>
     xml_nodeName => 'EffectiveDate',
     coerce => 1,
     ;
+
+coerce __PACKAGE__
+    => from 'HashRef'
+    => via { __PACKAGE__->new(%$_); };
 
 sub root_element {
     "BillingAmount";

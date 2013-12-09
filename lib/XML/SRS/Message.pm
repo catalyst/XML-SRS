@@ -18,6 +18,7 @@ has_element 'result' =>
 	isa => "XML::SRS::Result",
 	xml_nodeName => "Response",
 	required => 1,
+	coerce => 1,
 	;
 
 sub root_element {"Message"}

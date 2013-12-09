@@ -5,6 +5,7 @@ use PRANG::Graph;
 use XML::SRS::Types;
 use XML::SRS::Server::List;
 use PRANG::XMLSchema::Types;
+use XML::SRS::AuditDetails;
 
 # attributes
 has_attr 'handle_id' =>
@@ -71,6 +72,7 @@ has_element 'audit' =>
 	xml_nodeName => "AuditDetails",
 	xml_required => 0,
 	predicate => "has_audit",
+	coerce => 1,
 	;
 
 with 'XML::SRS::Audit';

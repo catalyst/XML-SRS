@@ -2,6 +2,7 @@ package XML::SRS::RunLog;
 
 use Moose;
 use PRANG::Graph;
+use Moose::Util::TypeConstraints;
 use XML::SRS::Types;
 use XML::SRS::TimeStamp;
 
@@ -43,6 +44,10 @@ has_element 'details' =>
     xml_nodeName => "RunLogDetails",
     xml_required => 0,
     ;
+
+coerce __PACKAGE__
+    => from 'HashRef'
+    => via { __PACKAGE__->new(%$_); };
 
 sub root_element {
     "RunLog";

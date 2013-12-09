@@ -4,6 +4,9 @@ package XML::SRS::ACL;
 use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
+use Moose::Util::TypeConstraints;
+
+use XML::SRS::ACL::Entry;
 
 has_attr 'Resource' =>
 	is => "ro",
@@ -42,11 +45,13 @@ has_attr 'Type' =>
 	;
 
 use XML::SRS::ACL::Entry;
+
 has_element 'entries' =>
 	is => "ro",
-	isa => "ArrayRef[XML::SRS::ACL::Entry]",
+	isa => "ACLEntryArrayRef",
 	xml_nodeName => "AccessControlListEntry",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 sub root_element {

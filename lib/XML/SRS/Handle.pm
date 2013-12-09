@@ -5,6 +5,9 @@ use PRANG::Graph;
 use XML::SRS::Types;
 use PRANG::XMLSchema::Types;
 
+use XML::SRS::AuditDetails;
+use XML::SRS::ChangedDomains;
+
 extends 'XML::SRS::Contact';
 
 has '+handle_id' =>
@@ -32,6 +35,7 @@ has_element 'audit' =>
 	isa => "XML::SRS::AuditDetails",
 	xml_nodeName => "AuditDetails",
 	predicate => "has_audit",
+	coerce => 1,
 	;
 
 has_element 'changed_domains' =>
@@ -39,6 +43,7 @@ has_element 'changed_domains' =>
 	isa => "XML::SRS::ChangedDomains",
 	xml_nodeName => "ChangedDomains",
 	predicate => "has_changed_domains",
+	coerce => 1,
 	;
 
 has_attr 'action_id' =>

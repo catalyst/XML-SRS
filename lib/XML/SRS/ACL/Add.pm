@@ -2,7 +2,8 @@ package XML::SRS::ACL::Add;
 
 use Moose;
 use PRANG::Graph;
-use Moose::Util::TypeConstraints;
+
+use XML::SRS::ACL::Entry;
 
 sub root_element {
     "AccessControlListAdd";
@@ -29,9 +30,10 @@ has_attr "FullResult" =>
 
 has_element "entries" =>
     is => "rw",
-    isa => "ArrayRef[XML::SRS::ACL::Entry]",
+    isa => "ACLEntryArrayRef",
     xml_nodeName => "AccessControlListEntry",
     xml_required => 0,
+    coerce => 1,
     ;
     
 has_element 'audit_text' =>
@@ -40,6 +42,7 @@ has_element 'audit_text' =>
     xml_nodeName => "AuditText",
     predicate => "has_audit",
     ;
+
 
 with 'XML::SRS::Action';
 

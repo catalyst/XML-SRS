@@ -18,6 +18,10 @@ has_element 'keys' =>
 	xml_nodeName => "EncryptKey",
 	;
 
+coerce __PACKAGE__
+    => from 'HashRef'
+    => via { __PACKAGE__->new(%$_); };
+
 with 'XML::SRS::Node';
 
 1;

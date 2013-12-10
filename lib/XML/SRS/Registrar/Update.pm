@@ -4,6 +4,10 @@ package XML::SRS::Registrar::Update;
 use Moose;
 use PRANG::Graph;
 
+use XML::SRS::Keyring;
+use XML::SRS::Role::List;
+use XML::SRS::Zone::List;
+
 has_attr 'name' =>
 	is => "ro",
 	isa => "Str",
@@ -54,6 +58,7 @@ has_element 'keyring' =>
 	isa => "XML::SRS::Keyring",
 	xml_nodeName => "EncryptKeys",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 use XML::SRS::Password;
@@ -72,6 +77,7 @@ has_element 'allowed_zones' =>
 	xml_nodeName => "Allowed2LDs",
 	predicate => "has_allowed_zones",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'roles' =>
@@ -80,6 +86,7 @@ has_element 'roles' =>
 	xml_nodeName => "Roles",
 	predicate => "has_roles",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_element 'audit_text' =>

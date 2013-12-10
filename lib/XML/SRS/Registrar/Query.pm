@@ -5,6 +5,8 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 
+use XML::SRS::Date::Range;
+
 sub root_element {
 	"RegistrarDetailsQry";
 }
@@ -25,9 +27,10 @@ has_attr "name_filter" =>
 
 has_element "when" =>
 	is => "ro",
-	isa => "ArrayRef[XML::SRS::Date::Range]",
+	isa => "XML::SRS::Date::Range",
 	xml_nodeName => "ResultDateRange",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 with 'XML::SRS::Query';

@@ -5,6 +5,8 @@ use Moose;
 use PRANG::Graph;
 use XML::SRS::Types;
 
+use XML::SRS::Date::Range;
+
 sub root_element {
 	"GetMessages";
 }
@@ -29,9 +31,10 @@ has_attr 'queue' =>
 
 has_element "when" =>
 	is => "ro",
-	isa => "ArrayRef[XML::SRS::Date::Range]",
+	isa => "XML::SRS::Date::Range",
 	xml_nodeName => "TransDateRange",
 	xml_required => 0,
+	coerce => 1,
 	;
 
 has_attr 'max_results' =>

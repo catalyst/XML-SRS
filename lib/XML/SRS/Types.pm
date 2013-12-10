@@ -54,7 +54,7 @@ subtype "${PKG}::HandleId"
 	# which allows for 3-16 characters.  Here we just
 	# restrict it to "word" characters, which still allows
 	# a whole bunch of Unicode characters.  And hyphens.
-	m{\A[\p{IsWord}\- ]{3,16}\Z};
+	m{^[\p{IsWord}\-](?:[\p{IsWord}\-]| (?! )){1,14}[\p{IsWord}\-]$}
 	};
 
 subtype "${PKG}::Email"

@@ -44,15 +44,17 @@ sub buildargs_timestamptz {
     my ( $timestamptz ) = pos_validated_list(
         \@_,
         { isa => 'Str' },
-    );  
+    );
     
 	$timestamptz =~ m{
 		(?<ymd>\d+-\d+-\d+)
 		\s(?<hms>\d+:\d+:\d+)
 		(?: (?<utc>Z) | (?<offset> [+-]\d{2} (?::?\d{2})? )
-		)}x or warn "$timestamptz didn't match";
+		)?}x or warn "$timestamptz didn't match";
+
 	my $hms = $+{hms};
 	my $ymd = $+{ymd};
+
 	my $offset = $+{utc} ? "+00:00" : $+{offset};
 	(   $inv->buildargs_time($hms, $offset),
 		$inv->buildargs_date($ymd)

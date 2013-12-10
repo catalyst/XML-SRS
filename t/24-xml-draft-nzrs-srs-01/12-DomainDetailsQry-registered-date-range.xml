@@ -1,0 +1,27 @@
+<NZSRSRequest VerMajor="5" VerMinor="40" RegistrarId="1512">
+  <DomainDetailsQry>              
+   <RegisteredDateRange>
+    <From Year="2007" Month="12" Day="32" Hour="10" Minute="01" Second="38"/>
+    <To Year="2007" Month="12" Day="01" Hour="10" Minute="01" Second="38"/>
+   </RegisteredDateRange>                     
+   <FieldList
+    RegistrarId="1"             
+    RegistrarName="1"           
+    Status="1"                  
+    LockedDate="1"              
+    CancelledDate="1"           
+    Delegate="1"                
+    NameServers="1"             
+    RegistrantRef="1"           
+    RegistrantContact="1"       
+    AdminContact="1"            
+    TechnicalContact="1"        
+    Term="1"                    
+    EffectiveFrom="1"           
+    BilledUntil="1"             
+    RegisteredDate="1"          
+    LastActionId="1"            
+    AuditText="1"               
+    ChangedByRegistrarId="1" />        
+  </DomainDetailsQry>
+</NZSRSRequest>

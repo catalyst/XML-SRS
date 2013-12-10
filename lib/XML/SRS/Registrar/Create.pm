@@ -12,21 +12,21 @@ has_attr 'registrar_id' =>
     is => "ro",
     isa => "Int",
     xml_name => "RegistrarId",
-    xml_required => 1,
+    required => 1,
     ;
 
 has_attr 'name' =>
     is => "ro",
     isa => "Str",
     xml_name => "Name",
-    xml_required => 1,
+    required => 1,
     ;
 
 has_attr 'account_reference' =>
     is => "ro",
     isa => "Str",
     xml_name => "AccRef",
-    xml_required => 1,
+    required => 1,
     ;
 
 has_attr 'url' =>

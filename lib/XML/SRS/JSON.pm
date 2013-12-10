@@ -17,6 +17,7 @@ my %SKIP_FIELDS = (
 # These types need a custom function to convert to json
 my %CUSTOM_CONVERT = (
     'XML::SRS::Server::List' => '_convert_nameservers_to_json',
+    'XML::SRS::Server::Filter::List' => '_convert_nameserver_filters_to_json',
     'XML::SRS::Role::List' => '_convert_roles_to_json',
     'XML::SRS::Zone::List' => '_convert_zones_to_json',
     'XML::SRS::DS::List' => '_convert_ds_to_json',
@@ -252,6 +253,12 @@ sub _convert_changed_domains_to_json {
     my $self = shift;
     
     return $self->_convert_list_to_json($self->domains);
+}
+
+sub _convert_nameserver_filters_to_json {
+    my $self = shift;
+
+    return $self->_convert_list_to_json($self->server_filter);
 }
 
 sub _convert_list_to_json {

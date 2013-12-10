@@ -1,0 +1,40 @@
+ <NZSRSRequest VerMajor="5" VerMinor="0"  RegistrarId="1512">
+  <DomainDetailsQry> 
+   <DomainNameFilter>acceptancetest12-1.co.te</DomainNameFilter>
+   <NameServerFilter><ServerFilter FQDN="srstestc1-1.net.te"/></NameServerFilter>
+   <RegistrantContactFilter Name="Registrant s12c1" Email="Registrant.email.s12c1@test.co.te">
+    <PostalAddressFilter Address1="Registrant Address 1 s12c1" Address2="Registrant Address 2 s12c1" City="Registrant City s12c1" Province="Registrant Province s12c1" PostalCode="Registrant post code s12c1" CountryCode="NZ"/>
+    <Phone AreaCode="4" CountryCode="64" LocalNumber="Registrant phone s12c1"/>
+    <Fax AreaCode="4" CountryCode="64" LocalNumber="Registrant fax s12c1"/>
+   </RegistrantContactFilter>                            
+   <AdminContactFilter Name="Admin s12c1" Email="Admin.email.s12c1@test.co.te">
+    <PostalAddressFilter Address1="Admin Address 1 s12c1" Address2="Admin Address 2 s12c1" City="Admin City s12c1" Province="Admin Province s12c1" PostalCode="Admin post code s12c1" CountryCode="NU"/>
+    <Phone AreaCode="4" CountryCode="64" LocalNumber="Admin phone s12c1"/>
+    <Fax AreaCode="4" CountryCode="64" LocalNumber="Admin fax s12c1"/>
+   </AdminContactFilter>                         
+   <TechnicalContactFilter Name="Technical s12c1" Email="Technical.email.s12c1@test.co.te">
+    <PostalAddressFilter Address1="Technical Address 1 s12c1" Address2="Technical Address 2 s12c1" City="Technical City s12c1" Province="Technical Province s12c1" PostalCode="Technical post code s12c1" CountryCode="AQ"/>
+    <Phone AreaCode="4" CountryCode="64" LocalNumber="Technical phone s12c1"/>
+    <Fax AreaCode="4" CountryCode="64" LocalNumber="Technical fax s12c1"/>
+   </TechnicalContactFilter>
+   <FieldList
+    RegistrarId="1"             
+    RegistrarName="1"           
+    Status="1"                  
+    LockedDate="1"              
+    CancelledDate="1"           
+    Delegate="1"                
+    NameServers="1"             
+    RegistrantRef="1"           
+    RegistrantContact="1"       
+    AdminContact="1"            
+    TechnicalContact="1"        
+    Term="1"                    
+    EffectiveFrom="1"           
+    BilledUntil="1"             
+    RegisteredDate="1"          
+    LastActionId="1"            
+    AuditText="1"               
+    ChangedByRegistrarId="1" />
+  </DomainDetailsQry>
+ </NZSRSRequest>

@@ -21,6 +21,7 @@ my %CUSTOM_CONVERT = (
     'XML::SRS::Role::List' => '_convert_roles_to_json',
     'XML::SRS::Zone::List' => '_convert_zones_to_json',
     'XML::SRS::DS::List' => '_convert_ds_to_json',
+    'XML::SRS::DS::Filter::List' => '_convert_ds_filters_to_json',
     'XML::SRS::Response' => '_convert_response_to_json',
     'XML::SRS::Result' => '_convert_result_to_json',
     'XML::SRS::TimeStamp' => '_convert_timestamp_to_json',
@@ -259,6 +260,12 @@ sub _convert_nameserver_filters_to_json {
     my $self = shift;
 
     return $self->_convert_list_to_json($self->server_filter);
+}
+
+sub _convert_ds_filters_to_json {
+    my $self = shift;
+
+    return $self->_convert_list_to_json($self->ds_filter);
 }
 
 sub _convert_list_to_json {

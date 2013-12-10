@@ -2,6 +2,14 @@
   <DomainDetailsQry> 
    <DomainNameFilter>acceptancetest12-1.co.te</DomainNameFilter>
    <NameServerFilter><ServerFilter FQDN="srstestc1-1.net.te"/></NameServerFilter>
+   <DNSSECFilter>
+    <DSFilter DigestType="1" KeyTag="555" Algorithm="5">
+        <Digest>3FC2FB591B6089F454B90A529C760E3F92F28399</Digest>
+    </DSFilter>
+    <DSFilter DigestType="2" KeyTag="444" Algorithm="5">
+        <Digest>3A54F693DA1D3FC6073B3D065FEDFAC000610CE83C7D2A084DF883E0B308DCA6</Digest>
+    </DSFilter>
+   </DNSSECFilter>
    <RegistrantContactFilter Name="Registrant s12c1" Email="Registrant.email.s12c1@test.co.te">
     <PostalAddressFilter Address1="Registrant Address 1 s12c1" Address2="Registrant Address 2 s12c1" City="Registrant City s12c1" Province="Registrant Province s12c1" PostalCode="Registrant post code s12c1" CountryCode="NZ"/>
     <Phone AreaCode="4" CountryCode="64" LocalNumber="Registrant phone s12c1"/>

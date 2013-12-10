@@ -7,6 +7,8 @@ use JSON::Syck;
 use Try::Tiny;
 use Data::Dumper;
 
+$JSON::Syck::ImplicitUnicode = 1;
+
 # Some fields should be skipped when converting to JSON
 my %SKIP_FIELDS = (
     'XML::SRS::Request'  => [qw(major minor)],

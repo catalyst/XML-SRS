@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="40" RegistrarId="100">
+    <Response Action="HandleCreate" FeId="1" FeSeq="45307301459519776" OrigRegistrarId="100" RecipientRegistrarId="100" Rows="1" TransId="Test testing/integrated/ui/wr62151-epp-handles/01-handle_base/03-handle_create.yml 0 g">
+        <FeTimeStamp Day="11" Hour="09" Minute="58" Month="12" Second="55" TimeZoneOffset="+13:00" Year="2013"/>
+        <Handle HandleId="lo&#x14D;p&#x3B4;igga" Name="Loopdigga" Email="Loopdigga@handlethis-orz.co.te" RegistrarId="100">
+            <PostalAddress Address1="1400 E 8 Mile Rd" Address2="Highland Park" City="Detroit" CountryCode="US" PostalCode="48203" Province="Michigan"/>
+            <Phone AreaCode="4" CountryCode="64" LocalNumber="Registrant phone s1c1"/>
+            <CreatedDate Day="11" Hour="09" Minute="58" Month="12" Second="55" TimeZoneOffset="+13:00" Year="2013"/>
+            <AuditDetails ActionId="Test testing/integrated/ui/wr62151-epp-handles/01-handle_base/03-handle_create.yml 0 g" RegistrarId="100">
+                <AuditTime><From Day="11" Hour="09" Minute="58" Month="12" Second="55" TimeZoneOffset="+13:00" Year="2013"/></AuditTime>
+                <AuditText><![CDATA[FooBar]]></AuditText>
+            </AuditDetails>
+        </Handle>
+    </Response>
+</NZSRSResponse>

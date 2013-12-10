@@ -21,7 +21,7 @@ for my $ts ( $ts1, $ts2 ) {
 
 	like($ts->timestamptz, qr/2010-06-02/, "nice timestamptz date...");
 	like($ts->timestamptz, qr/15:12:02/, "nice timestamptz time...");
-	like($ts->timestamptz, qr/1013/, "nice timestamptz tz...");
+	like($ts->timestamptz, qr/10:?13/, "nice timestamptz tz...");
 
 	like($ts->timestamp, qr/2010-06-02/, "nice timestamp date...");
 	like($ts->timestamp, qr/15:12:02/, "nice timestamp time...");

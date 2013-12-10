@@ -6,6 +6,8 @@ package XML::SRS::Message;
 use Moose;
 use PRANG::Graph;
 
+use XML::SRS::Result;
+
 has_attr 'unacked' =>
 	is => "rw",
 	isa => "Int",

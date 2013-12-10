@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE NZSRSResponse SYSTEM "protocol.dtd">
+<NZSRSResponse VerMajor="5" VerMinor="40" RegistrarId="100">
+   <Response Action="HandleCreate" FeId="1" FeSeq="75162847605267296" OrigRegistrarId="100" RecipientRegistrarId="100" Rows="1" TransId="Test testing/integrated/ui/DomainCreate/Provisional2lds/01-setup.yml 0 a">
+     <FeTimeStamp Day="10" Hour="17" Minute="28" Month="12" Second="28" TimeZoneOffset="+13:00" Year="2013"/>
+     <Handle HandleId="handle1" Name="Handle" Email="handle@handle1.co.te" RegistrarId="100">
+       <PostalAddress Address1="1400 E 8 Mile Rd" Address2="Highland Park" City="Detroit" CountryCode="US" PostalCode="48203" Province="Michigan"/>
+       <Phone AreaCode="4" CountryCode="64" LocalNumber="Registrant phone s1c1"/>
+       <CreatedDate Day="10" Hour="17" Minute="28" Month="12" Second="28" TimeZoneOffset="+13:00" Year="2013"/>
+       <AuditDetails ActionId="Test testing/integrated/ui/DomainCreate/Provisional2lds/01-setup.yml 0 a" RegistrarId="100">
+         <AuditTime>
+           <From Day="10" Hour="17" Minute="28" Month="12" Second="28" TimeZoneOffset="+13:00" Year="2013"/>
+         </AuditTime>
+         <AuditText/>
+       </AuditDetails>
+     </Handle>
+   </Response>
+</NZSRSResponse>

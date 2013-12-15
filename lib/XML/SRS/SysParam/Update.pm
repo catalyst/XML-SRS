@@ -9,9 +9,9 @@ sub root_element {
     "SysParamsUpdate";
 }
 
-has_element 'sys_param' =>
+has_element 'sys_params' =>
     is => "rw",
-    isa => "XML::SRS::SysParam",
+    isa => "SysParamList",
     xml_nodeName => "SysParam",
     required => 1,
     coerce => 1,

@@ -33,6 +33,16 @@ has_element 'audit' =>
 coerce __PACKAGE__
     => from 'HashRef'
     => via { __PACKAGE__->new(%$_); };
+    
+subtype "SysParamList",
+    as "ArrayRef[XML::SRS::SysParam]";
+
+coerce "SysParamList"
+    => from 'ArrayRef[HashRef]'
+    => via { 
+        my @vals = @$_; 
+        [ map { XML::SRS::SysParam->new($_) } @vals ];
+    };    
 
 sub root_element {
     "SysParam";

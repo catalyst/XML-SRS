@@ -1,0 +1,11 @@
+ <NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">
+  <SysParamsCreate ActionId="action">
+    <SysParam Name="Provisional 2lds">
+      <ParamValue><![CDATA[org.te]]></ParamValue>
+    </SysParam>
+    <SysParam Name="Maximum Provisional Billing Term">
+      <ParamValue><![CDATA[3]]></ParamValue>
+    </SysParam>
+    <AuditText>System Parameter setup</AuditText>
+  </SysParamsCreate>
+ </NZSRSRequest>

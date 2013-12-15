@@ -37,12 +37,40 @@ has_element "when" =>
 	coerce => 1,
 	;
 
+has_element "audit_text_filter" =>
+    is => "ro",
+    isa => "Str",
+    xml_nodeName => "AuditTextFilter",
+    xml_required => 0,
+    ;
+
 has_attr 'max_results' =>
 	is => 'ro',
 	isa => 'XML::SRS::Number',
 	xml_name => 'MaxResults',
 	xml_required => 0,
 	;
+	
+has_attr 'skip_results' =>
+    is => 'ro',
+    isa => 'XML::SRS::Number',
+    xml_name => 'SkipResults',
+    xml_required => 0,
+    ;
+
+has_attr 'count_results' =>
+    is => 'ro',
+    isa => 'XML::SRS::Number',
+    xml_name => 'CountResults',
+    xml_required => 0,
+    ;
+    
+has_attr 'action_id' =>
+    is => 'ro',
+    isa => 'Str',
+    xml_name => 'ActionId',
+    xml_required => 0,
+    ;
 
 use XML::SRS::GetMessages::TypeFilter;
 use Moose::Util::TypeConstraints;

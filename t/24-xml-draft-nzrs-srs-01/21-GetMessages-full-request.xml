@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="151602">
+   <GetMessages RecipientRegistrarId="151602" OriginatingRegistrarId="1" QueueMode="0" 
+    MaxResults="10" SkipResults="5" CountResults="0" ActionId="Foo">
+     <TransDateRange>
+       <From Year="2012" Hour="14" Month="12" TimeZoneOffset="+13:00" Day="11" Second="19" Minute="42"/>
+       <To Year="2013" Hour="14" Month="12" TimeZoneOffset="+13:00" Day="11" Second="19" Minute="42"/>       
+     </TransDateRange>
+     <AuditTextFilter>foo</AuditTextFilter>     
+   </GetMessages>
+</NZSRSRequest>

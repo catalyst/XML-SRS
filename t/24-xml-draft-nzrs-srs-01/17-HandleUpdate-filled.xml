@@ -25,23 +25,7 @@
          AreaCode="4"
          LocalNumber="000 0001"
          />
-      <AuditDetails
-         ActionId="HandleCreate-2010-06-08 14:11:00"
-         RegistrarId="90"
-         >
-        <AuditTime>
-          <From
-             Day="20"
-             Hour="03"
-             Minute="28"
-             Month="12"
-             Second="10"
-             TimeZoneOffset="+13:00"
-             Year="2009"
-             />
-        </AuditTime>
-        <AuditText><![CDATA[HandleCreate]]></AuditText>
-      </AuditDetails>
+      <AuditText><![CDATA[HandleCreate]]></AuditText>
     </HandleUpdate>
 
 </NZSRSRequest>

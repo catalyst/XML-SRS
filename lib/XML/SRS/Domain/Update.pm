@@ -136,6 +136,7 @@ has_element 'nameservers' =>
 	xml_nodeName => 'NameServers',
 	xml_required => 0,
     coerce => 1,
+    predicate => 'has_nameservers',
 	;
 
 has_element "dns_sec" =>
@@ -144,6 +145,7 @@ has_element "dns_sec" =>
 	xml_nodeName => "DNSSEC",
 	xml_required => 0,
 	coerce => 1,
+	predicate => 'has_dns_sec',
 	;
 
 with 'XML::SRS::Audit';

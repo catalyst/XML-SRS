@@ -42,8 +42,9 @@ subtype "${PKG}::DomainName"
 subtype "${PKG}::UDAI"
 	=> as "Str"
 	=> where {
-	$_ =~
-m{ \A [abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{8} \z }xms;
+	    1;
+	    # XXX: don't validate UDAIs, since this is not actually done in the SRS
+        #m{ \A [abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{8} \z }xms;
 	};
 
 subtype "${PKG}::HandleId"

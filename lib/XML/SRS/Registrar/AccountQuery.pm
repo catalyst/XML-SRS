@@ -9,7 +9,7 @@ use XML::SRS::Date::Range;
 has_attr 'registrar_ref' =>
     is => "ro",
     isa => "Str",
-    xml_name => "RegistrarRef",
+    xml_name => "RegistrantRef",
     xml_required => 0,
     ;
 

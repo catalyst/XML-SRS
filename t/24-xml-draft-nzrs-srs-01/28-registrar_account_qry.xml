@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
-<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="101">
-   <RegistrarAccountQry DomainName="transfer-test1.co.te">
-       </RegistrarAccountQry>
+<NZSRSRequest VerMinor="0" VerMajor="5" RegistrarId="100">
+   <RegistrarAccountQry InvoiceId="123" DomainName="name.co.te" RegistrantRef="ref" QryId="foo" TransStatus="PendingConfirmation">
+     <TransDateRange>
+       <From Year="2001" Month="2" Hour="16" Day="28" Second="13" Minute="23"/>
+       <To Year="2020" Month="2" Hour="16" Day="28" Second="13" Minute="23"/>
+     </TransDateRange>
+     <InvoiceDateRange>
+       <From Year="2001" Month="2" Hour="16" Day="28" Second="13" Minute="23"/>
+       <To Year="2020" Month="2" Hour="16" Day="28" Second="13" Minute="23"/>
+     </InvoiceDateRange>
+   </RegistrarAccountQry>
 </NZSRSRequest>

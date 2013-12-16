@@ -53,14 +53,6 @@ has_element 'fax' =>
 	coerce => 1,
 	;
 
-has_element 'audit' =>
-	is => "rw",
-	isa => "XML::SRS::AuditDetails",
-	xml_nodeName => "AuditDetails",
-	predicate => "has_audit",
-	coerce => 1,
-	;
-
 with 'XML::SRS::Audit';
 
 sub root_element {'HandleCreate'}

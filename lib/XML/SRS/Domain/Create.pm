@@ -20,6 +20,12 @@ has_attr 'domain_name_unicode' =>
 	xml_name => "DomainNameUnicode",
 	;
 
+has_attr 'domain_name_language' =>
+    is => "rw",
+    isa => "Str",
+    xml_name => "DomainNameLanguage",
+    ;
+
 has_attr 'registrant_ref' =>
 	is => "ro",
 	isa => "XML::SRS::UID",

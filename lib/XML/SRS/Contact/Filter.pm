@@ -3,7 +3,7 @@ package XML::SRS::Contact::Filter;
 
 use Moose;
 use PRANG::Graph;
-use XML::SRS::Contact::Address;
+use XML::SRS::Contact::Address::Filter;
 use XML::SRS::Contact::PSTN;
 
 use Moose::Util::TypeConstraints;
@@ -26,7 +26,7 @@ has_attr 'email' =>
 # elements
 has_element 'postal_address_filter' =>
 	is => 'ro',
-	isa => 'XML::SRS::Contact::Address',
+	isa => 'XML::SRS::Contact::Address::Filter',
 	xml_nodeName => 'PostalAddressFilter',
 	xml_required => 0,
 	coerce => 1,

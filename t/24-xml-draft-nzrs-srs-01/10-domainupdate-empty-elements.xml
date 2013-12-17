@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<NZSRSRequest VerMinor="0" VerMajor="5" RegistrarId="100">
+   <DomainUpdate ActionId="Test testing/integrated/ui/SRSClient-json/DomainUpdate/30-clear-nameservers.yml 0">
+     <DomainNameFilter>model-a.co.te</DomainNameFilter>
+     <NameServers/>
+     <DNSSEC/>
+   </DomainUpdate>
+</NZSRSRequest>

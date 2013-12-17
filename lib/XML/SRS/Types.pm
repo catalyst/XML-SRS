@@ -36,7 +36,8 @@ our $DNS_name_re = qr/(?:$RR_re\.)+$RR_re/;
 subtype "${PKG}::DomainName"
 	=> as "Str"
 	=> where {
-	m{\A$DNS_name_re\Z};
+	   1;
+	   #m{\A$DNS_name_re\Z};
 	};
 
 subtype "${PKG}::UDAI"

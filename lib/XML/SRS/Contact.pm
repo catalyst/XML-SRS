@@ -66,6 +66,14 @@ has_element 'fax' =>
 	xml_required => 0,
 	;
 
+# Is this an 'empty' contact? (i.e. no attributes/elements supplied) 
+sub is_empty {
+    my $self = shift;
+    
+    return ($self->name || $self->email || $self->address || $self->phone || $self->fax || $self->handle_id) ? 0 : 1;
+    
+}
+
 with 'XML::SRS::Node';
 
 use Moose::Util::TypeConstraints;

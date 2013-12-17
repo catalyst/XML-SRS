@@ -9,6 +9,13 @@ use XML::SRS::Contact::PSTN;
 use Moose::Util::TypeConstraints;
 
 # attributes
+has_attr 'handle_id' =>
+    is => "ro",
+    isa => "XML::SRS::HandleId",
+    xml_name => "HandleId",
+    xml_required => 0,
+    ;
+
 has_attr 'name' =>
 	is => 'ro',
 	isa => 'Str',
@@ -52,7 +59,7 @@ has_element 'fax' =>
 sub is_empty {
     my $self = shift;
     
-    return ($self->name && $self->email && $self->postal_address_filter && $self->phone && $self->fax) ? 0 : 1;
+    return ($self->name || $self->email || $self->postal_address_filter || $self->phone || $self->fax || $self->handle_id) ? 0 : 1;
     
 }
 

@@ -13,6 +13,7 @@ BEGIN { with 'PRANG::Graph', 'XML::SRS::Node'; }
 
 # packet types
 use XML::SRS::Request;
+use XML::SRS::RequestNew;
 use XML::SRS::Response;
 
 # data types

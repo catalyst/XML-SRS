@@ -110,6 +110,7 @@ has_element 'admin_contact_filter' =>
 	coerce => 1,
 	traits => [qw(Aliased)],	
 	alias => 'contact_admin',
+	predicate => 'has_admin_contact_filter',
 	;
 
 has_element 'technical_contact_filter' =>
@@ -120,6 +121,7 @@ has_element 'technical_contact_filter' =>
 	coerce => 1,
 	traits => [qw(Aliased)],	
 	alias => 'contact_technical',
+	predicate => 'has_technical_contact_filter',
 	;
 
 has_element 'result_date_range' =>

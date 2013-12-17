@@ -48,6 +48,14 @@ has_element 'fax' =>
 	coerce => 1,
 	;
 
+# Is this an 'empty' filter? (i.e. no attributes/elements supplied) 
+sub is_empty {
+    my $self = shift;
+    
+    return ($self->name && $self->email && $self->postal_address_filter && $self->phone && $self->fax) ? 0 : 1;
+    
+}
+
 coerce __PACKAGE__
 	=> from 'HashRef'
 	=> via {

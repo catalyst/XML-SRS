@@ -1,0 +1,8 @@
+<NZSRSRequest VerMajor="5" VerMinor="0" RegistrarId="100">  
+    <DomainDetailsQry>
+        <DomainNameFilter>*.co.te</DomainNameFilter>
+        <AdminContactFilter/>
+        <TechnicalContactFilter/>
+        <FieldList TechnicalContact="1"/>
+    </DomainDetailsQry>      
+</NZSRSRequest>

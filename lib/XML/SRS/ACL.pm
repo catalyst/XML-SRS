@@ -32,12 +32,6 @@ has_attr 'SizeChange' =>
 	xml_required => 0,
 	;
 
-sub BUILD {
-	my $self = shift;
-	defined($self->Size//$self->SizeChange)
-		or die "Must specify either Size or SizeChange";
-}
-
 has_attr 'Type' =>
 	is => "ro",
 	isa => "Str",

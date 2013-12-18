@@ -15,7 +15,7 @@ has_attr 'registrar_ref' =>
 
 has_attr 'domain_name' =>
     is => "ro",
-    isa => "XML::SRS::DomainName",
+    isa => "Str",
     xml_name => "DomainName",
     xml_required => 0,
     ;

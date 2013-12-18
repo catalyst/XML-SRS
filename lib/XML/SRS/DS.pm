@@ -6,20 +6,23 @@ use XML::SRS::Types;
 
 has_attr 'key_tag' =>
 	is => "ro",
-	isa => "Int",
+	isa => "Str",
 	xml_name => "KeyTag",
+	required => 1,	
 	;
 
 has_attr 'algorithm' =>
 	is => "ro",
-	isa => "Int",
+	isa => "Str",
 	xml_name => "Algorithm",
+	required => 1,
 	;
 
 has_attr 'digest_type' =>
 	is => "ro",
-	isa => "Int",
+	isa => "Str",
 	xml_name => "DigestType",
+	required => 1,
 	;
 	
 has_element 'digest' =>

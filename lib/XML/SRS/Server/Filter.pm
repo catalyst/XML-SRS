@@ -9,7 +9,7 @@ use Moose::Util::TypeConstraints;
 
 has_attr 'fqdn' =>
 	is => "ro",
-	isa => "XML::SRS::DomainName",
+	isa => "Str",
 	xml_name => "FQDN",
 	xml_required => 0,
 	;

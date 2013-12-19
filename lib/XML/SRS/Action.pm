@@ -22,6 +22,6 @@ has_attr 'action_id' =>
 	alias => 'unique_id',
 	;
 
-with 'XML::SRS::Node', "PRANG::Graph";
+with 'XML::SRS::Node', "PRANG::Graph", 'XML::SRS';
 
 1;

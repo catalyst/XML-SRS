@@ -12,7 +12,7 @@ use XML::SRS::Action;
 use XML::SRS::ActionResponse;
 
 has_attr "registrar_id" =>
-	is => "ro",
+	is => "rw",
 	isa => "XML::SRS::RegistrarId",
 	xml_name => "RegistrarId",
 	xml_required => 0,
